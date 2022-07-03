@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import AppHeader from './components/header/HeaderLogo.vue';
+import AppHeader from './components/header/AppHeader.vue';
 
 export default {
   components:{
@@ -12,6 +12,22 @@ export default {
 }
 </script>
 
-<style>
 
+
+
+<style lang="scss">
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root{
+  --bg-color: #419ED1;
+}
 </style>
