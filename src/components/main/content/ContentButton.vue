@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <article>
+    <button>Start Quiz!</button>
+  </article>
 </template>
 
 <script>
