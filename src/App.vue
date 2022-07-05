@@ -1,6 +1,7 @@
 <template>
   <app-header></app-header>
   <app-main></app-main>
+  
 </template>
 
 <script>
@@ -32,5 +33,9 @@ html{
 
 :root{
   --bg-color: #419ED1;
+}
+
+body{
+  overflow: hidden;
 }
 </style>

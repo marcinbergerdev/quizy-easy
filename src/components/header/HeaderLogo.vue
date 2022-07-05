@@ -22,10 +22,15 @@ export default {};
 
   letter-spacing: 3px;
   font-family: "Fuzzy Bubbles", cursive;
-  font-size: 2.4rem;
+  font-size: 1.6rem;
+  color: #fff;
 
+  @media (min-width: 330px) {
+    font-size: 2.3rem;
+  }
   @media (min-width: 768px) {
     font-size: 6rem;
+     color: #000;
   }
 }
 </style>
