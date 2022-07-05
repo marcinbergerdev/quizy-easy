@@ -71,7 +71,10 @@ main {
 }
 
 .section-container {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
   display: flex;
   flex-direction: column-reverse;
