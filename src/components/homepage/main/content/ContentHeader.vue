@@ -9,8 +9,7 @@ export default {};
 </script>
 <style lang="scss" scoped>
 .header-text {
-  position: relative;
-  top: -3rem;
+  padding: 30px 0;
   width: 15rem;
   font-size: 1.4rem;
   text-align: center;
