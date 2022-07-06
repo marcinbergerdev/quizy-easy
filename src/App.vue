@@ -29,6 +29,13 @@ html {
 }
 
 body {
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
+  background-image: url("./assets/background.png");
+  background-size: 100%;
+  background-position: 10%;
+  background-color: var(--bg-color);
   overflow: hidden;
 }
 </style>

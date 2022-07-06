@@ -27,25 +27,20 @@ export default {
 
 <style lang="scss">
 main {
-  min-height: 100vh;
-  min-height: fill-available;
-  min-height: -webkit-fill-available;
-  background-image: url("../../../assets/background.png");
-  background-size: 100%;
-  background-position: 10%;
-  background-color: var(--bg-color);
-
   &::before,
   &::after {
     content: "";
     position: absolute;
-    z-index: 0;
+    z-index: -1;
     transform: rotate(90deg);
     border: solid transparent;
     border-width: 50vw;
+
+
   }
 
-  &::before {
+
+&::before {
     top: 0;
     left: 0;
     border-left-color: #001226;
@@ -68,24 +63,18 @@ main {
       display: none;
     }
   }
+
 }
 
 .section-container {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+  min-height: 100vh;
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
-  min-height: inherit;
   color: #fff;
 
   @media (min-width: 768px) {
-    position: relative;
-    z-index: 1;
     flex-direction: row;
   }
 }
