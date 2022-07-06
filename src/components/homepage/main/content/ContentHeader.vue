@@ -10,17 +10,15 @@ export default {};
 
 <style lang="scss" scoped>
 .header-text {
-  padding: 30px 0;
+
   width: 15rem;
   font-size: 1.4rem;
   text-align: center;
 
   @media (min-width: 330px) {
-    top: -4rem;
     font-size: 1.7rem;
   }
   @media (min-width: 430px) {
-    top: -5rem;
     width: 20rem;
     font-size: 2rem;
   }
@@ -29,8 +27,6 @@ export default {};
   }
 
   @media (min-width: 768px) {
-    top: 0;
-    left: 2rem;
     width: 20rem;
     text-align: start;
     font-size: 4rem;
@@ -46,6 +42,5 @@ export default {};
     font-size: 4.5rem;
   }
 }
-
 </style>
 
