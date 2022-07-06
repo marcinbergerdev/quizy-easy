@@ -27,6 +27,7 @@ export default {
 
 <style lang="scss">
 main {
+  min-height: 100vh;
   &::before,
   &::after {
     content: "";
@@ -35,12 +36,9 @@ main {
     transform: rotate(90deg);
     border: solid transparent;
     border-width: 50vw;
-
-
   }
 
-
-&::before {
+  &::before {
     top: 0;
     left: 0;
     border-left-color: #001226;
@@ -63,7 +61,6 @@ main {
       display: none;
     }
   }
-
 }
 
 .section-container {
