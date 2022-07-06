@@ -17,7 +17,7 @@ article {
   z-index: 1;
 }
 
-.start-button{
+.start-button {
   padding: 1.5rem 3rem;
   font-size: 1.4rem;
   text-align: center;

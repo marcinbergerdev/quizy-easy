@@ -19,7 +19,6 @@
 
 body {
   min-height: 100vh;
-  min-height: -webkit-fill-available;
   background-image: url("./assets/background.png");
   background-size: 100%;
   background-position: 10%;
@@ -28,7 +27,6 @@ body {
 }
 
 html {
-  height: -webkit-fill-available;
   font-size: 10px;
   font-family: "Roboto", sans-serif;
 }
