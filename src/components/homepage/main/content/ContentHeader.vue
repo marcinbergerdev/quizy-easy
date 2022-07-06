@@ -38,7 +38,7 @@ header {
   @media (min-width: 1366px) {
 
   }
-  ostyluj dalej
+  // ostyluj dalej
 
 }
 
