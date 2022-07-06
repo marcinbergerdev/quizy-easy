@@ -35,6 +35,10 @@ main {
     transform: rotate(90deg);
     border: solid transparent;
     border-width: 50vw;
+
+    @media (orientation: landscape) and (max-width: 768px){
+      border-width: 30vw;
+    }
   }
 
   &::before {

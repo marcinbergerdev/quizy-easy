@@ -24,6 +24,10 @@ export default {};
   font-family: "Fuzzy Bubbles", cursive;
   font-size: 1.6rem;
   color: #fff;
+  @media (orientation: landscape) and (max-width: 768px) {
+    top: 10%;
+    left: 30%;
+  }
 
   @media (min-width: 330px) {
     font-size: 2.3rem;

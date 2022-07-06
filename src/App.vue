@@ -13,21 +13,18 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
 body {
-  min-height: 100vh; /* fall-back */
-  min-height: -moz-available;
-  min-height: -webkit-fill-available;
-  min-height: fill-available;
+  height: calc(100vh - calc(100vh - 100%));
   background-image: url("./assets/background.png");
   background-size: 100%;
   background-position: 10%;
   background-color: var(--bg-color);
   overflow: hidden;
-}
-
-html {
-  font-size: 10px;
-  font-family: "Roboto", sans-serif;
 }
 
 :root {

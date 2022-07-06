@@ -17,6 +17,10 @@ header {
   z-index: 1;
   text-align: center;
 
+  @media (orientation: landscape) and (max-width: 768px) {
+    left: 70%;
+  }
+
   @media (min-width: 330px) {
     bottom: 5%;
   }
