@@ -9,15 +9,20 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.start-button {
+article {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.start-button{
   padding: 1.5rem 3rem;
-  border-radius: 5rem;
   font-size: 1.4rem;
+  text-align: center;
   letter-spacing: 2px;
+  border-radius: 5rem;
   border: 0;
   background-color: #001226;
   color: #fff;

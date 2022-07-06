@@ -27,8 +27,6 @@ export default {
 
 <style lang="scss">
 main {
-  min-height: 100vh;
-
   &::before,
   &::after {
     content: "";
@@ -65,23 +63,7 @@ main {
 }
 
 .section-container {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  align-items: center;
-  min-height: inherit;
   color: #fff;
-
-  @media (min-width: 768px) {
-    position: relative;
-    z-index: 1;
-    flex-direction: row;
-  }
 }
 </style>
 

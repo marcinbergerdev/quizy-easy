@@ -17,8 +17,17 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  background-image: url("./assets/background.png");
+  background-size: 100%;
+  background-position: 10%;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
 html {
-  height: fill-available;
   height: -webkit-fill-available;
   font-size: 10px;
   font-family: "Roboto", sans-serif;
@@ -26,16 +35,5 @@ html {
 
 :root {
   --bg-color: #419ed1;
-}
-
-body {
-  min-height: 100vh;
-  min-height: fill-available;
-  min-height: -webkit-fill-available;
-  background-image: url("./assets/background.png");
-  background-size: 100%;
-  background-position: 10%;
-  background-color: var(--bg-color);
-  overflow: hidden;
 }
 </style>
