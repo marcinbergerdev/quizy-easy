@@ -27,6 +27,7 @@ export default {
 
 <style lang="scss">
 main {
+  height: calc(100vh - calc(100vh - 100%));
   &::before,
   &::after {
     content: "";

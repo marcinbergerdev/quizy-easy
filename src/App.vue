@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  height: calc(100vh - calc(100vh - 100%));
+  min-height: 100vh;
   background-image: url("./assets/background.png");
   background-size: 100%;
   background-position: 10%;
