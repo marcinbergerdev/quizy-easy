@@ -28,6 +28,8 @@ export default {
 <style lang="scss">
 main {
   min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
   background-image: url("../../../assets/background.png");
   background-size: 100%;
   background-position: 10%;

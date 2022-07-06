@@ -19,6 +19,7 @@
 
 html {
   height: fill-available;
+  height: -webkit-fill-available;
   font-size: 10px;
   font-family: "Roboto", sans-serif;
 }
@@ -29,7 +30,5 @@ html {
 
 body {
   overflow: hidden;
-  min-height: 100vh;
-  min-height: fill-available;
 }
 </style>
