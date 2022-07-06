@@ -2,10 +2,6 @@
   <router-view></router-view>
 </template>
 
-<script>
-</script>
-
-
 
 
 <style lang="scss">
@@ -18,7 +14,10 @@
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100vh; /* fall-back */
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
   background-image: url("./assets/background.png");
   background-size: 100%;
   background-position: 10%;
