@@ -7,6 +7,7 @@
 <script>
 export default {};
 </script>
+
 <style lang="scss" scoped>
 .header-text {
   padding: 30px 0;
@@ -45,5 +46,6 @@ export default {};
     font-size: 4.5rem;
   }
 }
+
 </style>
 

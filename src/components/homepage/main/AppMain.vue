@@ -13,14 +13,14 @@
 import ContentHeader from "./content/ContentHeader.vue";
 import ContentButton from "./content/ContentButton.vue";
 import ContentText from "./content/ContentText.vue";
-import FooterText from '../footer/FotterText.vue';
+import FooterText from "../footer/FotterText.vue";
 
 export default {
   components: {
     ContentHeader,
     ContentButton,
     ContentText,
-    FooterText
+    FooterText,
   },
 };
 </script>
@@ -41,8 +41,6 @@ main {
     transform: rotate(90deg);
     border: solid transparent;
     border-width: 50vw;
-
-
   }
 
   &::before {
@@ -84,10 +82,10 @@ main {
   color: #fff;
 
   @media (min-width: 768px) {
+    position: relative;
+    z-index: 1;
     flex-direction: row;
   }
 }
-
-
 </style>
 
