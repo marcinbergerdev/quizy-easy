@@ -32,14 +32,6 @@ header {
     width: 20rem;
     text-align: start;
   }
-
-  @media (min-width: 1000px) {
-  }
-  @media (min-width: 1366px) {
-
-  }
-  // ostyluj dalej
-
 }
 
 .header-text {
@@ -61,7 +53,7 @@ header {
   @media (min-width: 768px) {
     width: 20rem;
     text-align: start;
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   @media (min-width: 1000px) {

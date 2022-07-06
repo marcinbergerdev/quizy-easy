@@ -41,15 +41,39 @@ export default {
 
 <style lang="scss" scoped>
 article {
-
-
   @media (min-width: 768px) {
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
   }
-}
 
+  .content-text {
+    &__para {
+      font-family: "Indie Flower", cursive;
+      text-align: end;
+      line-height: 3;
+
+      @media (min-width: 768px) {
+        position: relative;
+        right: 1rem;
+        width: 29rem;
+        font-size: 1.4rem;
+      }
+      @media (min-width: 1000px) {
+        top: -2rem;
+        width: 43.8rem;
+      }
+      @media (min-width: 1366px) {
+        width: auto;
+        font-size: 1.8rem;
+      }
+      @media (min-width: 1600px) {
+        right: 3rem;
+        font-size: 2.1rem;
+      }
+    }
+  }
+}
 </style>
 
