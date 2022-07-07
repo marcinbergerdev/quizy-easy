@@ -5,9 +5,11 @@
 
 
 <style lang="scss">
-
 :root {
-  --bg-color: #419ed1;
+  --white: #fff;
+  --bg-homepage: #419ed1;
+  --bg-quiz: #001226;
+  --color-triangle: #001226;
 }
 
 *,

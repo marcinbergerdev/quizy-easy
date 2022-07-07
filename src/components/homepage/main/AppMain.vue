@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="app-main">
     <section class="section-container">
       <content-header></content-header>
       <content-button></content-button>
@@ -25,13 +25,13 @@ export default {
 };
 </script>
 
-<style lang="scss">
-main {
+<style lang="scss" scoped>
+.app-main {
   min-height: 100vh;
   background-image: url("../../../assets/background.png");
   background-size: 100%;
   background-position: 10%;
-  background-color: var(--bg-color);
+  background-color: var(--bg-homepage);
 
   @media (min-width: 768px) {
     position: relative;
@@ -54,21 +54,21 @@ main {
   &::before {
     top: 0;
     left: 0;
-    border-left-color: #001226;
+    border-left-color: var(--color-triangle);
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
 
     @media (min-width: 768px) {
       width: 100%;
       transform: rotate(0deg);
       border-width: 50vh 40vw;
-      border-right-color: #001226;
+      border-right-color: var(--color-triangle);
     }
   }
 
   &::after {
     bottom: 0;
     right: 0;
-    border-right-color: #001226;
+    border-right-color: var(--color-triangle);
 
     @media (min-width: 768px) {
       display: none;
@@ -77,7 +77,7 @@ main {
 }
 
 .section-container {
-  color: #fff;
+  color: var(--white);
 }
 </style>
 
