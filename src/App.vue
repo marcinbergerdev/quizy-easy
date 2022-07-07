@@ -19,11 +19,6 @@ html {
 }
 
 body {
-  min-height: 100vh;
-  background-image: url("./assets/background.png");
-  background-size: 100%;
-  background-position: 10%;
-  background-color: var(--bg-color);
   overflow: hidden;
 }
 

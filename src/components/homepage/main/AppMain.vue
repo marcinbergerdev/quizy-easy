@@ -27,7 +27,13 @@ export default {
 
 <style lang="scss">
 main {
-  height: calc(100vh - calc(100vh - 100%));
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../../../assets/background.png");
+  background-size: 100%;
+  background-position: 10%;
+  background-color: var(--bg-color);
+
   &::before,
   &::after {
     content: "";
@@ -37,7 +43,7 @@ main {
     border: solid transparent;
     border-width: 50vw;
 
-    @media (orientation: landscape) and (max-width: 768px){
+    @media (orientation: landscape) and (max-width: 768px) {
       border-width: 30vw;
     }
   }
