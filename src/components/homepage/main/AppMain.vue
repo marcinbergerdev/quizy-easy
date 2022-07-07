@@ -33,9 +33,9 @@ main {
   background-position: 10%;
   background-color: var(--bg-color);
 
-  @media (orientation: landscape) and (max-width: 768px) {
-      position: relative;
-    }
+  @media (min-width: 768px) {
+    position: relative;
+  }
 
   &::before,
   &::after {
