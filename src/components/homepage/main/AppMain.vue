@@ -30,7 +30,6 @@ main {
   position: relative;
 
    min-height: 100vh;
-  min-height: -webkit-fill-available;
   background-image: url("../../../assets/background.png");
   background-size: 100%;
   background-position: 10%;
