@@ -28,6 +28,7 @@ export default {
 <style lang="scss">
 main {
   position: relative;
+
   min-height: 100vh;
   background-image: url("../../../assets/background.png");
   background-size: 100%;

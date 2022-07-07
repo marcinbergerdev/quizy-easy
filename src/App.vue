@@ -14,11 +14,13 @@
 }
 
 html {
+  height: -webkit-fill-available;
   font-size: 10px;
   font-family: "Roboto", sans-serif;
 }
 
 body {
+  height: -webkit-fill-available;
   overflow: hidden;
 }
 
