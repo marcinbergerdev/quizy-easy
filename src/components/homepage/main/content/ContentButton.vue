@@ -26,9 +26,9 @@ article {
   border: 0;
   background-color: #001226;
   color: #fff;
-  opacity: 0.7;
 
   @media (min-width: 768px) {
+    opacity: 0.7;
     &:hover {
       opacity: 1;
       cursor: pointer;

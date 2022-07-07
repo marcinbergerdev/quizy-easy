@@ -5,6 +5,11 @@
 
 
 <style lang="scss">
+
+:root {
+  --bg-color: #419ed1;
+}
+
 *,
 *::before,
 *::after {
@@ -14,18 +19,11 @@
 }
 
 html {
-  height: -webkit-fill-available;
   font-size: 10px;
   font-family: "Roboto", sans-serif;
 }
 
 body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
   overflow: hidden;
-}
-
-:root {
-  --bg-color: #419ed1;
 }
 </style>

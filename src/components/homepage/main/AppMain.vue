@@ -27,13 +27,15 @@ export default {
 
 <style lang="scss">
 main {
-  position: relative;
-
-   min-height: 100vh;
+  min-height: 100vh;
   background-image: url("../../../assets/background.png");
   background-size: 100%;
   background-position: 10%;
   background-color: var(--bg-color);
+
+  @media (orientation: landscape) and (max-width: 768px) {
+      position: relative;
+    }
 
   &::before,
   &::after {
