@@ -31,6 +31,7 @@ export default {};
   width: 60%;
   max-width: 27rem;
   background-color: var(--color-quiz);
+  border-radius: 15px 15px 10px 10px;
 }
 
 .header {
@@ -39,6 +40,7 @@ export default {};
   text-align: center;
   background-color: var(--header-quiz);
   color: var(--white);
+  border-radius: 10px 10px 0 0 ;
 
   &__txt {
     font-weight: 100;
@@ -54,12 +56,12 @@ export default {};
 
   &__box {
     label {
-      margin: 0 10px;
-      padding: 5px;
+      margin: 0 1rem;
+      padding: 0.5rem;
       font-size: 2rem;
       background-color: #d9d9d9;
       border-radius: 1.6rem;
-      box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.35);
+      box-shadow: 0 0 2rem rgb(0, 0, 0, 0.35);
 
       @media (min-width: 768px) {
         cursor: pointer;
@@ -80,13 +82,13 @@ export default {};
 
 .confrim-languages {
   margin: 0 0 1.5rem 0;
-  padding: 5px 10px;
-  width: 6rem;
+  padding: 1rem 1.5rem;
+  width: 8rem;
   align-self: center;
   background-color: var(--header-quiz);
   color: var(--white);
   border: 0;
-  border-radius: 22px;
+  border-radius: 2.2rem;
 
   @media (min-width: 768px) {
     cursor: pointer;
