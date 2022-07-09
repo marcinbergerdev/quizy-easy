@@ -1,16 +1,19 @@
 <template>
   <app-header></app-header>
   <app-main></app-main>
+  <app-footer></app-footer>
 </template>
 
 <script>
 import AppHeader from './homepage/header/AppHeader.vue';
 import AppMain from './homepage/main/AppMain.vue';
+import AppFooter from "./homepage/footer/AppFooter.vue";
 
 export default {
   components:{
     AppHeader,
-    AppMain
+    AppMain,
+    AppFooter
   }
 }
 </script>

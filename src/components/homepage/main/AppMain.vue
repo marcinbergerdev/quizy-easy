@@ -6,21 +6,18 @@
       <content-text></content-text>
     </section>
   </main>
-  <footer-text></footer-text>
 </template>
 
 <script>
 import ContentHeader from "./content/ContentHeader.vue";
 import ContentButton from "./content/ContentButton.vue";
 import ContentText from "./content/ContentText.vue";
-import FooterText from "../footer/FotterText.vue";
 
 export default {
   components: {
     ContentHeader,
     ContentButton,
     ContentText,
-    FooterText,
   },
 };
 </script>

@@ -16,7 +16,7 @@
       </div>
     </form>
 
-    <button class="confrim-languages">Select</button>
+    <router-link to="/quiz" class="confrim-languages">Select</router-link>
   </article>
 </template>
 
@@ -85,6 +85,9 @@ export default {};
   padding: 1rem 1.5rem;
   width: 8rem;
   align-self: center;
+  font-size: 1.4rem;
+  text-align: center;
+  text-decoration: none;
   background-color: var(--header-quiz);
   color: var(--white);
   border: 0;

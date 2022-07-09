@@ -1,10 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import AppHomePage from "./components/AppHomePage.vue";
-import AppLanguages from "./components/languages/AppLanguages";
-import AppQuiz from "./components/quizOperation/AppQuiz.vue";
-
-// import HeaderLogo from "./components/homepage/header/HeaderLogo.vue";
+const AppHomePage = () => import("./components/AppHomePage.vue");
+const AppLanguages = () => import("./components/languages/AppLanguages");
+const AppQuiz = () => import("./components/AppQuiz.vue");
 
 const router = createRouter({
    history: createWebHistory(),
@@ -29,7 +27,7 @@ const router = createRouter({
                component: AppLanguages,
             },
          ],
-         redirect: '/quiz/languages'
+
       },
    ],
 });

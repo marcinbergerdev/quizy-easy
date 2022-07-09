@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import HeaderCards from "../cards/HeaderCards.vue";
+import HeaderCards from "./cards/HeaderCards.vue";
 
 export default {
   components: {
