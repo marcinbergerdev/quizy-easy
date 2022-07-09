@@ -1,32 +1,29 @@
 <template>
-  <header>
+  <header-cards>
     <h1 class="logo">Quizy Easy</h1>
-  </header>
+  </header-cards>
 </template>
 
 <script>
-export default {};
-</script>
+import HeaderCards from "../../cards/HeaderCards.vue";
 
-<style>
-</style>
+export default {
+  components: {
+    HeaderCards,
+  },
+};
+</script>
 
 
 <style lang="scss" scoped>
 .logo {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-
+  position: relative;
   letter-spacing: 3px;
-  font-family: "Fuzzy Bubbles", cursive;
-  font-size: 1.6rem;
+
   color: #fff;
   @media (orientation: landscape) and (max-width: 768px) {
     top: 10%;
-    left: 30%;
+    left: -85%;
   }
 
   @media (min-width: 330px) {
@@ -34,7 +31,7 @@ export default {};
   }
   @media (min-width: 768px) {
     font-size: 6rem;
-     color: #000;
+    color: #000;
   }
 }
 </style>

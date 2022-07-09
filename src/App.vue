@@ -9,7 +9,13 @@
   --white: #fff;
   --bg-homepage: #419ed1;
   --bg-quiz: #001226;
+  --header-quiz: #152538;
+  --color-quiz: #E5E7E9;
   --color-triangle: #001226;
+
+  --color-red: #E67F7F;
+  --color-green: #7FE689;
+  --color-blue: #7FC4E6;
 }
 
 *,
