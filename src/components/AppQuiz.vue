@@ -1,11 +1,13 @@
 <template>
-  <header-cards>
+ <div>
+   <header-cards>
     <h1 class="logo">Quizy Easy</h1>
   </header-cards>
 
   <main class="quiz-main">
     <router-view></router-view>
   </main>
+ </div>
 </template>
 
 <script>

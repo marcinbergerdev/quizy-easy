@@ -27,7 +27,6 @@ const router = createRouter({
                component: AppLanguages,
             },
          ],
-
       },
    ],
 });

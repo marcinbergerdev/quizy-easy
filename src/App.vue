@@ -1,5 +1,9 @@
 <template>
-  <router-view></router-view>
+  <router-view v-slot="routerHomepageAnimation">
+    <transition name="route" mode="out-in">
+        <component :is="routerHomepageAnimation.Component"></component>
+    </transition>
+  </router-view>
 </template>
 
 
@@ -10,12 +14,12 @@
   --bg-homepage: #419ed1;
   --bg-quiz: #001226;
   --header-quiz: #152538;
-  --color-quiz: #E5E7E9;
+  --color-quiz: #e5e7e9;
   --color-triangle: #001226;
 
-  --color-red: #E67F7F;
-  --color-green: #7FE689;
-  --color-blue: #7FC4E6;
+  --color-red: #e67f7f;
+  --color-green: #7fe689;
+  --color-blue: #7fc4e6;
 }
 
 *,
@@ -33,5 +37,18 @@ html {
 
 body {
   overflow: hidden;
+}
+
+
+.route-leave-from {
+  filter: brightness(100%)
+}
+
+.route-leave-active {
+  transition: 0.3s ease-out;
+}
+
+.route-leave-to {
+  filter: brightness(30%)
 }
 </style>
