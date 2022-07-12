@@ -8,15 +8,17 @@
         >
       </header>
 
-      <ul class="answers-list">
-        <li
-          class="answers-list__answer"
-          v-for="answer in answers"
-          :key="answer"
-        >
-          {{ answer }}
-        </li>
-      </ul>
+      <transition name="test" mode="out-in">
+        <ul class="answers-list">
+          <li
+            class="answers-list__answer"
+            v-for="answer in answers"
+            :key="answer"
+          >
+            {{ answer }}
+          </li>
+        </ul>
+      </transition>
 
       <router-link :to="questionLink" class="next-question">
         Next <Icon icon="akar-icons:arrow-right" />
@@ -67,6 +69,16 @@ export default {
 
 
 <style lang="scss">
+.test-leave-from {
+  transform: translateX(0px);
+}
+.test-leave-active {
+  transition: transform 0.5s ease-out;
+}
+.test-leave-to {
+  transform: translateX(-200px);
+}
+
 li {
   list-style: none;
 }
