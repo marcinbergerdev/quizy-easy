@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 const AppHomePage = () => import("./components/AppHomePage.vue");
 const AppLanguages = () => import("./components/languages/AppLanguages");
 const AppQuiz = () => import("./components/AppQuiz.vue");
+const QuestionList = () => import("./components/quizOperation/QuestionList.vue");
 
 const router = createRouter({
    history: createWebHistory(),
@@ -25,6 +26,11 @@ const router = createRouter({
                path: "/quiz/languages",
                name: "languages",
                component: AppLanguages,
+            },
+            {
+               path: "/quiz/question",
+               name: "question",
+               component: QuestionList,
             },
          ],
       },

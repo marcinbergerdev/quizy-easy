@@ -1,41 +1,46 @@
 <template>
- <div>
-   <header-cards>
-    <h1 class="logo">Quizy Easy</h1>
-  </header-cards>
+  <div class="quiz-container">
+    <header class="quiz-header">
+      <h1 class="quiz-header__logo">Quizy Easy</h1>
+    </header>
 
-  <main class="quiz-main">
-    <router-view></router-view>
-  </main>
- </div>
+    <main class="quiz-main">
+      <router-view v-slot="quizContent">
+        <transition name="route-quiz">
+          <component :is="quizContent.Component"></component>
+        </transition>
+      </router-view>
+    </main>
+  </div>
 </template>
 
 <script>
-import HeaderCards from "./cards/HeaderCards.vue";
-
-export default {
-  components: {
-    HeaderCards,
-  },
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
-.quiz-main {
+.quiz-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  min-height: 100vh;
+  align-items: center;
+  height: 100vh;
+  padding: 10vh 0;
   background-color: var(--bg-quiz);
+  overflow: auto;
 }
 
-.logo {
-  color: #c7dbe5;
-  font-size: 2.4rem;
-
-  @media (min-width: 320px) {
+.quiz-header {
+  &__logo {
     font-size: 3rem;
+    color: var(--logo-quiz);
   }
+}
+
+.quiz-main {
+  width: 100%;
+  max-width: 25rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 </style>

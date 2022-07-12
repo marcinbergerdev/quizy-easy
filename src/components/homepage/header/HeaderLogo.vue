@@ -1,21 +1,24 @@
 <template>
-  <header-cards>
+  <header>
     <h1 class="logo">Quizy Easy</h1>
-  </header-cards>
+  </header>
 </template>
 
-<script>
-import HeaderCards from "../../cards/HeaderCards.vue";
 
-export default {
-  components: {
-    HeaderCards,
-  },
-};
-</script>
 
 
 <style lang="scss" scoped>
+header {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  font-size: 1.6rem;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+
 .logo {
   position: relative;
   letter-spacing: 3px;

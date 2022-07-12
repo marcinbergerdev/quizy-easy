@@ -1,7 +1,7 @@
 <template>
   <router-view v-slot="routerHomepageAnimation">
     <transition name="route" mode="out-in">
-        <component :is="routerHomepageAnimation.Component"></component>
+      <component :is="routerHomepageAnimation.Component"></component>
     </transition>
   </router-view>
 </template>
@@ -11,11 +11,15 @@
 <style lang="scss">
 :root {
   --white: #fff;
+  --black: #000;
   --bg-homepage: #419ed1;
   --bg-quiz: #001226;
+  --bg-language: #D9D9D9;
   --header-quiz: #152538;
+  --logo-quiz: #bce4f8;
   --color-quiz: #e5e7e9;
   --color-triangle: #001226;
+  --bg-answer: #d5d8dc;
 
   --color-red: #e67f7f;
   --color-green: #7fe689;
@@ -39,16 +43,15 @@ body {
   overflow: hidden;
 }
 
-
 .route-leave-from {
-  filter: brightness(100%)
+  filter: brightness(100%);
 }
 
 .route-leave-active {
-  transition: 0.3s ease-out;
+  transition: 0.5s ease-out;
 }
 
 .route-leave-to {
-  filter: brightness(30%)
+  filter: brightness(30%);
 }
 </style>

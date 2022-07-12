@@ -6,43 +6,73 @@
 
     <form class="select-languages">
       <div class="select-languages__box">
-        <label for="eng" class="selected">EN</label>
-        <input type="radio" name="lang" id="eng" />
+        <label
+          for="eng"
+          @click="selectLanguage('eng')"
+          :class="{ selected: this.language === 'eng'}"
+          >EN</label
+        >
+
+        <input
+          type="radio"
+          id="eng"
+          name="lang"
+          value="eng"
+          v-model="language"
+        />
       </div>
 
       <div class="select-languages__box">
-        <label for="de">DE</label>
-        <input type="radio" name="lang" id="de" />
+        <label
+          for="de"
+          @click="selectLanguage('de')"
+          :class="{ selected: this.language === 'de'}"
+          >DE</label
+        >
+
+        <input type="radio" id="de" name="lang" value="de" v-model="language" />
       </div>
     </form>
-
-    <router-link to="/quiz" class="confrim-languages">Select</router-link>
+    <router-link to="/quiz/question" class="confrim-languages"
+      >Select</router-link
+    >
   </article>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      language: "eng",
+    };
+  },
+  methods: {
+    selectLanguage(language) {
+      this.language = language;
+      console.log(language);
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 .container-languages {
   display: flex;
   flex-direction: column;
-  width: 60%;
-  max-width: 27rem;
+  width: 100%;
+  margin: 1rem 1rem 5rem 1rem;
+  color: var(--white);
   background-color: var(--color-quiz);
-  border-radius: 15px 15px 10px 10px;
+  border-radius: 10px 10px 5px 5px;
 }
 
 .header {
-  padding: 1.5rem;
-  font-size: 1.6rem;
-  text-align: center;
+  padding: 1.5rem 0;
   background-color: var(--header-quiz);
-  color: var(--white);
-  border-radius: 10px 10px 0 0 ;
-
+  border-radius: 5px 5px 0 0;
   &__txt {
+    text-align: center;
+    font-size: 1.7rem;
     font-weight: 100;
   }
 }
@@ -51,20 +81,21 @@ export default {};
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: center;
-  min-height: 10rem;
-
+  min-height: 100px;
   &__box {
+    margin: 0 1rem;
     label {
-      margin: 0 1rem;
-      padding: 0.5rem;
-      font-size: 2rem;
-      background-color: #d9d9d9;
-      border-radius: 1.6rem;
-      box-shadow: 0 0 2rem rgb(0, 0, 0, 0.35);
+      display: block;
+      width: 40px;
+      padding: 5px 0;
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--black);
+      border-radius: 1.5rem;
+      background-color: var(--white);
+      box-shadow: 0 0 2rem rgb(0, 0, 0, 30%);
 
       @media (min-width: 768px) {
-        cursor: pointer;
       }
     }
 
@@ -73,25 +104,25 @@ export default {};
     }
 
     .selected {
-      padding: 5px;
+
       font-size: 2.4rem;
-      background-color: var(--color-green);
+      background-color: #152538;
+      color: #fff;
+      box-shadow: 0 0 2rem rgb(0, 0, 0, 85%);
+      transition: 0.1s ease-in-out;
     }
   }
 }
 
 .confrim-languages {
-  margin: 0 0 1.5rem 0;
-  padding: 1rem 1.5rem;
-  width: 8rem;
+  margin-bottom: 10px;
+  padding: 6px 20px;
   align-self: center;
-  font-size: 1.4rem;
-  text-align: center;
   text-decoration: none;
+  font-size: 1.3rem;
   background-color: var(--header-quiz);
   color: var(--white);
-  border: 0;
-  border-radius: 2.2rem;
+  border-radius: 3px;
 
   @media (min-width: 768px) {
     cursor: pointer;
