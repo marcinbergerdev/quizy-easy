@@ -14,14 +14,13 @@ header {
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-
   font-size: 1.6rem;
-  font-family: "Fuzzy Bubbles", cursive;
 }
 
 .logo {
   position: relative;
   letter-spacing: 3px;
+  font-family: "Fuzzy Bubbles", cursive;
 
   color: #fff;
   @media (orientation: landscape) and (max-width: 768px) {

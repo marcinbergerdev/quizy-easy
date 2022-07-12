@@ -1,15 +1,17 @@
 <template>
-  <nav>
-    <ul class="questions-list">
-      <question-item
-        v-for="(option, index) in questions"
-        :key="index"
-        :id="index"
-        :question="option.question"
-        :answers="option.sugesstion"
-      ></question-item>
-    </ul>
-  </nav>
+  <main class="quiz-questions">
+    <nav class='quiz-nav'>
+      <ul class="questions-list">
+        <question-item
+          v-for="(option, index) in questions"
+          :key="index"
+          :id="index"
+          :question="option.question"
+          :answers="option.sugesstion"
+        ></question-item>
+      </ul>
+    </nav>
+  </main>
 </template>
 
 <script>
@@ -29,7 +31,7 @@ export default {
             "Usce semper hendrerit velit lacinia placerat.",
             "Donec pulvinar sit amet risus i eleifend.",
             "Maecenas dignissim venenatis fermentum.",
-            "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
+            "Nulla porttitor nunc tellus, vel consequat risus porta",
           ],
         },
         // {
@@ -104,4 +106,24 @@ export default {
 </script>
 
 <style lang="scss">
+.quiz-questions {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0 0 0 ;
+  @media(min-width: 768px){
+  margin: 0 0 5rem 0 ;
+  }
+}
+
+.quiz-nav{
+  width: min(700px, 70%);
+}
+
+.questions-list {
+  border-radius: 1rem 1rem 0.5rem 0.5rem;
+  background-color: var(--color-quiz);
+}
 </style>

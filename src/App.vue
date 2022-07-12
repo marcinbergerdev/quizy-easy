@@ -12,14 +12,17 @@
 :root {
   --white: #fff;
   --black: #000;
+
   --bg-homepage: #419ed1;
   --bg-quiz: #001226;
-  --bg-language: #D9D9D9;
+  --bg-language: #d9d9d9;
+
   --header-quiz: #152538;
   --logo-quiz: #bce4f8;
   --color-quiz: #e5e7e9;
   --color-triangle: #001226;
   --bg-answer: #d5d8dc;
+  --hover-answer: #7fc4e6;
 
   --color-red: #e67f7f;
   --color-green: #7fe689;
@@ -32,11 +35,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
   font-size: 10px;
-  font-family: "Roboto", sans-serif;
 }
 
 body {

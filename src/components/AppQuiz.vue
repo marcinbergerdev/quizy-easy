@@ -4,13 +4,11 @@
       <h1 class="quiz-header__logo">Quizy Easy</h1>
     </header>
 
-    <main class="quiz-main">
-      <router-view v-slot="quizContent">
-        <transition name="route-quiz">
-          <component :is="quizContent.Component"></component>
-        </transition>
-      </router-view>
-    </main>
+    <router-view v-slot="quizContent">
+      <transition name="route-quiz">
+        <component :is="quizContent.Component"></component>
+      </transition>
+    </router-view>
   </div>
 </template>
 
@@ -36,11 +34,4 @@ export default {};
   }
 }
 
-.quiz-main {
-  width: 100%;
-  max-width: 25rem;
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
 </style>

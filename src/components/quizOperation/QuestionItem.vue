@@ -17,14 +17,19 @@
       </ul>
 
       <router-link to="/quiz/languages" class="next-question"
-        >Next <span>--></span></router-link
-      >
+        >Next <Icon icon="akar-icons:arrow-right"
+      /></router-link>
     </article>
   </li>
 </template>
 
 <script>
+import { Icon } from "@iconify/vue";
+
 export default {
+  components: {
+    Icon,
+  },
   props: {
     id: {
       type: Number,
@@ -45,21 +50,75 @@ export default {
 
 <style lang="scss">
 li {
+  list-style: none;
 }
 
 .question-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .question-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 1.5rem;
+  word-wrap: break-word;
+  color: var(--white);
+  background-color: var(--header-quiz);
+  border-radius: 0.5rem 0.5rem 0 0;
+
   &__question {
+    width: 80%;
+    font-size: 1.4rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+    @media (min-width: 768px) {
+      font-size: 1.6rem;
+    }
   }
 }
 
 .answers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 1.8rem 2rem 1.8rem;
+
   &__answer {
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
+    word-wrap: break-word;
+    background-color: var(--bg-answer);
+    border-radius: 1.5rem;
+
+    &:hover {
+      background-color: var(--hover-answer);
+    }
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
   }
 }
 
 .next-question {
+  width: 65px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 2rem 1rem 0;
+  padding: 0.7rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--white);
+  align-self: flex-end;
+  background-color: var(--header-quiz);
+  border-radius: 5rem;
+
+  @media (min-width: 768px) {
+    width: 65px;
+    padding: 0.7rem;
+    font-size: 1.3rem;
+  }
 }
 </style>
