@@ -1,7 +1,7 @@
 <template>
   <main class="quiz-questions">
     <nav class="quiz-nav">
-      <ul class="questions-list">
+      <ul>
         <question-item
           v-for="(option, index) in questions.slice(a, b)"
           :key="index"
@@ -41,37 +41,37 @@ export default {
         {
           question: "How do you take the best design ever?",
           sugesstion: [
-            "Usce semper hendrerit velit lacinia placerat.",
+            "Usce semper hlacinia placerat.",
             "Donec pulvinar sit amet risus id eleifend.",
-            "Maecenas dignissim venenatis fermentum.",
-            "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
+            "Maecenas dignissim.",
+            "Nulla.",
           ],
         },
         {
           question: "How get only one element from array?",
           sugesstion: [
-            "Usce semper hendrerit velit lacinia placerat.",
-            "Donec pulvinar sit amet risus id eleifend.",
-            "Maecenas dignissim venenatis fermentum.",
-            "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
+            "Usce sempe.",
+            "Donec sit amet risus id eleifend.",
+            "Fermentum.",
+            "Nulla porttitor nunc tellus, velnec.",
           ],
         },
         {
           question: "What makes decision-making effective?",
           sugesstion: [
-            "Usce semper hendrerit velit lacinia placerat.",
+            "Usce.",
             "Donec pulvinar sit amet risus id eleifend.",
-            "Maecenas dignissim venenatis fermentum.",
-            "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
+            "Maecenas dignissim fermentum.",
+            "Nulla porttitor",
           ],
         },
         {
           question: "How do you make a decision when both options are good?",
           sugesstion: [
-            "Usce semper hendrerit velit lacinia placerat.",
-            "Donec pulvinar sit amet risus id eleifend.",
-            "Maecenas dignissim venenatis fermentum.",
-            "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
+            "Usce.",
+            "Donec.",
+            "Maecenas.",
+            "Null.",
           ],
         },
         {
@@ -87,9 +87,9 @@ export default {
         {
           question: "What should you not do while making a decision?",
           sugesstion: [
-            "Usce semper hendrerit velit lacinia placerat.",
-            "Donec pulvinar sit amet risus id eleifend.",
-            "Maecenas dignissim venenatis fermentum.",
+            "Velit lacinia placerat.",
+            "Donec pulvinar sit amet.",
+            "Maecenas dignissim.",
             "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
           ],
         },
@@ -97,10 +97,10 @@ export default {
           question:
             "How can you determine if your chosen decision will benefit you?",
           sugesstion: [
-            "Usce semper hendrerit velit lacinia placerat.",
+            "Usce semper hendrerit velit placerat.",
             "Donec pulvinar sit amet risus id eleifend.",
-            "Maecenas dignissim venenatis fermentum.",
-            "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
+            "MVenenatis fermentum.",
+            "Nulla porttitor nunc.",
           ],
         },
       ],
@@ -145,9 +145,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 4rem 0 0 0;
+  margin-top: 1rem;
+  overflow: hidden;
   @media (min-width: 768px) {
-    margin: 0 0 5rem 0;
+    margin-top: -5rem;
   }
 }
 
@@ -155,8 +156,4 @@ export default {
   width: min(700px, 70%);
 }
 
-.questions-list {
-  border-radius: 1rem 1rem 0.5rem 0.5rem;
-  background-color: var(--color-quiz);
-}
 </style>

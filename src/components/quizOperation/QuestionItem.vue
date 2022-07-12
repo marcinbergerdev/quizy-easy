@@ -1,14 +1,14 @@
 <template>
-  <li>
-    <article class="question-container">
-      <header class="question-header">
-        <h1 class="question-header__question">{{ question }}</h1>
-        <span class="question-header__counter"
-          >{{ id }}/ {{ numberOfQuestion.length }}</span
-        >
-      </header>
+  <transition name="test" mode="out-in">
+    <li class="questions-list" v-if="dupa">
+      <article class="question-container">
+        <header class="question-header">
+          <h1 class="question-header__question">{{ question }}</h1>
+          <span class="question-header__counter"
+            >{{ id }}/ {{ numberOfQuestion.length }}</span
+          >
+        </header>
 
-      <transition name="test" mode="out-in">
         <ul class="answers-list">
           <li
             class="answers-list__answer"
@@ -18,13 +18,13 @@
             {{ answer }}
           </li>
         </ul>
-      </transition>
 
-      <router-link :to="questionLink" class="next-question">
-        Next <Icon icon="akar-icons:arrow-right" />
-      </router-link>
-    </article>
-  </li>
+        <router-link :to="questionLink" class="next-question">
+          Next <Icon icon="akar-icons:arrow-right" />
+        </router-link>
+      </article>
+    </li>
+  </transition>
 </template>
 
 <script>
@@ -35,7 +35,9 @@ export default {
     Icon,
   },
   data() {
-    return {};
+    return {
+      dupa: true,
+    };
   },
   emit: ["test"],
   props: {
@@ -64,23 +66,58 @@ export default {
       return { name: "question", params: { routeQuestion: this.id + 1 } };
     },
   },
+  watch: {
+    $route(value) {
+      if (value) {
+        this.dupa = false;
+        setTimeout(() => {
+          this.dupa = true;
+        }, 10);
+      }
+    },
+  },
 };
 </script>
 
 
 <style lang="scss">
+.test-enter-from {
+  opacity: 0;
+  transform: translateX(-400px);
+}
+.test-enter-active {
+  transition: all 0.5s ease-out;
+}
+.test-enter-to {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
 .test-leave-from {
+  opacity: 1;
   transform: translateX(0px);
 }
 .test-leave-active {
-  transition: transform 0.5s ease-out;
+  transition: all 0.5s ease-in;
 }
 .test-leave-to {
-  transform: translateX(-200px);
+  opacity: 0;
+  transform: translateX(400px);
 }
+
+
+
+
+
+
 
 li {
   list-style: none;
+}
+
+.questions-list {
+  border-radius: 1rem 1rem 0.5rem 0.5rem;
+  background-color: var(--color-quiz);
 }
 
 .question-container {
