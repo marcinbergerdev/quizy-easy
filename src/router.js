@@ -28,11 +28,13 @@ const router = createRouter({
                component: AppLanguages,
             },
             {
-               path: "/quiz/question",
+               path: "question/:routeQuestion",
                name: "question",
                component: QuestionList,
+               props: true,
             },
          ],
+         redirect: '/start-quiz'
       },
    ],
 });

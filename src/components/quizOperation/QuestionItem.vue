@@ -3,7 +3,9 @@
     <article class="question-container">
       <header class="question-header">
         <h1 class="question-header__question">{{ question }}</h1>
-        <span class="question-header__counter">{{ id + 1 }}/8</span>
+        <span class="question-header__counter"
+          >{{ id }}/ {{ numberOfQuestion.length }}</span
+        >
       </header>
 
       <ul class="answers-list">
@@ -16,9 +18,9 @@
         </li>
       </ul>
 
-      <router-link to="/quiz/languages" class="next-question"
-        >Next <Icon icon="akar-icons:arrow-right"
-      /></router-link>
+      <router-link :to="questionLink" class="next-question">
+        Next <Icon icon="akar-icons:arrow-right" />
+      </router-link>
     </article>
   </li>
 </template>
@@ -30,6 +32,10 @@ export default {
   components: {
     Icon,
   },
+  data() {
+    return {};
+  },
+  emit: ["test"],
   props: {
     id: {
       type: Number,
@@ -42,6 +48,18 @@ export default {
     answers: {
       type: Array,
       required: true,
+    },
+    numberOfQuestion: {
+      type: Array,
+      required: true,
+    },
+    routeQuestion: {
+      type: String,
+    },
+  },
+  computed: {
+    questionLink() {
+      return { name: "question", params: { routeQuestion: this.id + 1 } };
     },
   },
 };
@@ -119,6 +137,7 @@ li {
     width: 65px;
     padding: 0.7rem;
     font-size: 1.3rem;
+    cursor: pointer;
   }
 }
 </style>

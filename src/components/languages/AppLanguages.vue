@@ -40,7 +40,7 @@
           />
         </div>
       </form>
-      <router-link to="/quiz/question" class="confrim-languages"
+      <router-link to="/quiz/question/1" class="confrim-languages"
         >Select</router-link
       >
     </article>
