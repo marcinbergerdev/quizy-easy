@@ -1,27 +1,32 @@
 <template>
-  <transition name="test" mode="out-in">
-    <li class="questions-list" v-if="dupa">
+  <transition name="question-animation" mode="out-in">
+    <li class="questions-list" :key="idQuestion">
       <article class="question-container">
         <header class="question-header">
           <h1 class="question-header__question">{{ question }}</h1>
           <span class="question-header__counter"
-            >{{ id }}/ {{ numberOfQuestion.length }}</span
+            >{{ idQuestion }}/ {{ questionList.length }}</span
           >
         </header>
 
         <ul class="answers-list">
           <li
             class="answers-list__answer"
-            v-for="answer in answers"
-            :key="answer"
+            v-for="(option, index) in sugesstions"
+            :key="index"
           >
-            {{ answer }}
+            {{ option.sugesstion }}
           </li>
         </ul>
 
-        <router-link :to="questionLink" class="next-question">
-          Next <Icon icon="akar-icons:arrow-right" />
-        </router-link>
+        <section class='switch-question'>
+          <router-link :to="questionLink" class="switch-question__next">
+            Skip
+          </router-link>
+          <router-link :to="questionLink" class="switch-question__next">
+            Next <Icon icon="akar-icons:arrow-right" />
+          </router-link>
+        </section>
       </article>
     </li>
   </transition>
@@ -34,46 +39,34 @@ export default {
   components: {
     Icon,
   },
-  data() {
-    return {
-      dupa: true,
-    };
-  },
-  emit: ["test"],
   props: {
-    id: {
+    idQuestion: {
       type: Number,
+      required: true,
+    },
+    questionList: {
+      type: Array,
       required: true,
     },
     question: {
       type: String,
       required: true,
     },
-    answers: {
-      type: Array,
-      required: true,
-    },
-    numberOfQuestion: {
+    sugesstions: {
       type: Array,
       required: true,
     },
     routeQuestion: {
       type: String,
+      required: false,
     },
   },
   computed: {
     questionLink() {
-      return { name: "question", params: { routeQuestion: this.id + 1 } };
-    },
-  },
-  watch: {
-    $route(value) {
-      if (value) {
-        this.dupa = false;
-        setTimeout(() => {
-          this.dupa = true;
-        }, 10);
-      }
+      return {
+        name: "question",
+        params: { routeQuestion: this.idQuestion + 1 },
+      };
     },
   },
 };
@@ -81,35 +74,32 @@ export default {
 
 
 <style lang="scss">
-.test-enter-from {
+.question-animation-enter-from {
   opacity: 0;
   transform: translateX(-400px);
 }
-.test-enter-active {
+.question-animation-enter-active {
   transition: all 0.5s ease-out;
 }
-.test-enter-to {
+.question-animation-enter-to {
   opacity: 1;
   transform: translateX(0px);
 }
 
-.test-leave-from {
+
+.question-animation-leave-from {
   opacity: 1;
   transform: translateX(0px);
 }
-.test-leave-active {
+.question-animation-leave-active {
   transition: all 0.5s ease-in;
 }
-.test-leave-to {
+.question-animation-leave-to {
   opacity: 0;
   transform: translateX(400px);
 }
 
-
-
-
-
-
+// POZMIENIAJ
 
 li {
   list-style: none;
@@ -168,25 +158,30 @@ li {
   }
 }
 
-.next-question {
-  width: 65px;
+.switch-question{
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 2rem 1rem 0;
-  padding: 0.7rem;
-  text-decoration: none;
-  font-size: 1.1rem;
-  color: var(--white);
   align-self: flex-end;
-  background-color: var(--header-quiz);
-  border-radius: 5rem;
 
-  @media (min-width: 768px) {
+  &__next {
     width: 65px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 2rem 1rem 0;
     padding: 0.7rem;
-    font-size: 1.3rem;
-    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--white);
+    align-self: flex-end;
+    background-color: var(--header-quiz);
+    border-radius: 5rem;
+
+    @media (min-width: 768px) {
+      width: 65px;
+      padding: 0.7rem;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
   }
 }
 </style>

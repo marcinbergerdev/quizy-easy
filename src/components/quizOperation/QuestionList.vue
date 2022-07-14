@@ -3,12 +3,12 @@
     <nav class="quiz-nav">
       <ul>
         <question-item
-          v-for="(option, index) in questions.slice(a, b)"
+          v-for="(option, index) in questions.slice(currentQuestion, numberOfQuestion)"
           :key="index"
-          :id="b"
+          :id-question="numberOfQuestion"
+          :question-list="this.questions"
           :question="option.question"
-          :numberOfQuestion="this.questions"
-          :answers="option.sugesstion"
+          :sugesstions="option.sugesstions"
         ></question-item>
       </ul>
     </nav>
@@ -25,91 +25,109 @@ export default {
   props: ["routeQuestion"],
   data() {
     return {
-      a: 0,
-      b: 1,
+      currentQuestion: 0,
+      numberOfQuestion: 1,
       questions: [
         {
           question:
             "How do you take the best decision among several possibilities?",
-          sugesstion: [
-            "Usce semper hendrerit velit lacinia placerat.",
-            "Donec pulvinar sit amet risus i eleifend.",
-            "Maecenas dignissim venenatis fermentum.",
-            "Nulla porttitor nunc tellus, vel consequat risus porta",
+          sugesstions: [
+            {
+              sugesstion: "Usce semper hendrerit velit lacinia placerat.",
+              correct: true,
+            },
+            { sugesstion: "Donec pulvinar sit amet risus i eleifend." },
+            { sugesstion: "Maecenas dignissim venenatis fermentum." },
+            {
+              sugesstion:
+                "Nulla porttitor nunc tellus, vel consequat risus porta",
+            },
           ],
         },
         {
           question: "How do you take the best design ever?",
-          sugesstion: [
-            "Usce semper hlacinia placerat.",
-            "Donec pulvinar sit amet risus id eleifend.",
-            "Maecenas dignissim.",
-            "Nulla.",
+          sugesstions: [
+            { sugesstion: "Usce semper hlacinia placerat." },
+            { sugesstion: "Donec pulvinar sit amet risus id eleifend." },
+            { sugesstion: "Maecenas dignissim.", correct: true },
+            { sugesstion: "Nulla." },
           ],
         },
         {
           question: "How get only one element from array?",
-          sugesstion: [
-            "Usce sempe.",
-            "Donec sit amet risus id eleifend.",
-            "Fermentum.",
-            "Nulla porttitor nunc tellus, velnec.",
+          sugesstions: [
+            { sugesstion: "Usce sempe.", correct: true },
+            { sugesstion: "Donec sit amet risus id eleifend." },
+            { sugesstion: "Fermentum." },
+            { sugesstion: "Nulla porttitor nunc tellus, velnec." },
           ],
         },
         {
           question: "What makes decision-making effective?",
-          sugesstion: [
-            "Usce.",
-            "Donec pulvinar sit amet risus id eleifend.",
-            "Maecenas dignissim fermentum.",
-            "Nulla porttitor",
+          sugesstions: [
+            { sugesstion: "Usce." },
+            { sugesstion: "Donec pulvinar sit amet risus id eleifend." },
+            { sugesstion: "Maecenas dignissim fermentum." },
+            { sugesstion: "Nulla porttitor", correct: true },
           ],
         },
         {
           question: "How do you make a decision when both options are good?",
-          sugesstion: [
-            "Usce.",
-            "Donec.",
-            "Maecenas.",
-            "Null.",
+          sugesstions: [
+            { sugesstion: "Usce." },
+            { sugesstion: "Donec." },
+            { sugesstion: "Maecenas.", correct: true },
+            { sugesstion: "Null." },
           ],
         },
         {
           question:
             "What do you do when you have to make an important decision?",
-          sugesstion: [
-            "Usce semper hendrerit velit lacinia placerat.",
-            "Donec pulvinar sit amet risus id eleifend.",
-            "Maecenas dignissim venenatis fermentum.",
-            "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
+          sugesstions: [
+            {
+              sugesstion: "Usce semper hendrerit velit lacinia placerat.",
+              correct: true,
+            },
+            { sugesstion: "Donec pulvinar sit amet risus id eleifend." },
+            { sugesstion: "Maecenas dignissim venenatis fermentum." },
+            {
+              sugesstion:
+                "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
+            },
           ],
         },
         {
           question: "What should you not do while making a decision?",
-          sugesstion: [
-            "Velit lacinia placerat.",
-            "Donec pulvinar sit amet.",
-            "Maecenas dignissim.",
-            "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
+          sugesstions: [
+            { sugesstion: "Velit lacinia placerat." },
+            { sugesstion: "Donec pulvinar sit amet." },
+            { sugesstion: "Maecenas dignissim.", correct: true },
+            {
+              sugesstion:
+                "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
+            },
           ],
         },
         {
           question:
             "How can you determine if your chosen decision will benefit you?",
-          sugesstion: [
-            "Usce semper hendrerit velit placerat.",
-            "Donec pulvinar sit amet risus id eleifend.",
-            "MVenenatis fermentum.",
-            "Nulla porttitor nunc.",
+          sugesstions: [
+            { sugesstion: "Usce semper hendrerit velit placerat." },
+            {
+              sugesstion: "Donec pulvinar sit amet risus id eleifend.",
+              correct: true,
+            },
+            { sugesstion: "MVenenatis fermentum." },
+            { sugesstion: "Nulla porttitor nunc." },
           ],
         },
       ],
     };
   },
   methods: {
-    changeQuestion(newRoute) {
-      this.a = newRoute - 1;
-      this.b = newRoute;
+    changeQuestion(newRouteQuestion) {
+      this.currentQuestion = newRouteQuestion - 1;
+      this.numberOfQuestion = newRouteQuestion;
     },
   },
   watch: {
@@ -124,7 +142,6 @@ export default {
   //   next(false);
   // },
   //   TUTAJ MOŻE SIĘ PRZYDAĆ GDY NIE ZOSTANIE WYBRANA ZADNA Z OPCJI A KTOŚ KLIKNIE DALEJ
-
 
   // beforeRouteLeave(to, from, next) {
   //   console.log(to);
@@ -155,5 +172,4 @@ export default {
 .quiz-nav {
   width: min(700px, 70%);
 }
-
 </style>

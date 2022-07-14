@@ -46,14 +46,17 @@ body {
   overflow: hidden;
 }
 
+.route-enter-to,
 .route-leave-from {
   filter: brightness(100%);
 }
 
+.route-enter-active,
 .route-leave-active {
   transition: 0.5s ease-out;
 }
 
+.route-enter-from,
 .route-leave-to {
   filter: brightness(30%);
 }
