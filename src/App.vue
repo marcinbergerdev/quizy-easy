@@ -22,11 +22,11 @@
   --color-quiz: #e5e7e9;
   --color-triangle: #001226;
   --bg-answer: #d5d8dc;
-  --hover-answer: #7fc4e6;
 
-  --color-red: #e67f7f;
-  --color-green: #7fe689;
-  --color-blue: #7fc4e6;
+
+  --color-incorrect: #e67f7f;
+  --color-correct: #7fe689;
+  --color-checked: #7fc4e6;
 }
 
 *,
@@ -61,3 +61,7 @@ body {
   filter: brightness(30%);
 }
 </style>
+
+
+
+

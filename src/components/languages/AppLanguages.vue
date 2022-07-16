@@ -25,6 +25,23 @@
 
         <div class="select-languages__box">
           <label
+            for="pl"
+            @click="selectLanguage('pl')"
+            :class="{ selected: this.language === 'pl' }"
+            >PL</label
+          >
+
+          <input
+            type="radio"
+            id="pl"
+            name="lang"
+            value="pl"
+            v-model="language"
+          />
+        </div>
+
+        <div class="select-languages__box">
+          <label
             for="de"
             @click="selectLanguage('de')"
             :class="{ selected: this.language === 'de' }"

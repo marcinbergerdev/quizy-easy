@@ -12,20 +12,26 @@
         <ul class="answers-list">
           <li
             class="answers-list__answer"
+            :class="answer ? checkAnswer(option.correct) : ''"
             v-for="(option, index) in sugesstions"
             :key="index"
+            @click="setSugesstion(option.correct)"
           >
             {{ option.sugesstion }}
           </li>
         </ul>
 
-        <section class='switch-question'>
-          <router-link :to="questionLink" class="switch-question__next">
+        <section class="switch-question">
+          <router-link :to="questionLink" class="switch-question__skip">
             Skip
           </router-link>
-          <router-link :to="questionLink" class="switch-question__next">
+          <button
+            :to="questionLink"
+            class="switch-question__next"
+            @click="nextQuestion"
+          >
             Next <Icon icon="akar-icons:arrow-right" />
-          </router-link>
+          </button>
         </section>
       </article>
     </li>
@@ -34,8 +40,34 @@
 
 <script>
 import { Icon } from "@iconify/vue";
+import router from "@/router";
 
 export default {
+  data() {
+    return {
+      score: 0,
+      answer: false,
+    };
+  },
+  methods: {
+    setSugesstion(correct) {
+      if (correct) {
+        this.score++;
+      }
+      this.answer = true;
+    },
+    checkAnswer(correct) {
+      if (correct) {
+        return "correct";
+      } else {
+        return "incorrect";
+      }
+    },
+    nextQuestion() {
+      this.answer = false;
+      router.push(this.questionLink);
+    },
+  },
   components: {
     Icon,
   },
@@ -56,10 +88,6 @@ export default {
       type: Array,
       required: true,
     },
-    routeQuestion: {
-      type: String,
-      required: false,
-    },
   },
   computed: {
     questionLink() {
@@ -68,6 +96,13 @@ export default {
         params: { routeQuestion: this.idQuestion + 1 },
       };
     },
+  },
+  watch: {
+    $route(route){
+      const questionRoute = route.params.routeQuestion;
+      const numberOfQuestion = this.questionList.length + 1
+     if(questionRoute == numberOfQuestion ) router.push('/quiz/score');
+    }
   },
 };
 </script>
@@ -86,7 +121,6 @@ export default {
   transform: translateX(0px);
 }
 
-
 .question-animation-leave-from {
   opacity: 1;
   transform: translateX(0px);
@@ -98,8 +132,6 @@ export default {
   opacity: 0;
   transform: translateX(400px);
 }
-
-// POZMIENIAJ
 
 li {
   list-style: none;
@@ -149,7 +181,9 @@ li {
     border-radius: 1.5rem;
 
     &:hover {
-      background-color: var(--hover-answer);
+      background-color: var(--color-checked);
+      box-shadow: 0 0 2rem rgb(0, 0, 0, 30%);
+      transition: 0.1s ease-in-out;
     }
     @media (min-width: 768px) {
       font-size: 1.4rem;
@@ -158,11 +192,37 @@ li {
   }
 }
 
-.switch-question{
+.correct,
+.incorrect {
+  transition: 0.2s ease-in-out;
+  &:hover {
+    background-color: var(--color-correct);
+    box-shadow: none;
+    transition: none;
+  }
+}
+.correct {
+  background-color: var(--color-correct);
+  &:hover {
+    background-color: var(--color-correct);
+  }
+}
+.incorrect {
+  background-color: var(--color-incorrect);
+  &:hover {
+    background-color: var(--color-incorrect);
+  }
+}
+
+.switch-question {
   display: flex;
   align-self: flex-end;
 
   &__next {
+    border: 0;
+  }
+  &__next,
+  &__skip {
     width: 65px;
     display: flex;
     justify-content: space-around;
