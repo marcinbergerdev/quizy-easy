@@ -42,10 +42,6 @@ html {
   font-size: 10px;
 }
 
-body {
-  overflow: hidden;
-}
-
 .route-enter-to,
 .route-leave-from {
   filter: brightness(100%);

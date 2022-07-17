@@ -22,8 +22,6 @@
           </li>
         </ul>
 
-        {{ score }}
-
         <section class="switch-question">
           <button
             :to="questionLink"

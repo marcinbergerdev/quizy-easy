@@ -39,6 +39,7 @@ export default {};
   padding: 10vh 0;
   background-color: var(--bg-quiz);
   overflow: auto;
+  overflow-x: hidden;
 }
 
 .quiz-header {
