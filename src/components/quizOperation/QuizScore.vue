@@ -18,11 +18,11 @@ export default {};
    display: flex;
    flex: 1;
    align-items: center;
-   margin-bottom: 10rem;
 }
 
 .score-box{
-   background-color: var( --color-quiz);
+  background-color: var( --color-quiz);
+  margin-bottom: 5rem;
    &__header{
 
    }

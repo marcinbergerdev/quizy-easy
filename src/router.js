@@ -4,7 +4,7 @@ const AppHomePage = () => import("./components/AppHomePage.vue");
 const AppLanguages = () => import("./components/languages/AppLanguages");
 const AppQuiz = () => import("./components/AppQuiz.vue");
 const QuestionList = () => import("./components/quizOperation/QuestionList.vue");
-const QuizScore = () => import("./components/quizOperation/QuizScore.vue");
+// const QuizScore = () => import("./components/quizOperation/QuizScore.vue");
 
 const router = createRouter({
    history: createWebHistory(),
@@ -34,11 +34,11 @@ const router = createRouter({
                component: QuestionList,
                props: true,
             },
-            {
-               name: "score",
-               path: "/quiz/score",
-               component: QuizScore,
-            },
+            // {
+            //    name: "score",
+            //    path: "/quiz/score",
+            //    component: QuizScore,
+            // },
          ],
          redirect: '/start-quiz'
       },

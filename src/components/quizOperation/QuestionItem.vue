@@ -10,25 +10,26 @@
         </header>
 
         <ul class="answers-list">
-          <li
-            class="answers-list__answer"
-            :class="answer ? checkAnswer(option.correct) : ''"
-            v-for="(option, index) in sugesstions"
-            :key="index"
-            @click="setSugesstion(option.correct)"
-          >
-            {{ option.sugesstion }}
+          <li v-for="(option, index) in sugesstions" :key="index">
+            <button
+              class="answers-list__answer"
+              :class="answer ? checkAnswer(selectedOptions[index]) : ''"
+              @click="setSugesstion(index, option.correct, sugesstions)"
+              :disabled="disabledActivity"
+            >
+              {{ option.sugesstion }}
+            </button>
           </li>
         </ul>
 
+        {{ score }}
+
         <section class="switch-question">
-          <router-link :to="questionLink" class="switch-question__skip">
-            Skip
-          </router-link>
           <button
             :to="questionLink"
             class="switch-question__next"
             @click="nextQuestion"
+            :disabled="!disabledActivity"
           >
             Next <Icon icon="akar-icons:arrow-right" />
           </button>
@@ -47,24 +48,36 @@ export default {
     return {
       score: 0,
       answer: false,
+      selectedOptions: [],
+      disabledActivity: false,
     };
   },
   methods: {
-    setSugesstion(correct) {
+    setSugesstion(index, correct) {
       if (correct) {
         this.score++;
       }
+
+      const selected = this.sugesstions.map((item) => {
+        if (item.correct) {
+          return "correct";
+        } else if (item.id === index && !item.correct) {
+          return "incorrect";
+        } else {
+          return "unmarked";
+        }
+      });
+
+      this.selectedOptions = selected;
       this.answer = true;
+      this.disabledActivity = true;
     },
-    checkAnswer(correct) {
-      if (correct) {
-        return "correct";
-      } else {
-        return "incorrect";
-      }
+    checkAnswer(options) {
+      return options;
     },
     nextQuestion() {
       this.answer = false;
+      this.disabledActivity = false;
       router.push(this.questionLink);
     },
   },
@@ -97,13 +110,13 @@ export default {
       };
     },
   },
-  watch: {
-    $route(route){
-      const questionRoute = route.params.routeQuestion;
-      const numberOfQuestion = this.questionList.length + 1
-     if(questionRoute == numberOfQuestion ) router.push('/quiz/score');
-    }
-  },
+  // watch: {
+  //   $route(route){
+  //     const questionRoute = route.params.routeQuestion;
+  //     const numberOfQuestion = this.questionList.length + 1
+  //    if(questionRoute == numberOfQuestion ) router.push('/quiz/score');
+  //   }
+  // },
 };
 </script>
 
@@ -174,17 +187,30 @@ li {
   padding: 4rem 1.8rem 2rem 1.8rem;
 
   &__answer {
+    width: 100%;
     padding: 1rem 1.5rem;
     font-size: 1.3rem;
     word-wrap: break-word;
+    text-align: start;
     background-color: var(--bg-answer);
     border-radius: 1.5rem;
+    border: 0;
 
     &:hover {
       background-color: var(--color-checked);
       box-shadow: 0 0 2rem rgb(0, 0, 0, 30%);
       transition: 0.1s ease-in-out;
     }
+
+    &:disabled {
+      transition: 0.2s ease-in-out;
+      color: #000;
+      &:hover {
+        box-shadow: none;
+        transition: none;
+      }
+    }
+
     @media (min-width: 768px) {
       font-size: 1.4rem;
       cursor: pointer;
@@ -201,17 +227,17 @@ li {
     transition: none;
   }
 }
-.correct {
+.correct,
+.correct:hover {
   background-color: var(--color-correct);
-  &:hover {
-    background-color: var(--color-correct);
-  }
 }
-.incorrect {
+.incorrect,
+.incorrect:hover {
   background-color: var(--color-incorrect);
-  &:hover {
-    background-color: var(--color-incorrect);
-  }
+}
+.unmarked,
+.unmarked:hover {
+  background-color: #aaadb0;
 }
 
 .switch-question {
@@ -235,6 +261,10 @@ li {
     align-self: flex-end;
     background-color: var(--header-quiz);
     border-radius: 5rem;
+
+    &:disabled {
+      opacity: 0.5;
+    }
 
     @media (min-width: 768px) {
       width: 65px;

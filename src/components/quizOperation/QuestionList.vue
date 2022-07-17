@@ -38,7 +38,7 @@ export default {
           sugesstions: [
             {
               id: 0,
-              sugesstion: "Usce semper hendrerit velit lacinia placerat.",
+              sugesstion: "Usce semper hendrerit velit lacinia placerat. true",
               correct: true,
             },
             {
@@ -119,65 +119,65 @@ export default {
             { id: 3, sugesstion: "Null.", correct: false },
           ],
         },
-        {
-          question:
-            "What do you do when you have to make an important decision?",
-          sugesstions: [
-            {
-              id: 0,
-              sugesstion: "Usce semper hendrerit velit lacinia placerat.",
-              correct: true,
-            },
-            {
-              id: 1,
-              sugesstion: "Donec pulvinar sit amet risus id eleifend.",
-              correct: false,
-            },
-            {
-              id: 2,
-              sugesstion: "Maecenas dignissim venenatis fermentum.",
-              correct: false,
-            },
-            {
-              id: 3,
-              sugesstion:
-                "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
-              correct: false,
-            },
-          ],
-        },
-        {
-          question: "What should you not do while making a decision?",
-          sugesstions: [
-            { id: 0, sugesstion: "Velit lacinia placerat.", correct: false },
-            { id: 1, sugesstion: "Donec pulvinar sit amet.", correct: false },
-            { id: 2, sugesstion: "Maecenas dignissim.", correct: true },
-            {
-              id: 3,
-              sugesstion:
-                "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
-              correct: false,
-            },
-          ],
-        },
-        {
-          question:
-            "How can you determine if your chosen decision will benefit you?",
-          sugesstions: [
-            {
-              id: 0,
-              sugesstion: "Usce semper hendrerit velit placerat.",
-              correct: false,
-            },
-            {
-              id: 1,
-              sugesstion: "Donec pulvinar sit amet risus id eleifend.",
-              correct: true,
-            },
-            { id: 2, sugesstion: "MVenenatis fermentum.", correct: false },
-            { id: 3, sugesstion: "Nulla porttitor nunc.", correct: false },
-          ],
-        },
+        // {
+        //   question:
+        //     "What do you do when you have to make an important decision?",
+        //   sugesstions: [
+        //     {
+        //       id: 0,
+        //       sugesstion: "Usce semper hendrerit velit lacinia placerat.",
+        //       correct: true,
+        //     },
+        //     {
+        //       id: 1,
+        //       sugesstion: "Donec pulvinar sit amet risus id eleifend.",
+        //       correct: false,
+        //     },
+        //     {
+        //       id: 2,
+        //       sugesstion: "Maecenas dignissim venenatis fermentum.",
+        //       correct: false,
+        //     },
+        //     {
+        //       id: 3,
+        //       sugesstion:
+        //         "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
+        //       correct: false,
+        //     },
+        //   ],
+        // },
+        // {
+        //   question: "What should you not do while making a decision?",
+        //   sugesstions: [
+        //     { id: 0, sugesstion: "Velit lacinia placerat.", correct: false },
+        //     { id: 1, sugesstion: "Donec pulvinar sit amet.", correct: false },
+        //     { id: 2, sugesstion: "Maecenas dignissim.", correct: true },
+        //     {
+        //       id: 3,
+        //       sugesstion:
+        //         "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
+        //       correct: false,
+        //     },
+        //   ],
+        // },
+        // {
+        //   question:
+        //     "How can you determine if your chosen decision will benefit you?",
+        //   sugesstions: [
+        //     {
+        //       id: 0,
+        //       sugesstion: "Usce semper hendrerit velit placerat.",
+        //       correct: false,
+        //     },
+        //     {
+        //       id: 1,
+        //       sugesstion: "Donec pulvinar sit amet risus id eleifend.",
+        //       correct: true,
+        //     },
+        //     { id: 2, sugesstion: "MVenenatis fermentum.", correct: false },
+        //     { id: 3, sugesstion: "Nulla porttitor nunc.", correct: false },
+        //   ],
+        // },
       ],
     };
   },
@@ -220,10 +220,6 @@ export default {
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
-  overflow-x: hidden;
-  @media (min-width: 768px) {
-    margin-top: -5rem;
-  }
 }
 
 .quiz-nav {
