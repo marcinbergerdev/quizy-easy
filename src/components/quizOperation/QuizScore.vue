@@ -9,7 +9,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+
+  beforeRouteLeave(to, from,next) {
+
+    if(to.name === 'languages') return next(true)
+    next(false);
+  },
+};
 </script>
 
 

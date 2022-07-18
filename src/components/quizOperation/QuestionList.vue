@@ -72,7 +72,7 @@ export default {
               sugesstion: "Donec pulvinar sit amet risus id eleifend.",
               correct: false,
             },
-            { id: 2, sugesstion: "Maecenas dignissim.", correct: true },
+            { id: 2, sugesstion: "Maecenas dignissim. true", correct: true },
             { id: 3, sugesstion: "Nulla.", correct: false },
           ],
         },
@@ -85,7 +85,7 @@ export default {
               sugesstion: "Donec sit amet risus id eleifend.",
               correct: false,
             },
-            { id: 2, sugesstion: "Fermentum.", correct: true },
+            { id: 2, sugesstion: "Fermentum. triue", correct: true },
             {
               id: 3,
               sugesstion: "Nulla porttitor nunc tellus, velnec.",
@@ -107,7 +107,7 @@ export default {
               sugesstion: "Maecenas dignissim fermentum.",
               correct: false,
             },
-            { id: 3, sugesstion: "Nulla porttitor", correct: true },
+            { id: 3, sugesstion: "Nulla porttitor true ", correct: true },
           ],
         },
         {
@@ -178,6 +178,42 @@ export default {
             { id: 3, sugesstion: "Nulla porttitor nunc.", correct: false },
           ],
         },
+        {
+          question:
+            "How can you determine if your chosen decision will benefit you?",
+          sugesstions: [
+            {
+              id: 0,
+              sugesstion: "Usce semper hendrerit velit placerat.",
+              correct: false,
+            },
+            {
+              id: 1,
+              sugesstion: "Donec pulvinar sit amet risus id eleifend.",
+              correct: true,
+            },
+            { id: 2, sugesstion: "MVenenatis fermentum.", correct: false },
+            { id: 3, sugesstion: "Nulla porttitor nunc.", correct: false },
+          ],
+        },
+        {
+          question:
+            "How can you determine if your chosen decision will benefit you?",
+          sugesstions: [
+            {
+              id: 0,
+              sugesstion: "Usce semper hendrerit velit placerat.",
+              correct: false,
+            },
+            {
+              id: 1,
+              sugesstion: "Donec pulvinar sit amet risus id eleifend.",
+              correct: true,
+            },
+            { id: 2, sugesstion: "MVenenatis fermentum.", correct: false },
+            { id: 3, sugesstion: "Nulla porttitor nunc.", correct: false },
+          ],
+        },
       ],
     };
   },
@@ -193,18 +229,12 @@ export default {
       this.changeQuestion(newRoute);
     },
   },
-  // beforeRouteUpdate(to, from, next) {
-  //   console.log(to);
-  //   console.log(from);
-  //   next(false);
-  // },
-  //   TUTAJ MOŻE SIĘ PRZYDAĆ GDY NIE ZOSTANIE WYBRANA ZADNA Z OPCJI A KTOŚ KLIKNIE DALEJ
 
-  // beforeRouteLeave(to, from, next) {
-  //   console.log(to);
-  //   console.log(from);
-  //   next(false);
-  // },
+  beforeRouteUpdate(to, from, next) {
+    const toNextRoute = Number(to.params.routeQuestion);
+    const fromCurrentRoute = Number(from.params.routeQuestion);
+    fromCurrentRoute > toNextRoute ? next(false) : next(true);
+  },
   created() {
     const newRoute = Number(this.$route.params.routeQuestion);
     this.changeQuestion(newRoute);
@@ -221,7 +251,7 @@ export default {
   align-items: center;
   margin-top: 1rem;
 
-  @media(max-width: 768px) and (orientation: landscape){
+  @media (max-width: 768px) and (orientation: landscape) {
     margin-top: 5rem;
   }
 }

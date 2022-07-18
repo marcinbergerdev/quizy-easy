@@ -42,6 +42,7 @@ html {
   font-size: 10px;
 }
 
+
 .route-enter-to,
 .route-leave-from {
   filter: brightness(100%);

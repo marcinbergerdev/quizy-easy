@@ -22,6 +22,7 @@
           </li>
         </ul>
 
+
         <section class="switch-question">
           <button
             :to="questionLink"
@@ -42,9 +43,30 @@ import { Icon } from "@iconify/vue";
 import router from "@/router";
 
 export default {
+  components: {
+    Icon,
+  },
+  props: {
+    idQuestion: {
+      type: Number,
+      required: true,
+    },
+    questionList: {
+      type: Array,
+      required: true,
+    },
+    question: {
+      type: String,
+      required: true,
+    },
+    sugesstions: {
+      type: Array,
+      required: true,
+    },
+  },
+  inject: ['addPoint'],
   data() {
     return {
-      score: 0,
       answer: false,
       selectedOptions: [],
       disabledActivity: false,
@@ -52,9 +74,7 @@ export default {
   },
   methods: {
     setSugesstion(index, correct) {
-      if (correct) {
-        this.score++;
-      }
+      if (correct) this.addPoint();
 
       const selected = this.sugesstions.map((item) => {
         if (item.correct) {
@@ -79,42 +99,21 @@ export default {
       router.push(this.questionLink);
     },
   },
-  components: {
-    Icon,
-  },
-  props: {
-    idQuestion: {
-      type: Number,
-      required: true,
-    },
-    questionList: {
-      type: Array,
-      required: true,
-    },
-    question: {
-      type: String,
-      required: true,
-    },
-    sugesstions: {
-      type: Array,
-      required: true,
-    },
-  },
   computed: {
     questionLink() {
       return {
         name: "question",
-        params: { routeQuestion: this.idQuestion + 1 },
+        params: { routeQuestion: this.idQuestion + 1},
       };
     },
   },
-  // watch: {
-  //   $route(route){
-  //     const questionRoute = route.params.routeQuestion;
-  //     const numberOfQuestion = this.questionList.length + 1
-  //    if(questionRoute == numberOfQuestion ) router.push('/quiz/score');
-  //   }
-  // },
+  watch: {
+    $route(route){
+      const questionRoute = route.params.routeQuestion;
+      const numberOfQuestion = this.questionList.length
+      if(questionRoute >= numberOfQuestion + 1 ) router.push('/quiz/score');
+    }
+  },
 };
 </script>
 
@@ -235,7 +234,7 @@ li {
 }
 .unmarked,
 .unmarked:hover {
-  background-color: #aaadb0;
+  background-color: #c0c2c4;
 }
 
 .switch-question {

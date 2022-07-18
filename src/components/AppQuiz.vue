@@ -13,7 +13,23 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return {
+      score: 0
+    }
+  },
+  provide(){
+    return {
+      addPoint: this.addPoint,
+    }
+  },
+  methods: {
+    addPoint(){
+      ++this.score;
+    },
+  }
+};
 </script>
 
 <style lang="scss" scoped>
