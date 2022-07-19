@@ -1,19 +1,20 @@
 <template>
-  <main class='score-container'>
-    <article class='score-box'>
-      <header class='score-box__header'>Gratulacje</header>
-      <p class='score-box__score'>Twoje punkty to 8/10</p>
-      <router-link class='score-box__again' to="/quiz/languages">Play again</router-link>
+  <main class="score-container">
+    <article class="score-box">
+      <header class="score-box__header">Gratulacje</header>
+      <p class="score-box__score">Twoje punkty to {{ userScore() }}/10</p>
+      <router-link class="score-box__again" to="/quiz/languages"
+        >Play again</router-link
+      >
     </article>
   </main>
 </template>
 
 <script>
 export default {
-
-  beforeRouteLeave(to, from,next) {
-
-    if(to.name === 'languages') return next(true)
+  inject: ["userScore"],
+  beforeRouteLeave(to, from, next) {
+    if (to.name === "languages") return next(true);
     next(false);
   },
 };
@@ -21,25 +22,22 @@ export default {
 
 
 <style lang="scss" scoped>
-.score-container{
-   display: flex;
-   flex: 1;
-   align-items: center;
+.score-container {
+  display: flex;
+  flex: 1;
+  align-items: center;
 }
 
-.score-box{
-  background-color: var( --color-quiz);
+.score-box {
+  background-color: var(--color-quiz);
   margin-bottom: 5rem;
-   &__header{
+  &__header {
+  }
 
-   }
+  &__score {
+  }
 
-   &__score{
-
-   }
-
-   &__again{
-
-   }
+  &__again {
+  }
 }
 </style>

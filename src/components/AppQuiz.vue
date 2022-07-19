@@ -14,21 +14,29 @@
 
 <script>
 export default {
-  data(){
+  data() {
     return {
-      score: 0
-    }
+      score: 0,
+    };
   },
-  provide(){
+  provide() {
     return {
       addPoint: this.addPoint,
-    }
+      userScore: this.userScore,
+      resetPoint: this.resetPoint,
+    };
   },
   methods: {
-    addPoint(){
+    addPoint() {
       ++this.score;
     },
-  }
+    userScore() {
+      return this.score;
+    },
+    resetPoint() {
+      this.score = 0;
+    },
+  },
 };
 </script>
 

@@ -57,15 +57,16 @@
           />
         </div>
       </form>
-      <router-link to="/quiz/question/1" class="confrim-languages"
-        >Select</router-link
-      >
+
+      <button class="confrim-languages" @click="startGame">Select</button>
     </article>
   </main>
 </template>
 
 <script>
+import router from "@/router";
 export default {
+  inject: ["resetPoint"],
   data() {
     return {
       language: "eng",
@@ -74,7 +75,10 @@ export default {
   methods: {
     selectLanguage(language) {
       this.language = language;
-      console.log(language);
+    },
+    startGame() {
+      this.resetPoint();
+      router.push("/quiz/question/1");
     },
   },
 };
@@ -156,5 +160,10 @@ export default {
   background-color: var(--header-quiz);
   color: var(--white);
   border-radius: 0.3rem;
+  border: 0;
+
+  @media (min-width: 768px) {
+    cursor: pointer;
+  }
 }
 </style>
