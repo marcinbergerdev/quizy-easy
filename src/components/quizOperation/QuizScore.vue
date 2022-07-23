@@ -11,7 +11,7 @@
         <p class="score-info__score">
           poprawne odpowiedzi: {{ userScore() }} z {{ questions.length }}
         </p>
-        <router-link class="score-info__again" to="/quiz/languages"
+        <router-link class="score-info__again" to="/quiz/languages" @click="removeConfetti"
           >Play again</router-link
         >
       </section>
@@ -22,6 +22,11 @@
 <script>
 export default {
   inject: ["userScore", "questions"],
+  methods: {
+    removeConfetti(){
+      this.$confetti.stop();
+    }
+  },
   beforeRouteLeave(to, from, next) {
     if (to.name === "languages") return next(true);
     next(false);
@@ -31,7 +36,7 @@ export default {
     if(score === 10){
       this.$confetti.start();
     }
-  }
+  },
 };
 </script>
 

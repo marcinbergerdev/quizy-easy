@@ -11,6 +11,7 @@
           :id-question="numberOfQuestion"
           :question="option.question"
           :sugesstions="option.sugesstions"
+          :route-question="this.routeQuestion"
         ></question-item>
       </ul>
     </nav>
@@ -25,7 +26,7 @@ export default {
     QuestionItem,
   },
   props: ["routeQuestion"],
-  inject: ['questions'],
+  inject: ["questions"],
   data() {
     return {
       currentQuestion: 0,

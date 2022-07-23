@@ -24,7 +24,6 @@
 
         <section class="switch-question">
           <button
-            :to="questionLink"
             class="switch-question__next"
             @click="nextQuestion"
             :disabled="!disabledActivity"
@@ -59,6 +58,10 @@ export default {
       type: Array,
       required: true,
     },
+    routeQuestion: {
+      type: [Number, String],
+      required: true,
+    },
   },
   data() {
     return {
@@ -89,6 +92,11 @@ export default {
       return options;
     },
     nextQuestion() {
+      const routeQuestion = Number(this.routeQuestion);
+      if (routeQuestion === 10) {
+        return router.push("/quiz/score");
+      }
+
       this.answer = false;
       this.disabledActivity = false;
       router.push(this.questionLink);
@@ -98,15 +106,13 @@ export default {
     questionLink() {
       return {
         name: "question",
-        params: { routeQuestion: this.idQuestion + 1 },
+        params: {
+          routeQuestion:
+            this.idQuestion === this.questions.length
+              ? this.questions.length
+              : this.idQuestion + 1,
+        },
       };
-    },
-  },
-  watch: {
-    $route(route) {
-      const questionRoute = route.params.routeQuestion;
-      const numberOfQuestion = this.questions.length;
-      if (questionRoute >= numberOfQuestion + 1) router.push("/quiz/score");
     },
   },
 };
