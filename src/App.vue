@@ -18,7 +18,7 @@
   --bg-language: #d9d9d9;
 
   --header-quiz: #152538;
-  --logo-quiz: #bce4f8;
+  --logo-quiz: #ebf7ff;
   --color-quiz: #e5e7e9;
   --color-triangle: #001226;
   --bg-answer: #d5d8dc;

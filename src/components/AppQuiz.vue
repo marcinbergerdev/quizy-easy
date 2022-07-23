@@ -14,16 +14,202 @@
 
 <script>
 export default {
-  data() {
-    return {
-      score: 0,
-    };
-  },
   provide() {
     return {
       addPoint: this.addPoint,
       userScore: this.userScore,
       resetPoint: this.resetPoint,
+      questions: this.questions,
+    };
+  },
+  data() {
+    return {
+      score: 0,
+      questionsNumber: 0,
+      questions: [
+        {
+          question:
+            "How do you take the best decision among several possibilities?",
+          sugesstions: [
+            {
+              id: 0,
+              sugesstion: "Usce semper hendrerit velit lacinia placerat. true",
+              correct: true,
+            },
+            {
+              id: 1,
+              sugesstion: "Donec pulvinar sit amet risus i eleifend.",
+              correct: false,
+            },
+            {
+              id: 2,
+              sugesstion: "Maecenas dignissim venenatis fermentum.",
+              correct: false,
+            },
+            {
+              id: 3,
+              sugesstion:
+                "Nulla porttitor nunc tellus, vel consequat risus porta",
+              correct: false,
+            },
+          ],
+        },
+        {
+          question: "How do you take the best design ever?",
+          sugesstions: [
+            {
+              id: 0,
+              sugesstion: "Usce semper hlacinia placerat.",
+              correct: false,
+            },
+            {
+              id: 1,
+              sugesstion: "Donec pulvinar sit amet risus id eleifend.",
+              correct: false,
+            },
+            { id: 2, sugesstion: "Maecenas dignissim. true", correct: true },
+            { id: 3, sugesstion: "Nulla.", correct: false },
+          ],
+        },
+        {
+          question: "How get only one element from array?",
+          sugesstions: [
+            { id: 0, sugesstion: "Usce sempe.", correct: false },
+            {
+              id: 1,
+              sugesstion: "Donec sit amet risus id eleifend.",
+              correct: false,
+            },
+            { id: 2, sugesstion: "Fermentum. triue", correct: true },
+            {
+              id: 3,
+              sugesstion: "Nulla porttitor nunc tellus, velnec.",
+              correct: false,
+            },
+          ],
+        },
+        {
+          question: "What makes decision-making effective?",
+          sugesstions: [
+            { id: 0, sugesstion: "Usce.", correct: false },
+            {
+              id: 1,
+              sugesstion: "Donec pulvinar sit amet risus id eleifend.",
+              correct: false,
+            },
+            {
+              id: 2,
+              sugesstion: "Maecenas dignissim fermentum.",
+              correct: false,
+            },
+            { id: 3, sugesstion: "Nulla porttitor true ", correct: true },
+          ],
+        },
+        {
+          question: "How do you make a decision when both options are good?",
+          sugesstions: [
+            { id: 0, sugesstion: "Usce.", correct: false },
+            { id: 1, sugesstion: "Donec.", correct: false },
+            { id: 2, sugesstion: "Maecenas. true", correct: true },
+            { id: 3, sugesstion: "Null.", correct: false },
+          ],
+        },
+        {
+          question:
+            "What do you do when you have to make an important decision?",
+          sugesstions: [
+            {
+              id: 0,
+              sugesstion: "Usce semper hendrerit velit lacinia placerat. true",
+              correct: true,
+            },
+            {
+              id: 1,
+              sugesstion: "Donec pulvinar sit amet risus id eleifend.",
+              correct: false,
+            },
+            {
+              id: 2,
+              sugesstion: "Maecenas dignissim venenatis fermentum.",
+              correct: false,
+            },
+            {
+              id: 3,
+              sugesstion:
+                "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
+              correct: false,
+            },
+          ],
+        },
+        {
+          question: "What should you not do while making a decision?",
+          sugesstions: [
+            { id: 0, sugesstion: "Velit lacinia placerat.", correct: false },
+            { id: 1, sugesstion: "Donec pulvinar sit amet.", correct: false },
+            { id: 2, sugesstion: "Maecenas dignissim. true", correct: true },
+            {
+              id: 3,
+              sugesstion:
+                "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
+              correct: false,
+            },
+          ],
+        },
+        {
+          question:
+            "How can you determine if your chosen decision will benefit you?",
+          sugesstions: [
+            {
+              id: 0,
+              sugesstion: "Usce semper hendrerit velit placerat.",
+              correct: false,
+            },
+            {
+              id: 1,
+              sugesstion: "Donec pulvinar sit amet risus id eleifend. true ",
+              correct: true,
+            },
+            { id: 2, sugesstion: "MVenenatis fermentum.", correct: false },
+            { id: 3, sugesstion: "Nulla porttitor nunc.", correct: false },
+          ],
+        },
+        {
+          question:
+            "How can you determine if your chosen decision will benefit you?",
+          sugesstions: [
+            {
+              id: 0,
+              sugesstion: "Usce semper hendrerit velit placerat.",
+              correct: false,
+            },
+            {
+              id: 1,
+              sugesstion: "Donec pulvinar sit amet risus id eleifend. true",
+              correct: true,
+            },
+            { id: 2, sugesstion: "MVenenatis fermentum.", correct: false },
+            { id: 3, sugesstion: "Nulla porttitor nunc.", correct: false },
+          ],
+        },
+        {
+          question:
+            "How can you determine if your chosen decision will benefit you?",
+          sugesstions: [
+            {
+              id: 0,
+              sugesstion: "Usce semper hendrerit velit placerat.",
+              correct: false,
+            },
+            {
+              id: 1,
+              sugesstion: "Donec pulvinar sit amet risus id eleifend. true",
+              correct: true,
+            },
+            { id: 2, sugesstion: "MVenenatis fermentum.", correct: false },
+            { id: 3, sugesstion: "Nulla porttitor nunc.", correct: false },
+          ],
+        },
+      ],
     };
   },
   methods: {
@@ -69,7 +255,7 @@ export default {
 .quiz-header {
   &__logo {
     font-size: 3rem;
-    color: var(--logo-quiz);
+    color: #ebf7ff;
   }
 }
 </style>

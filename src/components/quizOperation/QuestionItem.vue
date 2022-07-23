@@ -5,7 +5,7 @@
         <header class="question-header">
           <h1 class="question-header__question">{{ question }}</h1>
           <span class="question-header__counter"
-            >{{ idQuestion }}/ {{ questionList.length }}</span
+            >{{ idQuestion }}/ {{ questions.length }}</span
           >
         </header>
 
@@ -14,14 +14,13 @@
             <button
               class="answers-list__answer"
               :class="answer ? checkAnswer(selectedOptions[index]) : ''"
-              @click="setSugesstion(index, option.correct, sugesstions)"
+              @click="setSugesstion(index, option.correct)"
               :disabled="disabledActivity"
             >
               {{ option.sugesstion }}
             </button>
           </li>
         </ul>
- 
 
         <section class="switch-question">
           <button
@@ -46,13 +45,10 @@ export default {
   components: {
     Icon,
   },
+  inject: ["addPoint", "questions"],
   props: {
     idQuestion: {
       type: Number,
-      required: true,
-    },
-    questionList: {
-      type: Array,
       required: true,
     },
     question: {
@@ -64,7 +60,6 @@ export default {
       required: true,
     },
   },
-  inject: ['addPoint'],
   data() {
     return {
       answer: false,
@@ -86,9 +81,9 @@ export default {
         }
       });
 
-      this.selectedOptions = selected;
       this.answer = true;
       this.disabledActivity = true;
+      this.selectedOptions = selected;
     },
     checkAnswer(options) {
       return options;
@@ -103,16 +98,16 @@ export default {
     questionLink() {
       return {
         name: "question",
-        params: { routeQuestion: this.idQuestion + 1},
+        params: { routeQuestion: this.idQuestion + 1 },
       };
     },
   },
   watch: {
-    $route(route){
+    $route(route) {
       const questionRoute = route.params.routeQuestion;
-      const numberOfQuestion = this.questionList.length
-      if(questionRoute >= numberOfQuestion + 1 ) router.push('/quiz/score');
-    }
+      const numberOfQuestion = this.questions.length;
+      if (questionRoute >= numberOfQuestion + 1) router.push("/quiz/score");
+    },
   },
 };
 </script>

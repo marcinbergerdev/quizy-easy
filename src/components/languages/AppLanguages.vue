@@ -61,6 +61,9 @@
       <button class="confrim-languages" @click="startGame">Select</button>
     </article>
   </main>
+
+
+
 </template>
 
 <script>
@@ -85,6 +88,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .quiz-main {
   width: 100%;
   max-width: 25rem;
