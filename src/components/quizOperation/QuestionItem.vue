@@ -93,7 +93,7 @@ export default {
     },
     nextQuestion() {
       const routeQuestion = Number(this.routeQuestion);
-      if (routeQuestion === 10) {
+      if (routeQuestion === this.questions.length) {
         return router.push("/quiz/score");
       }
 

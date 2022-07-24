@@ -3,15 +3,18 @@
     <article class="score-box">
       <header class="score-header">
         <h1 class="score-header__text">Score!</h1>
-        <span class="score-header__userScore">{{ userScore() }}</span>
+        <span class="score-header__userScore">{{ score }}</span>
       </header>
 
       <section class="score-info">
-        <p class="score-info__txt">Gratulacje jestes koxem</p>
+        <p class="score-info__txt">{{ feedback }}</p>
         <p class="score-info__score">
-          poprawne odpowiedzi: {{ userScore() }} z {{ questions.length }}
+          poprawne odpowiedzi: {{ score }} z {{ questions.length }}
         </p>
-        <router-link class="score-info__again" to="/quiz/languages" @click="removeConfetti"
+        <router-link
+          class="score-info__again"
+          to="/quiz/languages"
+          @click="removeConfetti"
           >Play again</router-link
         >
       </section>
@@ -22,18 +25,40 @@
 <script>
 export default {
   inject: ["userScore", "questions"],
+  data() {
+    return {
+      score: 0,
+    };
+  },
   methods: {
-    removeConfetti(){
+    removeConfetti() {
       this.$confetti.stop();
-    }
+    },
+  },
+  computed: {
+    feedback() {
+      let feedback = "";
+      if (this.score <= this.questions.length * 0.3) {
+        feedback = "Musisz jeszcze troche przyłożyć sie do nauki :)";
+      } else if (this.score <= this.questions.length * 0.6) {
+        feedback = "Więcej niż połowa, jest dobrze!";
+      } else if (this.score <= this.questions.length * 0.9) {
+        feedback = "Twoja wiedza jest na dobrym poziomie, trzymaj tak dalej!";
+      } else if (this.score <= this.questions.length * 1.0) {
+        feedback = "Powinnieneś już zacząć szukać pracy w It :)";
+      }
+      return feedback;
+    },
   },
   beforeRouteLeave(to, from, next) {
     if (to.name === "languages") return next(true);
     next(false);
   },
-  created(){
+  created() {
     const score = this.userScore();
-    if(score === 10){
+
+    this.score = score;
+    if (score === this.questions.length) {
       this.$confetti.start();
     }
   },
