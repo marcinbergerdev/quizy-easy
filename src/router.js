@@ -3,6 +3,8 @@ import { createRouter, createWebHistory } from "vue-router";
 const AppHomePage = () => import("./components/AppHomePage.vue");
 const AppLanguages = () => import("./components/languages/AppLanguages");
 const AppQuiz = () => import("./components/AppQuiz.vue");
+const QuizCategory = () => import("./components/category/QuizCategory.vue");
+
 const QuestionList = () => import("./components/quizOperation/QuestionList.vue");
 const QuizScore = () => import("./components/quizOperation/QuizScore.vue");
 
@@ -27,6 +29,11 @@ const router = createRouter({
                name: "languages",
                path: "/quiz/languages",
                component: AppLanguages,
+            },
+            {
+               name: "cateory",
+               path: "/quiz/category",
+               component: QuizCategory,
             },
             {
                name: "question",

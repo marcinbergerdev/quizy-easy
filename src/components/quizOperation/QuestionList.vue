@@ -1,5 +1,4 @@
 <template>
-  <main class="quiz-questions">
     <nav class="quiz-nav">
       <ul>
         <question-item
@@ -15,7 +14,6 @@
         ></question-item>
       </ul>
     </nav>
-  </main>
 </template>
 
 <script>
@@ -60,18 +58,6 @@ export default {
 </script>
 
 <style lang="scss">
-.quiz-questions {
-  width: 100%;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-
-  @media (max-width: 768px) and (orientation: landscape) {
-    margin-top: 5rem;
-  }
-}
 
 .quiz-nav {
   width: min(700px, 70%);

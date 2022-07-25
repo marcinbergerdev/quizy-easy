@@ -10,7 +10,7 @@
         </header>
 
         <ul class="answers-list">
-          <li v-for="(option, index) in sugesstions" :key="index">
+           <li v-for="(option, index) in sugesstions" :key="index">
             <button
               class="answers-list__answer"
               :class="answer ? checkAnswer(selectedOptions[index]) : ''"

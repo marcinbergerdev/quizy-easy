@@ -1,5 +1,4 @@
 <template>
-  <main class="quiz-main">
     <article class="container-languages">
       <header class="header">
         <h1 class="header__txt">Select language</h1>
@@ -60,10 +59,6 @@
 
       <button class="confrim-languages" @click="startGame">Select</button>
     </article>
-  </main>
-
-
-
 </template>
 
 <script>
@@ -89,18 +84,11 @@ export default {
 
 <style lang="scss" scoped>
 
-.quiz-main {
-  width: 100%;
-  max-width: 25rem;
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-
 .container-languages {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 25rem;
   margin: 1rem 1rem 5rem 1rem;
   color: var(--white);
   background-color: var(--color-quiz);

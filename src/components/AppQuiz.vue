@@ -4,11 +4,13 @@
       <h1 class="quiz-header__logo">Quizy Easy</h1>
     </header>
 
-    <router-view v-slot="quizContent">
-      <transition name="route-quiz" mode="out-in">
-        <component :is="quizContent.Component"></component>
-      </transition>
-    </router-view>
+    <main class="quiz-main">
+      <router-view v-slot="quizContent">
+        <transition name="route-quiz" mode="out-in">
+          <component :is="quizContent.Component"></component>
+        </transition>
+      </router-view>
+    </main>
   </div>
 </template>
 
@@ -17,14 +19,14 @@ export default {
   provide() {
     return {
       addPoint: this.addPoint,
-      userScore: this.userScore,
+      setUserScore: this.setUserScore,
       resetPoint: this.resetPoint,
       questions: this.questions,
     };
   },
   data() {
     return {
-      score: 0,
+      userScore: 0,
       questionsNumber: 0,
       questions: [
         {
@@ -214,13 +216,13 @@ export default {
   },
   methods: {
     addPoint() {
-      ++this.score;
+      ++this.userScore;
     },
-    userScore() {
-      return this.score;
+    setUserScore() {
+      return this.userScore;
     },
     resetPoint() {
-      this.score = 0;
+      this.userScore = 0;
     },
   },
 };
@@ -257,6 +259,14 @@ export default {
     font-size: 3rem;
     color: #ebf7ff;
   }
+}
+
+.quiz-main {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
 

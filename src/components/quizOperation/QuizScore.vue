@@ -1,30 +1,28 @@
 <template>
-  <main class="score-container">
-    <article class="score-box">
-      <header class="score-header">
-        <h1 class="score-header__text">Score!</h1>
-        <span class="score-header__userScore">{{ score }}</span>
-      </header>
+  <article class="score-box">
+    <header class="score-header">
+      <h1 class="score-header__text">Score!</h1>
+      <span class="score-header__userScore">{{ score }}</span>
+    </header>
 
-      <section class="score-info">
-        <p class="score-info__txt">{{ feedback }}</p>
-        <p class="score-info__score">
-          poprawne odpowiedzi: {{ score }} z {{ questions.length }}
-        </p>
-        <router-link
-          class="score-info__again"
-          to="/quiz/languages"
-          @click="removeConfetti"
-          >Play again</router-link
-        >
-      </section>
-    </article>
-  </main>
+    <section class="score-info">
+      <p class="score-info__txt">{{ feedback }}</p>
+      <p class="score-info__score">
+        poprawne odpowiedzi: {{ score }} z {{ questions.length }}
+      </p>
+      <router-link
+        class="score-info__again"
+        to="/quiz/languages"
+        @click="removeConfetti"
+        >Play again</router-link
+      >
+    </section>
+  </article>
 </template>
 
 <script>
 export default {
-  inject: ["userScore", "questions"],
+  inject: ["setUserScore", "questions"],
   data() {
     return {
       score: 0,
@@ -38,14 +36,15 @@ export default {
   computed: {
     feedback() {
       let feedback = "";
+
       if (this.score <= this.questions.length * 0.3) {
         feedback = "Musisz jeszcze troche przyłożyć sie do nauki :)";
       } else if (this.score <= this.questions.length * 0.6) {
         feedback = "Więcej niż połowa, jest dobrze!";
-      } else if (this.score <= this.questions.length * 0.9) {
+      } else if (this.score <= this.questions.length * 0.8) {
         feedback = "Twoja wiedza jest na dobrym poziomie, trzymaj tak dalej!";
       } else if (this.score <= this.questions.length * 1.0) {
-        feedback = "Powinnieneś już zacząć szukać pracy w It :)";
+        feedback = "Praca w It gdzieś tam na Ciebie czeka :)";
       }
       return feedback;
     },
@@ -55,9 +54,9 @@ export default {
     next(false);
   },
   created() {
-    const score = this.userScore();
-
+    const score = this.setUserScore();
     this.score = score;
+
     if (score === this.questions.length) {
       this.$confetti.start();
     }
@@ -67,16 +66,10 @@ export default {
 
 
 <style lang="scss" scoped>
-.score-container {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  width: 100%;
-}
-
 .score-box {
   width: min(80%, 50rem);
   margin: 0 auto;
+  padding: 0 2.5rem;
   text-align: center;
   background-color: #ebf7ff;
   color: #2b2a2a;
