@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 const AppHomePage = () => import("./components/AppHomePage.vue");
-const AppLanguages = () => import("./components/languages/AppLanguages");
 const AppQuiz = () => import("./components/AppQuiz.vue");
 const QuizCategory = () => import("./components/category/QuizCategory.vue");
+const QuizLanguages = () => import("./components/languages/QuizLanguages");
 
 const QuestionList = () => import("./components/quizOperation/QuestionList.vue");
 const QuizScore = () => import("./components/quizOperation/QuizScore.vue");
@@ -26,14 +26,14 @@ const router = createRouter({
          component: AppQuiz,
          children: [
             {
-               name: "languages",
-               path: "/quiz/languages",
-               component: AppLanguages,
-            },
-            {
-               name: "cateory",
+               name: "category",
                path: "/quiz/category",
                component: QuizCategory,
+            },
+            {
+               name: "languages",
+               path: "/quiz/languages",
+               component: QuizLanguages,
             },
             {
                name: "question",

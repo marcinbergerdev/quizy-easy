@@ -23,7 +23,7 @@ export default {
   components: {
     QuestionItem,
   },
-  props: ["routeQuestion"],
+  props: ["routeQuestion", "selectedCategory"],
   inject: ["questions"],
   data() {
     return {
@@ -53,6 +53,9 @@ export default {
     const newRoute = Number(this.$route.params.routeQuestion);
     this.changeQuestion(newRoute);
     this.questionsNumber = this.questions.length;
+
+    // console.log(this.selectedCategory);
+
   },
 };
 </script>
