@@ -5,12 +5,12 @@
         <header class="question-header">
           <h1 class="question-header__question">{{ question }}</h1>
           <span class="question-header__counter"
-            >{{ idQuestion }}/ {{ questions.length }}</span
+            >{{ idQuestion }}/{{ selectedQuestions.length }}</span
           >
         </header>
 
         <ul class="answers-list">
-           <li v-for="(option, index) in sugesstions" :key="index">
+          <li v-for="(option, index) in sugesstions" :key="index">
             <button
               class="answers-list__answer"
               :class="answer ? checkAnswer(selectedOptions[index]) : ''"
@@ -44,7 +44,7 @@ export default {
   components: {
     Icon,
   },
-  inject: ["addPoint", "questions"],
+  inject: ["addPoint"],
   props: {
     idQuestion: {
       type: Number,
@@ -62,6 +62,10 @@ export default {
       type: [Number, String],
       required: true,
     },
+    selectedQuestions: {
+      type: Object,
+      required: true,
+    },
   },
   data() {
     return {
@@ -74,10 +78,10 @@ export default {
     setSugesstion(index, correct) {
       if (correct) this.addPoint();
 
-      const selected = this.sugesstions.map((item) => {
-        if (item.correct) {
+      const selected = this.sugesstions.map(({id, correct}) => {
+        if (correct) {
           return "correct";
-        } else if (item.id === index && !item.correct) {
+        } else if (id === index && !correct) {
           return "incorrect";
         } else {
           return "unmarked";
@@ -93,7 +97,7 @@ export default {
     },
     nextQuestion() {
       const routeQuestion = Number(this.routeQuestion);
-      if (routeQuestion === this.questions.length) {
+      if (routeQuestion === this.selectedQuestions.length) {
         return router.push("/quiz/score");
       }
 
@@ -108,8 +112,8 @@ export default {
         name: "question",
         params: {
           routeQuestion:
-            this.idQuestion === this.questions.length
-              ? this.questions.length
+            this.idQuestion === this.selectedQuestions.length
+              ? this.selectedQuestions.length
               : this.idQuestion + 1,
         },
       };

@@ -1,45 +1,50 @@
 <template>
-    <article class="score-box">
-      <header class="score-header">
-        <h1 class="score-header__text">Score!</h1>
-        <span class="score-header__userScore">{{ userScore }}</span>
-      </header>
+  <article class="score-box">
+    <header class="score-header">
+      <h1 class="score-header__text">Score!</h1>
+      <span class="score-header__userScore">{{ userScore }}</span>
+    </header>
 
-      <section class="score-info">
-        <p class="score-info__txt">{{ feedback }}</p>
-        <p class="score-info__score">
-          poprawne odpowiedzi: {{ userScore }} z {{ questions.length }}
-        </p>
-        <router-link
-          class="score-info__again"
-          to="/quiz/category"
-          @click="removeConfetti"
-          >Play again</router-link
-        >
-      </section>
-    </article>
+    <section class="score-info">
+      <p class="score-info__txt">{{ feedback }}</p>
+      <p class="score-info__score">
+        poprawne odpowiedzi: {{ userScore }} z {{ selectedQuestions.length }}
+      </p>
+      <router-link
+        class="score-info__again"
+        to="/quiz/category"
+        @click="playAgain"
+        >Play again</router-link
+      >
+    </section>
+  </article>
 </template>
 
 <script>
 export default {
-  inject: ["questions"],
   props: ["userScore"],
+  data() {
+    return {
+      selectedQuestions: [],
+    };
+  },
   methods: {
-    removeConfetti() {
+    playAgain() {
       this.$confetti.stop();
+      localStorage.removeItem("questions");
     },
   },
   computed: {
     feedback() {
       let feedback = "";
 
-      if (this.userScore <= this.questions.length * 0.3) {
+      if (this.userScore <= this.selectedQuestions.length * 0.3) {
         feedback = "Musisz jeszcze troche przyłożyć sie do nauki :)";
-      } else if (this.userScore <= this.questions.length * 0.6) {
+      } else if (this.userScore <= this.selectedQuestions.length * 0.6) {
         feedback = "Więcej niż połowa, jest dobrze!";
-      } else if (this.userScore <= this.questions.length * 0.8) {
+      } else if (this.userScore <= this.selectedQuestions.length * 0.8) {
         feedback = "Twoja wiedza jest na dobrym poziomie, trzymaj tak dalej!";
-      } else if (this.userScore <= this.questions.length * 1.0) {
+      } else if (this.userScore <= this.selectedQuestions.length * 1.0) {
         feedback = "Praca w It gdzieś tam na Ciebie czeka :)";
       }
       return feedback;
@@ -50,7 +55,10 @@ export default {
     next(false);
   },
   created() {
-    if (this.userScore === this.questions.length) {
+    const selectedQuestions = JSON.parse(localStorage.getItem("questions"));
+    this.selectedQuestions = selectedQuestions;
+
+    if (this.userScore === this.selectedQuestions.length) {
       this.$confetti.start();
     }
   },
@@ -59,7 +67,6 @@ export default {
 
 
 <style lang="scss" scoped>
-
 .score-box {
   width: min(80%, 50rem);
   margin: 0 auto;

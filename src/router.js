@@ -5,7 +5,8 @@ const AppQuiz = () => import("./components/AppQuiz.vue");
 const QuizCategory = () => import("./components/category/QuizCategory.vue");
 const QuizLanguages = () => import("./components/languages/QuizLanguages");
 
-const QuestionList = () => import("./components/quizOperation/QuestionList.vue");
+const QuestionList = () =>
+   import("./components/quizOperation/QuestionList.vue");
 const QuizScore = () => import("./components/quizOperation/QuizScore.vue");
 
 const router = createRouter({
@@ -47,7 +48,7 @@ const router = createRouter({
                component: QuizScore,
             },
          ],
-         redirect: '/start-quiz'
+         redirect: "/start-quiz",
       },
    ],
 });

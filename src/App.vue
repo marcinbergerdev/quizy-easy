@@ -23,7 +23,6 @@
   --color-triangle: #001226;
   --bg-answer: #d5d8dc;
 
-
   --color-incorrect: #e67f7f;
   --color-correct: #7fe689;
   --color-checked: #7fc4e6;
@@ -41,7 +40,6 @@
 html {
   font-size: 10px;
 }
-
 
 .route-enter-to,
 .route-leave-from {

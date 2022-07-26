@@ -5,10 +5,16 @@
     </header>
 
     <section class="select-category">
-      <router-link to="/quiz/languages" class="select-category__button" @click="selectedCategory('frontend')"
+      <router-link
+        to="/quiz/languages"
+        class="select-category__button"
+        @click="selectQuestionsCategory('frontend')"
         >Frontend</router-link
       >
-      <router-link to="/quiz/languages" class="select-category__button" @click="selectedCategory('backend')"
+      <router-link
+        to="/quiz/languages"
+        class="select-category__button"
+        @click="selectQuestionsCategory('backend')"
         >Backend</router-link
       >
     </section>
@@ -17,7 +23,7 @@
 
 <script>
 export default {
-   inject: ['selectedCategory'],
+  inject: ["selectQuestionsCategory"],
 };
 </script>
 
@@ -25,8 +31,8 @@ export default {
 <style lang="scss" scoped>
 .category-container {
   width: min(80%, 30rem);
-   border-radius: 1rem 1rem 0.5rem 0.5rem;
-   background-color: var(--color-quiz);
+  border-radius: 1rem 1rem 0.5rem 0.5rem;
+  background-color: var(--color-quiz);
 }
 
 .category-header {

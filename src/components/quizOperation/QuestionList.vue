@@ -1,19 +1,20 @@
 <template>
-    <nav class="quiz-nav">
-      <ul>
-        <question-item
-          v-for="(option, index) in questions.slice(
-            currentQuestion,
-            numberOfQuestion
-          )"
-          :key="index"
-          :id-question="numberOfQuestion"
-          :question="option.question"
-          :sugesstions="option.sugesstions"
-          :route-question="this.routeQuestion"
-        ></question-item>
-      </ul>
-    </nav>
+  <nav class="quiz-nav">
+    <ul>
+      <question-item
+        v-for="(option, index) in selectedQuestions.slice(
+          currentQuestion,
+          numberOfQuestion
+        )"
+        :key="index"
+        :id-question="numberOfQuestion"
+        :question="option.question"
+        :sugesstions="option.sugesstions"
+        :route-question="this.routeQuestion"
+        :selected-questions="this.selectedQuestions"
+      ></question-item>
+    </ul>
+  </nav>
 </template>
 
 <script>
@@ -23,10 +24,10 @@ export default {
   components: {
     QuestionItem,
   },
-  props: ["routeQuestion", "selectedCategory"],
-  inject: ["questions"],
+  props: ["routeQuestion"],
   data() {
     return {
+      selectedQuestions: [],
       currentQuestion: 0,
       numberOfQuestion: 1,
     };
@@ -43,7 +44,6 @@ export default {
       this.changeQuestion(newRoute);
     },
   },
-
   beforeRouteUpdate(to, from, next) {
     const toNextRoute = Number(to.params.routeQuestion);
     const fromCurrentRoute = Number(from.params.routeQuestion);
@@ -51,17 +51,16 @@ export default {
   },
   created() {
     const newRoute = Number(this.$route.params.routeQuestion);
+    const selectedQuestions = JSON.parse(localStorage.getItem("questions"));
+
+    this.selectedQuestions = selectedQuestions;
     this.changeQuestion(newRoute);
-    this.questionsNumber = this.questions.length;
-
-    // console.log(this.selectedCategory);
-
+    this.questionsNumber = this.selectedQuestions.length;
   },
 };
 </script>
 
 <style lang="scss">
-
 .quiz-nav {
   width: min(700px, 70%);
 }
