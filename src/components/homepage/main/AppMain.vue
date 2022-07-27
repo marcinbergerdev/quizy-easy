@@ -24,15 +24,14 @@ export default {
 
 <style lang="scss" scoped>
 .app-main {
+  position: relative;
   min-height: 100vh;
   background-image: url("../../../assets/background.png");
   background-size: 100%;
   background-position: 10%;
   background-color: var(--bg-homepage);
 
-  @media (min-width: 768px) {
-    position: relative;
-  }
+
 
   &::before,
   &::after {

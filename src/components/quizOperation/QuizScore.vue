@@ -31,7 +31,6 @@ export default {
   methods: {
     playAgain() {
       this.$confetti.stop();
-      localStorage.removeItem("questions");
     },
   },
   computed: {
@@ -70,6 +69,7 @@ export default {
 .score-box {
   width: min(80%, 50rem);
   margin: 0 auto;
+  padding: 2rem;
   text-align: center;
   background-color: #ebf7ff;
   color: #2b2a2a;
