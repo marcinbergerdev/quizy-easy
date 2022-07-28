@@ -32,7 +32,6 @@ export default {
   background-color: var(--bg-homepage);
 
 
-
   &::before,
   &::after {
     content: "";

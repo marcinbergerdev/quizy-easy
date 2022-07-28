@@ -29,6 +29,13 @@ export default {
 
 
 <style lang="scss" scoped>
+
+li:nth-of-type(){
+  color: red
+}
+
+
+
 .category-container {
   width: min(80%, 30rem);
   border-radius: 1rem 1rem 0.5rem 0.5rem;

@@ -88,6 +88,7 @@ export default {
         }
       });
 
+       console.log(selected);
       this.answer = true;
       this.disabledActivity = true;
       this.selectedOptions = selected;

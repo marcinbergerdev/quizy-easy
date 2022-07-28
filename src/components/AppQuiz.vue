@@ -33,267 +33,289 @@ export default {
       questions: {
         frontend: [
           {
-            question: "Działają pytania z frontendu",
+            question: "Co oznaczają skróty HTML i CSS?",
             sugesstions: [
               {
                 id: 0,
-                sugesstion:
-                  "Usce semper hendrerit velit lacinia placerat. true",
-                correct: true,
+                sugesstion: "Helper Text Mark Languages & Coding Style Sheets",
+                correct: false,
               },
               {
                 id: 1,
-                sugesstion: "Donec pulvinar sit amet risus i eleifend.",
+                sugesstion: "Hiper Text Make Language & Comment Style Sheet",
                 correct: false,
               },
               {
                 id: 2,
-                sugesstion: "Maecenas dignissim venenatis fermentum.",
-                correct: false,
+                sugesstion:
+                  "Hyper Text Mark-up Language & Cascading Style Sheets",
+                correct: true,
               },
               {
                 id: 3,
                 sugesstion:
-                  "Nulla porttitor nunc tellus, vel consequat risus porta",
+                  "Height Text Mental Language & Counter Strike Shoots",
                 correct: false,
               },
             ],
           },
           {
-            question: "frontendHow do you take the best design ever?",
+            question: "Jakie typy danych występują w javascript?",
             sugesstions: [
               {
                 id: 0,
-                sugesstion: "Usce semper hlacinia placerat.",
+                sugesstion:
+                  "Letter, Number, Boolean, Array, Undefined, Zero i Signal",
                 correct: false,
               },
               {
                 id: 1,
-                sugesstion: "Donec pulvinar sit amet risus id eleifend.",
-                correct: false,
-              },
-              { id: 2, sugesstion: "Maecenas dignissim. true", correct: true },
-              { id: 3, sugesstion: "Nulla.", correct: false },
-            ],
-          },
-          {
-            question: "frontendHow get only one element from array?",
-            sugesstions: [
-              { id: 0, sugesstion: "Usce sempe.", correct: false },
-              {
-                id: 1,
-                sugesstion: "Donec sit amet risus id eleifend.",
-                correct: false,
-              },
-              { id: 2, sugesstion: "Fermentum. triue", correct: true },
-              {
-                id: 3,
-                sugesstion: "Nulla porttitor nunc tellus, velnec.",
-                correct: false,
-              },
-            ],
-          },
-          {
-            question: "frontendWhat makes decision-making effective?",
-            sugesstions: [
-              { id: 0, sugesstion: "Usce.", correct: false },
-              {
-                id: 1,
-                sugesstion: "Donec pulvinar sit amet risus id eleifend.",
+                sugesstion:
+                  "String, Number, Boolean, Array, Undefined, Null i Symbol",
                 correct: false,
               },
               {
                 id: 2,
-                sugesstion: "Maecenas dignissim fermentum.",
+                sugesstion: "String, Number, Boolean, Undefined",
                 correct: false,
               },
-              { id: 3, sugesstion: "Nulla porttitor true ", correct: true },
+              {
+                id: 3,
+                sugesstion:
+                  "String, Number, Boolean, Object, Undefined, Null i Symbol",
+                correct: true,
+              },
             ],
           },
           {
-            question:
-              "frontendHow do you make a decision when both options are good?",
-            sugesstions: [
-              { id: 0, sugesstion: "Usce.", correct: false },
-              { id: 1, sugesstion: "Donec.", correct: false },
-              { id: 2, sugesstion: "Maecenas. true", correct: true },
-              { id: 3, sugesstion: "Null.", correct: false },
-            ],
-          },
-          {
-            question:
-              "What do you do when you have to make an important decision?",
+            question: "Jakiego tagu użyjemy jeżeli chcemy stworzyć checkbox?",
             sugesstions: [
               {
                 id: 0,
                 sugesstion:
-                  "Usce semper hendrerit velit lacinia placerat. true",
+                  '<input type="checkbox">',
                 correct: true,
               },
               {
                 id: 1,
-                sugesstion: "Donec pulvinar sit amet risus id eleifend.",
+                sugesstion:
+                  "<checkbox>",
                 correct: false,
               },
               {
                 id: 2,
-                sugesstion: "Maecenas dignissim venenatis fermentum.",
+                sugesstion: '<checkbox type="input">',
+                correct: false,
+              },
+              {
+                id: 3,
+                sugesstion: "Wszystkie odpoweidzi są poprawne",
+                correct: false,
+              },
+            ],
+          },
+          {
+            question: "Który z wymienionych sposobów jest poprawny do wstawiania komentarza w pliku CSS?",
+            sugesstions: [
+              { id: 0, sugesstion: "/ komentarz /", correct: false },
+              {
+                id: 1,
+                sugesstion: "/' komentarz '/",
+                correct: false,
+              },
+              {
+                id: 2,
+                sugesstion: "/* komentarz */",
+                correct: true,
+              },
+              { id: 3, sugesstion: "' komentarz '", correct: false },
+            ],
+          },
+          {
+            question:
+              "Który z nich jest operatorem warunkowym(Ternary Operator)?",
+            sugesstions: [
+              { id: 0, sugesstion: "<?", correct: false },
+              { id: 1, sugesstion: ";?", correct: false },
+              { id: 2, sugesstion: "?:", correct: true },
+              { id: 3, sugesstion: ":?", correct: false },
+            ],
+          },
+          {
+            question:
+              "Gdzie jest właściwe miejsce do wstawienia pliku JavaScript?",
+            sugesstions: [
+              {
+                id: 0,
+                sugesstion:
+                  "<footer>",
+                correct: false,
+              },
+              {
+                id: 1,
+                sugesstion: "<body>",
+                correct: false,
+              },
+              {
+                id: 2,
+                sugesstion: "<head>",
                 correct: false,
               },
               {
                 id: 3,
                 sugesstion:
-                  "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
-                correct: false,
+                  "<head> i <body>",
+                correct: true,
               },
             ],
           },
           {
-            question: "What should you not do while making a decision?",
+            question: "Mamy liste 10 elementów które zawierają tekst, jakiej pseudoklasy użyjemy aby ustawić kolor tekstu tylko na 5 ostatnich elementach?",
             sugesstions: [
-              { id: 0, sugesstion: "Velit lacinia placerat.", correct: false },
-              { id: 1, sugesstion: "Donec pulvinar sit amet.", correct: false },
-              { id: 2, sugesstion: "Maecenas dignissim. true", correct: true },
+              { id: 0, sugesstion: "li:nth-child-type(5){ color: red}", correct: false },
+              { id: 1, sugesstion: "li:nth-of-type(n / 5){ color: red}", correct: false },
+              { id: 2, sugesstion: "li:nth-of-type(n + 5){ color: red}", correct: true },
               {
                 id: 3,
                 sugesstion:
-                  "Nulla porttitor nunc tellus, vel consequat risus porta nec.",
+                  "li:nth-of-type(n - 5){ color: red}",
                 correct: false,
               },
             ],
           },
           {
             question:
-              "How can you determine if your chosen decision will benefit you?",
+              "Orginalna nazwa JavaScriptu to?",
             sugesstions: [
               {
                 id: 0,
-                sugesstion: "Usce semper hendrerit velit placerat.",
+                sugesstion: "LiveScript",
                 correct: false,
               },
               {
                 id: 1,
-                sugesstion: "Donec pulvinar sit amet risus id eleifend. true ",
+                sugesstion: "Mocha",
                 correct: true,
               },
-              { id: 2, sugesstion: "MVenenatis fermentum.", correct: false },
-              { id: 3, sugesstion: "Nulla porttitor nunc.", correct: false },
+              { id: 2, sugesstion: "JavaScript", correct: false },
+              { id: 3, sugesstion: "Java", correct: false },
             ],
           },
           {
             question:
-              "How can you determine if your chosen decision will benefit you?",
+              "Jaki typ zwróci nam console.log(typeof NaN) ?",
             sugesstions: [
               {
                 id: 0,
-                sugesstion: "Usce semper hendrerit velit placerat.",
+                sugesstion: "NaN",
                 correct: false,
               },
               {
                 id: 1,
-                sugesstion: "Donec pulvinar sit amet risus id eleifend. true",
-                correct: true,
+                sugesstion: "undefined",
+                correct: false,
               },
-              { id: 2, sugesstion: "MVenenatis fermentum.", correct: false },
-              { id: 3, sugesstion: "Nulla porttitor nunc.", correct: false },
+              { id: 2, sugesstion: "number", correct: true },
+
+              { id: 3, sugesstion: "null", correct: false },
             ],
           },
           {
             question:
-              "How can you determine if your chosen decision will benefit you?",
+              "Jaka jest różnica między get i defineProperty?",
             sugesstions: [
               {
                 id: 0,
-                sugesstion: "Usce semper hendrerit velit placerat.",
-                correct: false,
+                sugesstion: "get zostanie zdefiniowany w prototypie obiektu / Object.defineProperty() zostanie zdefiniowany na instancji, do której jest stosowany",
+                correct: true,
               },
               {
                 id: 1,
-                sugesstion: "Donec pulvinar sit amet risus id eleifend. true",
-                correct: true,
+                sugesstion: "get zostanie zdefiniowany na instancji, do której jest stosowany / Object.defineProperty() zostanie zdefiniowany w prototypie obiektu",
+                correct: false,
               },
-              { id: 2, sugesstion: "MVenenatis fermentum.", correct: false },
-              { id: 3, sugesstion: "Nulla porttitor nunc.", correct: false },
+              { id: 2, sugesstion: "nie ma różnicy są takie same", correct: false },
+              { id: 3, sugesstion: "get jest zdefiniowana w DOM / Object.defineProperty() jest zdefiniowany w window.global", correct: false },
             ],
           },
         ],
         backend: [
           {
-            question: "Działają pytania z backendy",
+            question: "Co oznacza skrót OOP?",
             sugesstions: [
               {
                 id: 0,
                 sugesstion:
-                  "Usce semper hendrerit velit lacinia placerat. true",
+                  "Oriented-Operation Programming",
+                correct: false,
+              },
+              {
+                id: 1,
+                sugesstion: "Oriented-Object Programming",
+                correct: false,
+              },
+              {
+                id: 2,
+                sugesstion: "Object-Oriented Programming",
+                correct: true,
+              },
+              {
+                id: 3,
+                sugesstion:
+                  "Observation Oriented Programming",
+                correct: false,
+              },
+            ],
+          },
+          {
+            question: "Rozwiń skrót CRUD",
+            sugesstions: [
+              {
+                id: 0,
+                sugesstion: "Create, Read, Update, Delete",
                 correct: true,
               },
               {
                 id: 1,
-                sugesstion: "Donec pulvinar sit amet risus i eleifend.",
+                sugesstion: "Change, Read, Upgrade, Delete",
+                correct: false,
+              },
+              { id: 2, sugesstion: "Create, React, Update, Debug", correct: false },
+              { id: 3, sugesstion: "Concentrate, Remote, User, Delete", correct: false },
+            ],
+          },
+          {
+            question: "Roznica między put a patch?",
+            sugesstions: [
+              { id: 0, sugesstion: "Obie robią to samo", correct: false },
+              {
+                id: 1,
+                sugesstion: "PUT aktualizuje lub usuwa cały zasób / PATCH aktualizuje tylko cały zasób",
+                correct: false,
+              },
+              { id: 2, sugesstion: "PUT aktualizuje lub tworzy cały zasób / PATCH aktualizuje cały zasób lub jego fragment", correct: true },
+              {
+                id: 3,
+                sugesstion: "PUT aktualizuje cały zasób lub jego fragment / PATCH służy do aktualizacji całego zasobu",
+                correct: false,
+              },
+            ],
+          },
+          {
+            question: "Co to jest relacyjna baza danych?",
+            sugesstions: [
+              { id: 0, sugesstion: "Relacyjna baza danych to rodzaj bazy danych, który nie pozwala przechowywać danych tylko zapewnia do nich dostęp", correct: false },
+              {
+                id: 1,
+                sugesstion: "Relacyjna baza danych to rodzaj bazy danych, który pozwala przechowywać nie powiązane ze sobą elementy danych i nie zapewnia do nich dostępu",
                 correct: false,
               },
               {
                 id: 2,
-                sugesstion: "Maecenas dignissim venenatis fermentum.",
+                sugesstion: "Relacyjna baza danych to rodzaj bazy danych, który pozwala przechowywać nie powiązane ze sobą elementy danych i zapewnia do nich dostęp",
                 correct: false,
               },
-              {
-                id: 3,
-                sugesstion:
-                  "Nulla porttitor nunc tellus, vel consequat risus porta",
-                correct: false,
-              },
-            ],
-          },
-          {
-            question: "backendyHow do you take the best design ever?",
-            sugesstions: [
-              {
-                id: 0,
-                sugesstion: "Usce semper hlacinia placerat.",
-                correct: false,
-              },
-              {
-                id: 1,
-                sugesstion: "Donec pulvinar sit amet risus id eleifend.",
-                correct: false,
-              },
-              { id: 2, sugesstion: "Maecenas dignissim. true", correct: true },
-              { id: 3, sugesstion: "Nulla.", correct: false },
-            ],
-          },
-          {
-            question: "How get only one element from array?",
-            sugesstions: [
-              { id: 0, sugesstion: "Usce sempe.", correct: false },
-              {
-                id: 1,
-                sugesstion: "Donec sit amet risus id eleifend.",
-                correct: false,
-              },
-              { id: 2, sugesstion: "Fermentum. triue", correct: true },
-              {
-                id: 3,
-                sugesstion: "Nulla porttitor nunc tellus, velnec.",
-                correct: false,
-              },
-            ],
-          },
-          {
-            question: "backendyWhat makes decision-making effective?",
-            sugesstions: [
-              { id: 0, sugesstion: "Usce.", correct: false },
-              {
-                id: 1,
-                sugesstion: "Donec pulvinar sit amet risus id eleifend.",
-                correct: false,
-              },
-              {
-                id: 2,
-                sugesstion: "Maecenas dignissim fermentum.",
-                correct: false,
-              },
-              { id: 3, sugesstion: "Nulla porttitor true ", correct: true },
+              { id: 3, sugesstion: "Relacyjna baza danych to rodzaj bazy danych, który pozwala przechowywać powiązane ze sobą elementy danych i zapewnia do nich dostęp", correct: true },
             ],
           },
           {
@@ -403,7 +425,7 @@ export default {
             ],
           },
         ],
-      }
+      },
     };
   },
   methods: {

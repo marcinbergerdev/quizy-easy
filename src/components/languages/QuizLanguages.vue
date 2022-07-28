@@ -1,64 +1,59 @@
 <template>
-    <article class="container-languages">
-      <header class="header">
-        <h1 class="header__txt">Select language</h1>
-      </header>
+  <article class="container-languages">
+    <header class="header">
+      <h1 class="header__txt">Select language</h1>
+    </header>
 
-      <form class="select-languages">
-        <div class="select-languages__box">
-          <label
-            for="eng"
-            @click="selectLanguage('eng')"
-            :class="{ selected: this.language === 'eng' }"
-            >EN</label
-          >
+    <form class="select-languages">
+      <div class="select-languages__box">
+        <label
+          for="eng"
+          @click="selectLanguage('eng')"
+          :class="{ selected: this.language === 'eng' }"
+          >EN</label
+        >
 
-          <input
-            type="radio"
-            id="eng"
-            name="lang"
-            value="eng"
-            v-model="language"
-          />
-        </div>
+        <input
+          type="radio"
+          id="eng"
+          name="lang"
+          value="eng"
+          v-model="language"
+        />
+      </div>
 
-        <div class="select-languages__box">
-          <label
-            for="pl"
-            @click="selectLanguage('pl')"
-            :class="{ selected: this.language === 'pl' }"
-            >PL</label
-          >
+      <div class="select-languages__box">
+        <label
+          for="pl"
+          @click="selectLanguage('pl')"
+          :class="{ selected: this.language === 'pl' }"
+          >PL</label
+        >
 
-          <input
-            type="radio"
-            id="pl"
-            name="lang"
-            value="pl"
-            v-model="language"
-          />
-        </div>
+        <input type="radio" id="pl" name="lang" value="pl" v-model="language" />
+      </div>
 
-        <div class="select-languages__box">
-          <label
-            for="de"
-            @click="selectLanguage('de')"
-            :class="{ selected: this.language === 'de' }"
-            >DE</label
-          >
+      <div class="select-languages__box">
+        <label
+          for="de"
+          @click="selectLanguage('de')"
+          :class="{ selected: this.language === 'de' }"
+          >DE</label
+        >
 
-          <input
-            type="radio"
-            id="de"
-            name="lang"
-            value="de"
-            v-model="language"
-          />
-        </div>
-      </form>
+        <input type="radio" id="de" name="lang" value="de" v-model="language" />
+      </div>
+    </form>
 
-      <button class="confrim-languages" @click="startGame">Select</button>
-    </article>
+    <section class="confrim-languages">
+      <button class="confrim-languages__button" @click="backToCategories">
+        Back
+      </button>
+      <button class="confrim-languages__button" @click="startGame">
+        Select
+      </button>
+    </section>
+  </article>
 </template>
 
 <script>
@@ -78,12 +73,14 @@ export default {
       this.resetPoint();
       router.push("/quiz/question/1");
     },
+    backToCategories(){
+      router.push("/quiz/category");
+    }
   },
 };
 </script>
 
 <style lang="scss" scoped>
-
 .container-languages {
   display: flex;
   flex-direction: column;
@@ -144,18 +141,23 @@ export default {
 }
 
 .confrim-languages {
-  margin-bottom: 1rem;
-  padding: 0.6rem 2rem;
-  align-self: center;
-  text-decoration: none;
-  font-size: 1.3rem;
-  background-color: var(--header-quiz);
-  color: var(--white);
-  border-radius: 0.3rem;
-  border: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  &__button {
+    margin-bottom: 1rem;
+    padding: 0.6rem 2rem;
+    align-self: center;
+    text-decoration: none;
+    font-size: 1.3rem;
+    background-color: var(--header-quiz);
+    color: var(--white);
+    border-radius: 0.3rem;
+    border: 0;
 
-  @media (min-width: 768px) {
-    cursor: pointer;
+    @media (min-width: 768px) {
+      cursor: pointer;
+    }
   }
 }
 </style>

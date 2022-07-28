@@ -22,10 +22,10 @@ header {
   }
 
   @media (min-width: 330px) {
-    bottom: 5%;
+    bottom: 2%;
   }
-  @media (min-width: 490px) {
-    bottom: 7%;
+  @media (min-width: 400px) {
+    bottom: 5%;
   }
 
   @media (min-width: 768px) {
@@ -55,7 +55,6 @@ header {
   }
 
   @media (min-width: 768px) {
-    width: 20rem;
     text-align: start;
     font-size: 3rem;
   }
