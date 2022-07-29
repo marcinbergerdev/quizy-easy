@@ -7,7 +7,6 @@
 </template>
 
 
-
 <style lang="scss">
 :root {
   --white: #fff;

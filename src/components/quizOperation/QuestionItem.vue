@@ -14,7 +14,7 @@
             <button
               class="answers-list__answer"
               :class="answer ? checkAnswer(selectedOptions[index]) : ''"
-              @click="setSugesstion(index, option.correct)"
+              @click="setSugesstion(option.sugesstion, option.correct)"
               :disabled="disabledActivity"
             >
               {{ option.sugesstion }}
@@ -75,20 +75,19 @@ export default {
     };
   },
   methods: {
-    setSugesstion(index, correct) {
+    setSugesstion(userSugesstion, correct) {
       if (correct) this.addPoint();
 
-      const selected = this.sugesstions.map(({id, correct}) => {
+      const selected = this.sugesstions.map(({ sugesstion, correct }) => {
         if (correct) {
           return "correct";
-        } else if (id === index && !correct) {
+        } else if (sugesstion === userSugesstion && !correct) {
           return "incorrect";
         } else {
           return "unmarked";
         }
       });
 
-       console.log(selected);
       this.answer = true;
       this.disabledActivity = true;
       this.selectedOptions = selected;
