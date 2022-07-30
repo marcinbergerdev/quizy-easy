@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import router from "@/router";
 import QuestionItem from "./QuestionItem.vue";
 
 export default {
@@ -30,6 +31,7 @@ export default {
       selectedQuestions: [],
       currentQuestion: 0,
       numberOfQuestion: 1,
+      refreshPage: true,
     };
   },
   methods: {
@@ -43,6 +45,14 @@ export default {
       const newRoute = Number(route);
       this.changeQuestion(newRoute);
     },
+  },
+  beforeRouteEnter(to, from) {
+    const routeTo = to.params.routeQuestion;
+    const routeFrom = from.params.routeQuestion;
+
+    if (routeTo >= 2 && routeFrom === undefined) {
+      router.push("/quiz/question/1");
+    }
   },
   beforeRouteUpdate(to, from, next) {
     const toNextRoute = Number(to.params.routeQuestion);
