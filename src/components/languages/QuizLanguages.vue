@@ -1,7 +1,7 @@
 <template>
   <article class="container-languages">
     <header class="header">
-      <h1 class="header__txt">Select language</h1>
+      <h1 class="header__txt">{{ $t("language") }}</h1>
     </header>
 
     <form class="select-languages">
@@ -47,10 +47,10 @@
 
     <section class="confrim-languages">
       <button class="confrim-languages__button" @click="backToCategories">
-        Back
+        {{$t("back")}}
       </button>
       <button class="confrim-languages__button" @click="startGame">
-        Select
+        {{$t("select")}}
       </button>
     </section>
   </article>
@@ -68,6 +68,7 @@ export default {
   methods: {
     selectLanguage(language) {
       this.language = language;
+      this.$i18n.locale = this.language
     },
     startGame() {
       this.resetPoint();
@@ -144,9 +145,11 @@ export default {
   display: flex;
   justify-content: center;
   gap: 10px;
+
   &__button {
     margin-bottom: 1rem;
     padding: 0.6rem 2rem;
+    width: 30%;
     align-self: center;
     text-decoration: none;
     font-size: 1.3rem;

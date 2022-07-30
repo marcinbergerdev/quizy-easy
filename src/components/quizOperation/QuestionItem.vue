@@ -28,7 +28,7 @@
             @click="nextQuestion"
             :disabled="!disabledActivity"
           >
-            Next <Icon icon="akar-icons:arrow-right" />
+            {{$t('next')}} <Icon icon="akar-icons:arrow-right" />
           </button>
         </section>
       </article>

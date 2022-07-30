@@ -1,7 +1,7 @@
 <template>
   <article class="category-container">
     <header class="category-header">
-      <h1 class="category-header__text">Category</h1>
+      <h1 class="category-header__text">{{$t('category')}}</h1>
     </header>
 
     <section class="select-category">

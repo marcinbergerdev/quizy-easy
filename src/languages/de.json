@@ -1,0 +1,446 @@
+{
+   "category": "Kategorie",
+   "language": "Sprache auswählen",
+
+   "select": "Start",
+   "back": "Zurück",
+   "next": "Weiter",
+
+
+   "score": "Punkt!",
+
+   "feedbackOne": "Du musst dich noch ein bisschen mehr um dein Studium bemühen :)",
+   "feedbackTwo": "Mehr als die Hälfte, ist gut!",
+   "feedbackThree": "Ihr Wissen ist auf einem guten Stand, machen Sie weiter so!",
+   "feedbackFor": "Irgendwo wartet ein Job in It auf Sie :)",
+
+   "correct": "richtige Antworten:",
+   "of": "von",
+   "play": "Nochmals spielen",
+
+
+   "frontend": [
+      {
+         "question": "Was bedeuten die Abkürzungen HTML und CSS?",
+         "sugesstions": [
+            {
+               "sugesstion": "Helper Text Mark Languages & Coding Style Sheets",
+               "correct": false
+            },
+            {
+               "sugesstion": "Hiper Text Make Language & Comment Style Sheet",
+               "correct": false
+            },
+            {
+               "sugesstion": "Hyper Text Mark-up Language & Cascading Style Sheets",
+               "correct": true
+            },
+            {
+               "sugesstion": "Height Text Mental Language & Counter Strike Shoots",
+               "correct": false
+            }
+         ]
+      },
+      {
+         "question": "Welche Datentypen gibt es in Javascript?",
+         "sugesstions": [
+            {
+               "sugesstion": "Letter, Number, Boolean, Array, Undefined, Zero i Signal",
+               "correct": false
+            },
+            {
+               "sugesstion": "String, Number, Boolean, Array, Undefined, Null i Symbol",
+               "correct": false
+            },
+            {
+               "sugesstion": "String, Number, Boolean, Undefined",
+               "correct": false
+            },
+            {
+               "sugesstion": "String, Number, Boolean, Object, Undefined, Null i Symbol",
+               "correct": true
+            }
+         ]
+      },
+      {
+         "question": "Welchen Tags verwenden wir, wenn wir ein Checkbox erstellen wollen?",
+         "sugesstions": [
+            {
+               "sugesstion": "<input type='checkbox'>",
+               "correct": true
+            },
+            {
+               "sugesstion": "<checkbox>",
+               "correct": false
+            },
+            {
+               "sugesstion": "<checkbox type='input'>",
+               "correct": false
+            },
+            {
+               "sugesstion": "Alle Antworten sind richtig",
+               "correct": false
+            }
+         ]
+      },
+      {
+         "question": "Welche der folgenden Möglichkeiten ist die richtige, um einen Kommentar in eine CSS-Datei einzufügen?",
+         "sugesstions": [
+            {
+               "sugesstion": "/ Kommentar  /",
+               "correct": false
+            },
+            {
+               "sugesstion": "/' Kommentar  '/",
+               "correct": false
+            },
+            {
+               "sugesstion": "/* Kommentar  */",
+               "correct": true
+            },
+            {
+               "sugesstion": "' Kommentar  '",
+               "correct": false
+            }
+         ]
+      },
+      {
+         "question": "Welcher dieser Operatoren ist der bedingte Operator(Ternary Operator)?",
+         "sugesstions": [
+            {
+               "sugesstion": "<?",
+               "correct": false
+            },
+            {
+               "sugesstion": ";?",
+               "correct": false
+            },
+            {
+               "sugesstion": "?:",
+               "correct": true
+            },
+            {
+               "sugesstion": ":?",
+               "correct": false
+            }
+         ]
+      },
+      {
+         "question": "Gdzie jest właściwe miejsce do wstawienia pliku JavaScript?",
+         "sugesstions": [
+            {
+               "sugesstion": "<footer>",
+               "correct": false
+            },
+            {
+               "sugesstion": "<body>",
+               "correct": false
+            },
+            {
+               "sugesstion": "<head>",
+               "correct": false
+            },
+            {
+               "sugesstion": "<head> i <body>",
+               "correct": true
+            }
+         ]
+      },
+      {
+         "question": "Wir haben eine Liste mit 10 Elementen, die Text enthalten. Welche Pseudoklasse verwenden wir, um die Textfarbe nur für die letzten 5 Elemente festzulegen?",
+         "sugesstions": [
+            {
+               "sugesstion": "li:nth-child-type(5){ color: red}",
+               "correct": false
+            },
+            {
+               "sugesstion": "li:nth-of-type(n / 5){ color: red}",
+               "correct": false
+            },
+            {
+               "sugesstion": "li:nth-of-type(n + 5){ color: red}",
+               "correct": true
+            },
+            {
+               "sugesstion": "li:nth-of-type(n - 5){ color: red}",
+               "correct": false
+            }
+         ]
+      },
+      {
+         "question": "Der ursprüngliche Name des JavaScript ist?",
+         "sugesstions": [
+            {
+               "sugesstion": "LiveScript",
+               "correct": false
+            },
+            {
+               "sugesstion": "Mocha",
+               "correct": true
+            },
+            {
+               "sugesstion": "JavaScript",
+               "correct": false
+            },
+            {
+               "sugesstion": "Java",
+               "correct": false
+            }
+         ]
+      },
+      {
+         "question": "Welchen Typ wird console.log(typeof NaN) zurückgeben?",
+         "sugesstions": [
+            {
+               "sugesstion": "NaN",
+               "correct": false
+            },
+            {
+               "sugesstion": "undefined",
+               "correct": false
+            },
+            {
+               "sugesstion": "number",
+               "correct": true
+            },
+            {
+               "sugesstion": "null",
+               "correct": false
+            }
+         ]
+      },
+      {
+         "question": "Was ist der Unterschied zwischen get und defineProperty?",
+         "sugesstions": [
+            {
+               "sugesstion": "get wird im Objektprototyp definiert / Object.defineProperty() wird auf der Instanz definiert, auf die es angewendet wird",
+               "correct": true
+            },
+            {
+               "sugesstion": "get wird in der Instanz definiert, auf die es angewendet wird / Object.defineProperty() wird im Objektprototyp definiert",
+               "correct": false
+            },
+            {
+               "sugesstion": "es gibt keinen Unterschied, sie sind identisch",
+               "correct": false
+            },
+            {
+               "sugesstion": "get ist im DOM definiert / Object.defineProperty() ist in window.global definiert",
+               "correct": false
+            }
+         ]
+      }
+   ],
+   "backend": [
+      {
+         "question": "Was bedeutet OOP?",
+         "sugesstions": [
+            {
+               "sugesstion": "Oriented-Operation Programming",
+               "correct": false
+            },
+            {
+               " sugesstion": "Oriented-Object Programming",
+               "correct": false
+            },
+            {
+               "sugesstion": "Object-Oriented Programming",
+               "correct": true
+            },
+            {
+               "sugesstion": "Observation Oriented Programming",
+               "correct": false
+            }
+         ]
+      },
+      {
+         "question": "Erweitern Sie die Abkürzung CRUD",
+         "sugesstions": [
+            {
+               "sugesstion": "Create, Read, Update, Delete",
+               "correct": true
+            },
+            {
+               "sugesstion": "Change, Read, Upgrade, Delete",
+               "correct": false
+            },
+            {
+               "sugesstion": "Create, React, Update, Debug",
+               "correct": false
+            },
+            {
+               "sugesstion": "Concentrate, Remote, User, Delete",
+               "correct": false
+            }
+         ]
+      },
+      {
+         "question": "Der Unterschied zwischen Put und Patch?",
+         "sugesstions": [
+            {
+               "sugesstion": "Beide haben die gleiche Funktion",
+               "correct": false
+            },
+            {
+               "sugesstion": "PUT aktualisiert oder löscht die gesamte Ressource / PATCH aktualisiert nur die gesamte Ressource",
+               "correct": false
+            },
+            {
+               "sugesstion": "PUT aktualisiert oder erstellt die gesamte Ressource / PATCH aktualisiert die gesamte Ressource oder einen Teil von ihr",
+               "correct": true
+            },
+            {
+               "sugesstion": "PUT aktualisiert die gesamte Ressource oder einen Teil davon / PATCH aktualisiert die gesamte Ressource",
+               "correct": false
+            }
+         ]
+      },
+      {
+         "question": "Was ist eine relationale Datenbank?",
+         "sugesstions": [
+            {
+               "sugesstion": "Eine relationale Datenbank ist ein Datenbanktyp, der es Ihnen ermöglicht, zusammenhängende Datenelemente zu speichern und auf diese zuzugreifen",
+               "correct": true
+            },
+            {
+               "sugesstion": "Eine relationale Datenbank ist ein Datenbanktyp, der nicht die Speicherung von Daten ermöglicht, sondern nur den Zugriff auf diese.",
+               "correct": false
+            },
+            {
+               "sugesstion": "Eine relationale Datenbank ist ein Datenbanktyp, der die Speicherung von nicht zusammenhängenden Datenelementen ermöglicht und keinen Zugriff auf diese Elemente bietet.",
+               "correct": false
+            },
+            {
+               "sugesstion": "Eine relationale Datenbank ist ein Datenbanktyp, der es ermöglicht, nicht zusammenhängende Datenelemente zu speichern und den Zugriff auf diese zu ermöglichen",
+               "correct": false
+            }
+         ]
+      },
+      {
+         "question": "Was ist der Unterschied zwischen einer Schnittstelle und einer abstrakten Klasse?",
+         "sugesstions": [
+            {
+               "sugesstion": "Sie haben die gleiche Funktion",
+               "correct": false
+            },
+            {
+               "sugesstion": "Schnittstellen können einen Zustand haben und definieren kein Verhalten für Objekte",
+               "correct": false
+            },
+            {
+               "sugesstion": "Schnittstellen können keinen Zustand haben, sie werden verwendet, um das Verhalten von Objekten zu definieren",
+               "correct": true
+            },
+            {
+               " sugesstion": "Keine dieser Antworten ist richtig",
+               "correct": false
+            }
+         ]
+      },
+      {
+         "question": "Was ist der Unterschied zwischen Beitritt und Vereinigung?",
+         "sugesstions": [
+            {
+               "sugesstion": "JOIN erzeugt kartesischen Quotienten und Teilmengen / UNION erzeugt Arrays von Objekten",
+               "correct": false
+            },
+            {
+               " sugesstion": "JOIN erstellt Arrays von Objekten / UNION platziert Zeilen aus einer Abfrage nacheinander",
+               "correct": false
+            },
+            {
+               "sugesstion": "JOIN fügt Zeilen aus Abfragen nacheinander ein / UNION erzeugt kartesisches Produkt und Teilmengen",
+               "correct": false
+            },
+            {
+               "sugesstion": "JOIN erzeugt kartesisches Produkt und Teilmengen / UNION platziert Zeilen aus Abfragen nacheinander",
+               "correct": true
+            }
+         ]
+      },
+      {
+         "question": "Was ist eine JSP-Page?",
+         "sugesstions": [
+            {
+               "sugesstion": "Java Server Page (JSP) ist ein Textdokument, das zwei Arten von Text enthält: statische Daten und JSP-Elemente",
+               "correct": true
+            },
+            {
+               "sugesstion": "Java Server Page (JSP) ist ein Dokument in Form eines Lichtbildes, das zwei Erweiterungen hat: PNG, JPGN",
+               "correct": false
+            },
+            {
+               "sugesstion": "Java Server Page (JSP) es ist eine Datenbank, die Bilder speichert",
+               "correct": false
+            },
+            {
+               "sugesstion": "Java Server Page (JSP) ist ein Server, auf dem Sie Fotos hinzufügen können",
+               "correct": false
+            }
+         ]
+      },
+      {
+         "question": "Erweitern Sie die Abkürzung des ACID",
+         "sugesstions": [
+            {
+               "sugesstion": "Application Create Include Data",
+               "correct": false
+            },
+            {
+               "sugesstion": "Atomicity Consistency Isolation Durable",
+               "correct": true
+            },
+            {
+               "sugesstion": "Automatic Customer Insert Design",
+               "correct": false
+            },
+            {
+               "sugesstion": "Administrator Coordinate Issue Database ",
+               "correct": false
+            }
+         ]
+      },
+      {
+         "question": "Was ist ein API-Gateway?",
+         "sugesstions": [
+            {
+               "sugesstion": "Alle Antworten sind richtig",
+               "correct": false
+            },
+            {
+               "sugesstion": "Es ist eine Datenbank",
+               "correct": false
+            },
+            {
+               "sugesstion": "Dies sind Mikroserver, die es dem Nutzer ermöglichen, die API einzugeben und gemeinsam zu nutzen",
+               "correct": false
+            },
+            {
+               "sugesstion": "Der Server, der der einzig mögliche Einstiegspunkt in das System ist, kapselt die Architektur des gesamten Systems und stellt eine API zur Verfügung, die bereits für jeden Client angepasst ist",
+               "correct": true
+            }
+         ]
+      },
+      {
+         "question": "Was ist der wichtigste Teil des API-Designs?",
+         "sugesstions": [
+            {
+               "sugesstion": "Dokumentation",
+               "correct": true
+            },
+            {
+               "sugesstion": "Kohärenz",
+               "correct": false
+            },
+            {
+               "sugesstion": "Sicherheit",
+               "correct": false
+            },
+            {
+               "sugesstion": "Stabilität",
+               "correct": false
+            }
+         ]
+      }
+   ]
+}

@@ -11,12 +11,14 @@
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
     "vue-confetti": "^2.3.0",
+    "vue-i18n": "^9.1.10",
     "vue-router": "^4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
     "@iconify/vue": "^3.2.1",
+    "@intlify/vue-i18n-loader": "^5.0.0",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",

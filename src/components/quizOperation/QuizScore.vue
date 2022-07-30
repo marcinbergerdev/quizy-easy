@@ -1,20 +1,20 @@
 <template>
   <article class="score-box">
     <header class="score-header">
-      <h1 class="score-header__text">Score!</h1>
+      <h1 class="score-header__text">{{$t("score")}}</h1>
       <span class="score-header__userScore">{{ userScore }}</span>
     </header>
 
     <section class="score-info">
       <p class="score-info__txt">{{ feedback }}</p>
       <p class="score-info__score">
-        poprawne odpowiedzi: {{ userScore }} z {{ selectedQuestions.length }}
+        {{$t("correct")}} {{ userScore }} {{$t("of")}} {{ selectedQuestions.length }}
       </p>
       <router-link
         class="score-info__again"
         to="/quiz/category"
         @click="playAgain"
-        >Play again</router-link
+        >{{$t("play")}}</router-link
       >
     </section>
   </article>
@@ -106,7 +106,7 @@ export default {
   }
 
   &__again {
-    padding: 0.6rem 2rem;
+    padding: 1rem 2rem;
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 100;
