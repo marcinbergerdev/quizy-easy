@@ -1,24 +1,25 @@
 {
    "category": "Kategoria",
    "language": "Wybierz język",
-
    "select": "Dalej",
    "back": "Wróć",
    "next": "Dalej",
-
    "score": "Score!",
 
-   "feedbackOne": "Musisz jeszcze troche przyłożyć sie do nauki :)",
-   "feedbackTwo": "Więcej niż połowa, jest dobrze!",
-   "feedbackThree": "Twoja wiedza jest na dobrym poziomie, trzymaj tak dalej!",
-   "feedbackFor": "Praca w It gdzieś tam na Ciebie czeka :)",
+
+
+   "feedback": {
+      "feedbackOne": "Musisz jeszcze troche przyłożyć sie do nauki :)",
+      "feedbackTwo": "Więcej niż połowa, jest dobrze!",
+      "feedbackThree": "Twoja wiedza jest na dobrym poziomie, trzymaj tak dalej!",
+      "feedbackFor": "Praca w It gdzieś tam na Ciebie czeka :)"
+   },
+
+
+
    "correct": "poprawne odpowiedzi:",
    "of": "z",
    "play": "Zagraj ponownie",
-
-
-
-
    "frontend": [
       {
          "question": "Co oznaczają skróty HTML i CSS?",

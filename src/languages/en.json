@@ -1,22 +1,21 @@
 {
    "category": "Category",
    "language": "Select language",
-
    "select": "Next",
    "back": "Back",
    "next": "Next",
-
    "score": "Score!",
-   "feedbackOne": "You still need to put some effort into your studies :)",
-   "feedbackTwo": "More than half, is good!",
-   "feedbackThree": "Your knowledge is at a good level, keep it up!",
-   "feedbackFor": "A job in It is waiting for you somewhere :)",
+
+   "feedback": {
+      "feedbackOne": "You still need to put some effort into your studies :)",
+      "feedbackTwo": "More than half, is good!",
+      "feedbackThree": "Your knowledge is at a good level, keep it up!",
+      "feedbackFor": "A job in It is waiting for you somewhere :)"
+   },
+
    "correct": "correct answers:",
    "of": "of",
    "play": "Play again",
-
-
-
    "frontend": [
       {
          "question": "What do the abbreviations HTML and CSS mean?",

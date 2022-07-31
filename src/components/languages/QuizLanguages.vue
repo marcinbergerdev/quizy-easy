@@ -56,7 +56,7 @@ export default {
   data() {
     return {
       lang: "en",
-      translateQuestions: {},
+      translateText: {},
     };
   },
   methods: {
@@ -65,24 +65,29 @@ export default {
       this.$i18n.locale = lang;
 
       if (lang === "en") {
-        this.translateQuestions = {
+        this.translateText = {
           frontend: this.$i18n.messages.en.frontend,
           backend: this.$i18n.messages.en.backend,
+          feedback: this.$i18n.messages.en.feedback,
         };
       } else if (lang === "pl") {
-        this.translateQuestions = {
+        this.translateText = {
           frontend: this.$i18n.messages.pl.frontend,
           backend: this.$i18n.messages.pl.backend,
+          feedback: this.$i18n.messages.pl.feedback,
         };
       } else if (lang === "de") {
-        this.translateQuestions = {
+        this.translateText = {
           frontend: this.$i18n.messages.de.frontend,
           backend: this.$i18n.messages.de.backend,
+          feedback: this.$i18n.messages.de.feedback,
         };
       }
+
+
       localStorage.setItem(
-        "translatedQuestions",
-        JSON.stringify(this.translateQuestions)
+        "translatedText",
+        JSON.stringify(this.translateText)
       );
       localStorage.setItem("language", lang);
     },
@@ -92,9 +97,10 @@ export default {
 
     if (!currentLanguage) {
       localStorage.setItem("language", this.lang);
-      this.translateQuestions = {
+      this.translateText = {
         frontend: this.$i18n.messages.en.frontend,
         backend: this.$i18n.messages.en.backend,
+        feedback: this.$i18n.messages.en.feedback,
       };
     } else {
       this.lang = currentLanguage;
@@ -102,8 +108,8 @@ export default {
     }
 
     localStorage.setItem(
-      "translatedQuestions",
-      JSON.stringify(this.translateQuestions)
+      "translatedText",
+      JSON.stringify(this.translateText)
     );
 
     localStorage.setItem("language", this.lang);

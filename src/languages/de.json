@@ -1,24 +1,22 @@
 {
    "category": "Kategorie",
    "language": "Sprache auswählen",
-
    "select": "Weiter",
    "back": "Zurück",
    "next": "Weiter",
-
-
    "score": "Punkt!",
 
-   "feedbackOne": "Du musst dich noch ein bisschen mehr um dein Studium bemühen :)",
-   "feedbackTwo": "Mehr als die Hälfte, ist gut!",
-   "feedbackThree": "Ihr Wissen ist auf einem guten Stand, machen Sie weiter so!",
-   "feedbackFor": "Irgendwo wartet ein Job in It auf Sie :)",
+   "feedback": {
+      "feedbackOne": "Du musst dich noch ein bisschen mehr um dein Studium bemühen :)",
+      "feedbackTwo": "Mehr als die Hälfte, ist gut!",
+      "feedbackThree": "Ihr Wissen ist auf einem guten Stand, machen Sie weiter so!",
+      "feedbackFor": "Irgendwo wartet ein Job in It auf Sie :)"
+   },
+
 
    "correct": "richtige Antworten:",
    "of": "von",
    "play": "Nochmals spielen",
-
-
    "frontend": [
       {
          "question": "Was bedeuten die Abkürzungen HTML und CSS?",
@@ -332,7 +330,7 @@
                "correct": true
             },
             {
-               " sugesstion": "Keine dieser Antworten ist richtig",
+               "sugesstion": "Keine dieser Antworten ist richtig",
                "correct": false
             }
          ]

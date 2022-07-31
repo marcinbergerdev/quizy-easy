@@ -35,16 +35,19 @@ export default {
   },
   computed: {
     feedback() {
+      const info = JSON.parse(localStorage.getItem('translatedQuestions'));
+
+
       let feedback = "";
 
       if (this.userScore <= this.selectedQuestions.length * 0.3) {
-        feedback = "Musisz jeszcze troche przyłożyć sie do nauki :)";
+        feedback = info.feedback.feedbackOne
       } else if (this.userScore <= this.selectedQuestions.length * 0.6) {
-        feedback = "Więcej niż połowa, jest dobrze!";
+        feedback = info.feedback.feedbackTwo;
       } else if (this.userScore <= this.selectedQuestions.length * 0.8) {
-        feedback = "Twoja wiedza jest na dobrym poziomie, trzymaj tak dalej!";
+        feedback = info.feedback.feedbackThree;
       } else if (this.userScore <= this.selectedQuestions.length * 1.0) {
-        feedback = "Praca w It gdzieś tam na Ciebie czeka :)";
+        feedback = info.feedback.feedbackFor;
       }
       return feedback;
     },

@@ -443,19 +443,19 @@ export default {
       ++this.userScore;
     },
     selectQuestionsCategory(category) {
-      const translatedQuestions = JSON.parse(
-        localStorage.getItem("translatedQuestions")
+      const translatedText = JSON.parse(
+        localStorage.getItem("translatedText")
       );
 
       if (category === "frontend") {
         localStorage.setItem(
           "questions",
-          JSON.stringify(translatedQuestions.frontend)
+          JSON.stringify(translatedText.frontend)
         );
       } else {
         localStorage.setItem(
           "questions",
-          JSON.stringify(translatedQuestions.backend)
+          JSON.stringify(translatedText.backend)
         );
       }
     },

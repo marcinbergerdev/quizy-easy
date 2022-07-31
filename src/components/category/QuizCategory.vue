@@ -1,7 +1,7 @@
 <template>
   <article class="category-container">
     <header class="category-header">
-      <h1 class="category-header__text">{{$t('category')}}</h1>
+      <h1 class="category-header__text">{{ $t("category") }}</h1>
     </header>
 
     <section class="select-category">
@@ -29,12 +29,9 @@ export default {
 
 
 <style lang="scss" scoped>
-
-li:nth-of-type(){
-  color: red
+li:nth-of-type() {
+  color: red;
 }
-
-
 
 .category-container {
   width: min(80%, 30rem);
