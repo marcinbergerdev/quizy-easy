@@ -22,6 +22,7 @@ export default {
   provide() {
     return {
       addPoint: this.addPoint,
+      resetPoint: this.resetPoint,
       selectQuestionsCategory: this.selectQuestionsCategory,
     };
   },
@@ -441,6 +442,9 @@ export default {
   methods: {
     addPoint() {
       ++this.userScore;
+    },
+     resetPoint() {
+      this.userScore = 0;
     },
     selectQuestionsCategory(category) {
       const translatedText = JSON.parse(

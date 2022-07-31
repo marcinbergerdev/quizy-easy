@@ -44,7 +44,7 @@
         {{ $t("back") }}
       </router-link>
 
-      <router-link to="/quiz/category" class="confrim-languages__button">
+      <router-link to="/quiz/category" class="confrim-languages__button" @click="resetPoint">
         {{ $t("select") }}
       </router-link>
     </section>
@@ -53,6 +53,7 @@
 
 <script>
 export default {
+  inject: ['resetPoint'],
   data() {
     return {
       lang: "en",
