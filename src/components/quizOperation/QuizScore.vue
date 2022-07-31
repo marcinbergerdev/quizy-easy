@@ -35,7 +35,7 @@ export default {
   },
   computed: {
     feedback() {
-      const info = JSON.parse(localStorage.getItem('translatedQuestions'));
+      const info = JSON.parse(localStorage.getItem('translatedText'));
 
 
       let feedback = "";
