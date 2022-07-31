@@ -12,7 +12,7 @@
       </p>
       <router-link
         class="score-info__again"
-        to="/quiz/category"
+        to="/quiz/languages"
         @click="playAgain"
         >{{$t("play")}}</router-link
       >
@@ -50,7 +50,7 @@ export default {
     },
   },
   beforeRouteLeave(to, from, next) {
-    if (to.name === "category") return next(true);
+    if (to.name === "languages") return next(true);
     next(false);
   },
   created() {

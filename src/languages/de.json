@@ -2,7 +2,7 @@
    "category": "Kategorie",
    "language": "Sprache auswählen",
 
-   "select": "Start",
+   "select": "Weiter",
    "back": "Zurück",
    "next": "Weiter",
 
@@ -240,7 +240,7 @@
                "correct": false
             },
             {
-               " sugesstion": "Oriented-Object Programming",
+               "sugesstion": "Oriented-Object Programming",
                "correct": false
             },
             {
@@ -345,7 +345,7 @@
                "correct": false
             },
             {
-               " sugesstion": "JOIN erstellt Arrays von Objekten / UNION platziert Zeilen aus einer Abfrage nacheinander",
+               "sugesstion": "JOIN erstellt Arrays von Objekten / UNION platziert Zeilen aus einer Abfrage nacheinander",
                "correct": false
             },
             {

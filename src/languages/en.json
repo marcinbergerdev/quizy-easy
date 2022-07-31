@@ -2,7 +2,7 @@
    "category": "Category",
    "language": "Select language",
 
-   "select": "Start",
+   "select": "Next",
    "back": "Back",
    "next": "Next",
 
@@ -238,7 +238,7 @@
                "correct": false
             },
             {
-               " sugesstion": "Oriented-Object Programming",
+               "sugesstion": "Oriented-Object Programming",
                "correct": false
             },
             {

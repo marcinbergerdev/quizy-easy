@@ -22,7 +22,6 @@ export default {
   provide() {
     return {
       addPoint: this.addPoint,
-      resetPoint: this.resetPoint,
       selectQuestionsCategory: this.selectQuestionsCategory,
     };
   },
@@ -443,25 +442,24 @@ export default {
     addPoint() {
       ++this.userScore;
     },
-    resetPoint() {
-      this.userScore = 0;
-    },
     selectQuestionsCategory(category) {
+      const translatedQuestions = JSON.parse(
+        localStorage.getItem("translatedQuestions")
+      );
+
       if (category === "frontend") {
         localStorage.setItem(
           "questions",
-          JSON.stringify(this.questions.frontend)
+          JSON.stringify(translatedQuestions.frontend)
         );
       } else {
         localStorage.setItem(
           "questions",
-          JSON.stringify(this.questions.backend)
+          JSON.stringify(translatedQuestions.backend)
         );
       }
     },
   },
-
-
 };
 </script>
 

@@ -6,13 +6,13 @@
 
     <section class="select-category">
       <router-link
-        to="/quiz/languages"
+        to="/quiz/question/1"
         class="select-category__button"
         @click="selectQuestionsCategory('frontend')"
         >Frontend</router-link
       >
       <router-link
-        to="/quiz/languages"
+        to="/quiz/question/1"
         class="select-category__button"
         @click="selectQuestionsCategory('backend')"
         >Backend</router-link

@@ -27,14 +27,14 @@ const router = createRouter({
          component: AppQuiz,
          children: [
             {
-               name: "category",
-               path: "/quiz/category",
-               component: QuizCategory,
-            },
-            {
                name: "languages",
                path: "/quiz/languages",
                component: QuizLanguages,
+            },
+            {
+               name: "category",
+               path: "/quiz/category",
+               component: QuizCategory,
             },
             {
                name: "question",

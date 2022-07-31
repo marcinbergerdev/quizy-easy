@@ -2,7 +2,7 @@
    "category": "Kategoria",
    "language": "Wybierz język",
 
-   "select": "Start",
+   "select": "Dalej",
    "back": "Wróć",
    "next": "Dalej",
 
@@ -240,7 +240,7 @@
                "correct": false
             },
             {
-               " sugesstion": "Oriented-Object Programming",
+               "sugesstion": "Oriented-Object Programming",
                "correct": false
             },
             {
@@ -332,7 +332,7 @@
                "correct": true
             },
             {
-               " sugesstion": "Żadna z tych odpowiedzi nie jest prawidłowa",
+               "sugesstion": "Żadna z tych odpowiedzi nie jest prawidłowa",
                "correct": false
             }
          ]
@@ -345,7 +345,7 @@
                "correct": false
             },
             {
-               " sugesstion": "JOIN tworzy tablice obiektów / UNION umieszcza wiersze z zapytań jeden za drugim",
+               "sugesstion": "JOIN tworzy tablice obiektów / UNION umieszcza wiersze z zapytań jeden za drugim",
                "correct": false
             },
             {

@@ -8,75 +8,105 @@
       <div class="select-languages__box">
         <label
           for="eng"
-          @click="selectLanguage('eng')"
-          :class="{ selected: this.language === 'eng' }"
+          @click="selectLanguage('en')"
+          :class="{ selected: this.lang === 'en' }"
           >EN</label
         >
 
-        <input
-          type="radio"
-          id="eng"
-          name="lang"
-          value="eng"
-          v-model="language"
-        />
+        <input type="radio" id="en" name="lang" value="en" v-model="lang" />
       </div>
 
       <div class="select-languages__box">
         <label
           for="pl"
           @click="selectLanguage('pl')"
-          :class="{ selected: this.language === 'pl' }"
+          :class="{ selected: this.lang === 'pl' }"
           >PL</label
         >
 
-        <input type="radio" id="pl" name="lang" value="pl" v-model="language" />
+        <input type="radio" id="pl" name="lang" value="pl" v-model="lang" />
       </div>
 
       <div class="select-languages__box">
         <label
           for="de"
           @click="selectLanguage('de')"
-          :class="{ selected: this.language === 'de' }"
+          :class="{ selected: this.lang === 'de' }"
           >DE</label
         >
 
-        <input type="radio" id="de" name="lang" value="de" v-model="language" />
+        <input type="radio" id="de" name="lang" value="de" v-model="lang" />
       </div>
     </form>
 
     <section class="confrim-languages">
-      <button class="confrim-languages__button" @click="backToCategories">
-        {{$t("back")}}
-      </button>
-      <button class="confrim-languages__button" @click="startGame">
-        {{$t("select")}}
-      </button>
+      <router-link to="/quiz" class="confrim-languages__button">
+        {{ $t("back") }}
+      </router-link>
+
+      <router-link to="/quiz/category" class="confrim-languages__button">
+        {{ $t("select") }}
+      </router-link>
     </section>
   </article>
 </template>
 
 <script>
-import router from "@/router";
 export default {
-  inject: ["resetPoint"],
   data() {
     return {
-      language: "eng",
+      lang: "en",
+      translateQuestions: {},
     };
   },
   methods: {
-    selectLanguage(language) {
-      this.language = language;
-      this.$i18n.locale = this.language
+    selectLanguage(lang) {
+      this.lang = lang;
+      this.$i18n.locale = lang;
+
+      if (lang === "en") {
+        this.translateQuestions = {
+          frontend: this.$i18n.messages.en.frontend,
+          backend: this.$i18n.messages.en.backend,
+        };
+      } else if (lang === "pl") {
+        this.translateQuestions = {
+          frontend: this.$i18n.messages.pl.frontend,
+          backend: this.$i18n.messages.pl.backend,
+        };
+      } else if (lang === "de") {
+        this.translateQuestions = {
+          frontend: this.$i18n.messages.de.frontend,
+          backend: this.$i18n.messages.de.backend,
+        };
+      }
+      localStorage.setItem(
+        "translatedQuestions",
+        JSON.stringify(this.translateQuestions)
+      );
+      localStorage.setItem("language", lang);
     },
-    startGame() {
-      this.resetPoint();
-      router.push("/quiz/question/1");
-    },
-    backToCategories(){
-      router.push("/quiz/category");
+  },
+  created() {
+    const currentLanguage = localStorage.getItem("language");
+
+    if (!currentLanguage) {
+      localStorage.setItem("language", this.lang);
+      this.translateQuestions = {
+        frontend: this.$i18n.messages.en.frontend,
+        backend: this.$i18n.messages.en.backend,
+      };
+    } else {
+      this.lang = currentLanguage;
+      this.selectLanguage(this.lang);
     }
+
+    localStorage.setItem(
+      "translatedQuestions",
+      JSON.stringify(this.translateQuestions)
+    );
+
+    localStorage.setItem("language", this.lang);
   },
 };
 </script>
