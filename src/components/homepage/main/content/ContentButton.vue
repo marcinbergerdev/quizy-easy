@@ -1,12 +1,10 @@
 <template>
   <article>
-    <router-link class='start-button' to="/quiz/languages">Start Quiz!</router-link>
+    <router-link class="start-button" to="/quiz/languages"
+      >Start Quiz!</router-link
+    >
   </article>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style lang="scss" scoped>
 article {

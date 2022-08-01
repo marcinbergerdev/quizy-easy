@@ -1,20 +1,21 @@
 <template>
   <article class="score-box">
     <header class="score-header">
-      <h1 class="score-header__text">{{$t("score")}}</h1>
+      <h1 class="score-header__text">{{ $t("score") }}</h1>
       <span class="score-header__userScore">{{ userScore }}</span>
     </header>
 
     <section class="score-info">
       <p class="score-info__txt">{{ feedback }}</p>
       <p class="score-info__score">
-        {{$t("correct")}} {{ userScore }} {{$t("of")}} {{ selectedQuestions.length }}
+        {{ $t("correct") }} {{ userScore }} {{ $t("of") }}
+        {{ selectedQuestions.length }}
       </p>
       <router-link
         class="score-info__again"
         to="/quiz/languages"
         @click="playAgain"
-        >{{$t("play")}}</router-link
+        >{{ $t("play") }}</router-link
       >
     </section>
   </article>
@@ -35,13 +36,12 @@ export default {
   },
   computed: {
     feedback() {
-      const info = JSON.parse(localStorage.getItem('translatedText'));
-
+      const info = JSON.parse(localStorage.getItem("translatedText"));
 
       let feedback = "";
 
       if (this.userScore <= this.selectedQuestions.length * 0.3) {
-        feedback = info.feedback.feedbackOne
+        feedback = info.feedback.feedbackOne;
       } else if (this.userScore <= this.selectedQuestions.length * 0.6) {
         feedback = info.feedback.feedbackTwo;
       } else if (this.userScore <= this.selectedQuestions.length * 0.8) {

@@ -31,7 +31,6 @@ export default {
   background-position: 10%;
   background-color: var(--bg-homepage);
 
-
   &::before,
   &::after {
     content: "";
