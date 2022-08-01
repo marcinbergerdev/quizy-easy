@@ -339,7 +339,7 @@
          ]
       },
       {
-         "question": "Jaka jest różnica między join and union?",
+         "question": "Jaka jest różnica między join i union?",
          "sugesstions": [
             {
                "sugesstion": "JOIN tworzy iloraz kartezjański i podzbiory / UNION tworzy tablice obiektów",

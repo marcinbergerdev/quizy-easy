@@ -124,7 +124,7 @@
          ]
       },
       {
-         "question": "Gdzie jest właściwe miejsce do wstawienia pliku JavaScript?",
+         "question": "Wo ist der richtige Platz, um die JavaScript-Datei einzufügen?",
          "sugesstions": [
             {
                "sugesstion": "<footer>",
