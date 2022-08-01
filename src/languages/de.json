@@ -51,7 +51,7 @@
                "correct": false
             },
             {
-               "sugesstion": "String, Number, Boolean, Undefined",
+               "sugesstion": "String, Number, Boolean, Undefined, Zero",
                "correct": false
             },
             {
