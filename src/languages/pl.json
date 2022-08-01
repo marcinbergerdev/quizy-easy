@@ -43,7 +43,7 @@
          ]
       },
       {
-         "question": "Jakie typy danych występują w javascript?",
+         "question": "Jakie typy danych występują w JavaScript?",
          "sugesstions": [
             {
                "sugesstion": "Letter, Number, Boolean, Array, Undefined, Zero i Signal",
@@ -151,19 +151,19 @@
          "question": "Mamy liste 10 elementów które zawierają tekst, jakiej pseudoklasy użyjemy aby ustawić kolor tekstu tylko na 5 ostatnich elementach?",
          "sugesstions": [
             {
-               "sugesstion": "li:nth-child-type(5){ color: red}",
+               "sugesstion": "li:nth-child-type(5){ color: red;}",
                "correct": false
             },
             {
-               "sugesstion": "li:nth-of-type(n / 5){ color: red}",
+               "sugesstion": "li:nth-of-type(n / 5){ color: red;}",
                "correct": false
             },
             {
-               "sugesstion": "li:nth-of-type(n + 5){ color: red}",
+               "sugesstion": "li:nth-of-type(n + 5){ color: red;}",
                "correct": true
             },
             {
-               "sugesstion": "li:nth-of-type(n - 5){ color: red}",
+               "sugesstion": "li:nth-of-type(n - 5){ color: red;}",
                "correct": false
             }
          ]
@@ -325,7 +325,7 @@
                "correct": false
             },
             {
-               "sugesstion": "Interfejsy mogą mieć stan i nie definiują zachowania dla obiektów.",
+               "sugesstion": "Interfejsy mogą mieć stan i nie definiują zachowania dla obiektów",
                "correct": false
             },
             {
@@ -363,7 +363,7 @@
          "question": "Co to jest JSP Page?",
          "sugesstions": [
             {
-               "sugesstion": "Java Server Page (JSP) to dokument tekstowy zawierający dwa typy tekstu: static data and JSP elements.",
+               "sugesstion": "Java Server Page (JSP) to dokument tekstowy zawierający dwa typy tekstu: static data and JSP elements",
                "correct": true
             },
             {
@@ -409,7 +409,7 @@
                "correct": false
             },
             {
-               "sugesstion": "Jest to baza danych.",
+               "sugesstion": "Jest to baza danych",
                "correct": false
             },
             {
@@ -417,7 +417,7 @@
                "correct": false
             },
             {
-               "sugesstion": "Serwer, który jest jedynym możliwym punktem wejścia do systemu, hermetyzuje architekturę całego systemu i udostępnia API, które jest już dostosowane dla każdego klienta.",
+               "sugesstion": "Serwer, który jest jedynym możliwym punktem wejścia do systemu, hermetyzuje architekturę całego systemu i udostępnia API, które jest już dostosowane dla każdego klienta",
                "correct": true
             }
          ]

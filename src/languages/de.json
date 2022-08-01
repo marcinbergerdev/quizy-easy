@@ -148,19 +148,19 @@
          "question": "Wir haben eine Liste mit 10 Elementen, die Text enthalten. Welche Pseudoklasse verwenden wir, um die Textfarbe nur für die letzten 5 Elemente festzulegen?",
          "sugesstions": [
             {
-               "sugesstion": "li:nth-child-type(5){ color: red}",
+               "sugesstion": "li:nth-child-type(5){ color: red;}",
                "correct": false
             },
             {
-               "sugesstion": "li:nth-of-type(n / 5){ color: red}",
+               "sugesstion": "li:nth-of-type(n / 5){ color: red;}",
                "correct": false
             },
             {
-               "sugesstion": "li:nth-of-type(n + 5){ color: red}",
+               "sugesstion": "li:nth-of-type(n + 5){ color: red;}",
                "correct": true
             },
             {
-               "sugesstion": "li:nth-of-type(n - 5){ color: red}",
+               "sugesstion": "li:nth-of-type(n - 5){ color: red;}",
                "correct": false
             }
          ]
@@ -301,11 +301,11 @@
                "correct": true
             },
             {
-               "sugesstion": "Eine relationale Datenbank ist ein Datenbanktyp, der nicht die Speicherung von Daten ermöglicht, sondern nur den Zugriff auf diese.",
+               "sugesstion": "Eine relationale Datenbank ist ein Datenbanktyp, der nicht die Speicherung von Daten ermöglicht, sondern nur den Zugriff auf diese",
                "correct": false
             },
             {
-               "sugesstion": "Eine relationale Datenbank ist ein Datenbanktyp, der die Speicherung von nicht zusammenhängenden Datenelementen ermöglicht und keinen Zugriff auf diese Elemente bietet.",
+               "sugesstion": "Eine relationale Datenbank ist ein Datenbanktyp, der die Speicherung von nicht zusammenhängenden Datenelementen ermöglicht und keinen Zugriff auf diese Elemente bietet",
                "correct": false
             },
             {

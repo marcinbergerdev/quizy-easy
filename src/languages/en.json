@@ -147,19 +147,19 @@
          "question": "We have a list of 10 elements that contain text, what pseudo-class will we use to set the text color only on the last 5 elements?",
          "sugesstions": [
             {
-               "sugesstion": "li:nth-child-type(5){ color: red}",
+               "sugesstion": "li:nth-child-type(5){ color: red;}",
                "correct": false
             },
             {
-               "sugesstion": "li:nth-of-type(n / 5){ color: red}",
+               "sugesstion": "li:nth-of-type(n / 5){ color: red;}",
                "correct": false
             },
             {
-               "sugesstion": "li:nth-of-type(n + 5){ color: red}",
+               "sugesstion": "li:nth-of-type(n + 5){ color: red;}",
                "correct": true
             },
             {
-               "sugesstion": "li:nth-of-type(n - 5){ color: red}",
+               "sugesstion": "li:nth-of-type(n - 5){ color: red;}",
                "correct": false
             }
          ]
@@ -392,7 +392,7 @@
                "correct": false
             },
             {
-               "sugesstion": "Administrator Coordinate Issue Database ",
+               "sugesstion": "Administrator Coordinate Issue Database",
                "correct": false
             }
          ]
