@@ -44,7 +44,11 @@
         {{ $t("back") }}
       </router-link>
 
-      <router-link to="/quiz/category" class="confrim-languages__button" @click="resetPoint">
+      <router-link
+        to="/quiz/category"
+        class="confrim-languages__button"
+        @click="resetPoint"
+      >
         {{ $t("select") }}
       </router-link>
     </section>
@@ -53,7 +57,7 @@
 
 <script>
 export default {
-  inject: ['resetPoint'],
+  inject: ["resetPoint"],
   data() {
     return {
       lang: "en",
@@ -67,30 +71,25 @@ export default {
 
       if (lang === "en") {
         this.translateText = {
-          frontend: this.$i18n.messages.en.frontend,
-          backend: this.$i18n.messages.en.backend,
+          questions: this.$i18n.messages.en.questions,
           feedback: this.$i18n.messages.en.feedback,
         };
       } else if (lang === "pl") {
         this.translateText = {
-          frontend: this.$i18n.messages.pl.frontend,
-          backend: this.$i18n.messages.pl.backend,
+          questions: this.$i18n.messages.pl.questions,
           feedback: this.$i18n.messages.pl.feedback,
         };
       } else if (lang === "de") {
         this.translateText = {
-          frontend: this.$i18n.messages.de.frontend,
-          backend: this.$i18n.messages.de.backend,
+          questions: this.$i18n.messages.de.questions,
           feedback: this.$i18n.messages.de.feedback,
         };
       }
-
-
+      localStorage.setItem("language", lang);
       localStorage.setItem(
         "translatedText",
         JSON.stringify(this.translateText)
       );
-      localStorage.setItem("language", lang);
     },
   },
   created() {
@@ -99,8 +98,7 @@ export default {
     if (!currentLanguage) {
       localStorage.setItem("language", this.lang);
       this.translateText = {
-        frontend: this.$i18n.messages.en.frontend,
-        backend: this.$i18n.messages.en.backend,
+        questions: this.$i18n.messages.en.questions,
         feedback: this.$i18n.messages.en.feedback,
       };
     } else {
@@ -108,10 +106,7 @@ export default {
       this.selectLanguage(this.lang);
     }
 
-    localStorage.setItem(
-      "translatedText",
-      JSON.stringify(this.translateText)
-    );
+    localStorage.setItem("translatedText", JSON.stringify(this.translateText));
 
     localStorage.setItem("language", this.lang);
   },
