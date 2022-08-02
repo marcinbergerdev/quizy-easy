@@ -14,430 +14,436 @@
    "correct": "correct answers:",
    "of": "of",
    "play": "Play again",
-   "questions": {
-      "frontend": [
-         {
-            "question": "What do the abbreviations HTML and CSS mean?",
-            "sugesstions": [
-               {
-                  "sugesstion": "Helper Text Mark Languages & Coding Style Sheets",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Hiper Text Make Language & Comment Style Sheet",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Hyper Text Mark-up Language & Cascading Style Sheets",
-                  "correct": true
-               },
-               {
-                  "sugesstion": "Height Text Mental Language & Counter Strike Shoots",
-                  "correct": false
-               }
-            ]
-         },
-         {
-            "question": "What data types are present in javascript?",
-            "sugesstions": [
-               {
-                  "sugesstion": "Letter, Number, Boolean, Array, Undefined, Zero i Signal",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "String, Number, Boolean, Array, Undefined, Null i Symbol",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "String, Number, Boolean, Undefined, Zero",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "String, Number, Boolean, Object, Undefined, Null i Symbol",
-                  "correct": true
-               }
-            ]
-         },
-         {
-            "question": "What tag do we use if we want to create a checkbox?",
-            "sugesstions": [
-               {
-                  "sugesstion": "<input type='checkbox'>",
-                  "correct": true
-               },
-               {
-                  "sugesstion": "<checkbox>",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "<checkbox type='input'>",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "All answers are correct",
-                  "correct": false
-               }
-            ]
-         },
-         {
-            "question": "Which of the listed ways is correct for inserting a comment in a CSS file?",
-            "sugesstions": [
-               {
-                  "sugesstion": "/ Comment /",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "/' Comment '/",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "/* Comment */",
-                  "correct": true
-               },
-               {
-                  "sugesstion": "' Comment '",
-                  "correct": false
-               }
-            ]
-         },
-         {
-            "question": "Which one is a conditional operator(Ternary Operator)?",
-            "sugesstions": [
-               {
-                  "sugesstion": "<?",
-                  "correct": false
-               },
-               {
-                  "sugesstion": ";?",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "?:",
-                  "correct": true
-               },
-               {
-                  "sugesstion": ":?",
-                  "correct": false
-               }
-            ]
-         },
-         {
-            "question": "Where is the right place to insert a JavaScript file?",
-            "sugesstions": [
-               {
-                  "sugesstion": "<footer>",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "<body>",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "<head>",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "<head> i <body>",
-                  "correct": true
-               }
-            ]
-         },
-         {
-            "question": "We have a list of 10 elements that contain text, what pseudo-class will we use to set the text color only on the last 5 elements?",
-            "sugesstions": [
-               {
-                  "sugesstion": "li:nth-child-type(5){ color: red;}",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "li:nth-of-type(n / 5){ color: red;}",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "li:nth-of-type(n + 5){ color: red;}",
-                  "correct": true
-               },
-               {
-                  "sugesstion": "li:nth-of-type(n - 5){ color: red;}",
-                  "correct": false
-               }
-            ]
-         },
-         {
-            "question": "The original name of JavaScript is?",
-            "sugesstions": [
-               {
-                  "sugesstion": "LiveScript",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Mocha",
-                  "correct": true
-               },
-               {
-                  "sugesstion": "JavaScript",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Java",
-                  "correct": false
-               }
-            ]
-         },
-         {
-            "question": "What type will console.log(typeof NaN) return?",
-            "sugesstions": [
-               {
-                  "sugesstion": "NaN",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "undefined",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "number",
-                  "correct": true
-               },
-               {
-                  "sugesstion": "null",
-                  "correct": false
-               }
-            ]
-         },
-         {
-            "question": "What is the difference between get and defineProperty?",
-            "sugesstions": [
-               {
-                  "sugesstion": "get will be defined in the object prototype / Object.defineProperty() will be defined on the instance to which it is applied",
-                  "correct": true
-               },
-               {
-                  "sugesstion": "get will be defined on the instance to which it is applied / Object.defineProperty() will be defined in the prototype of the object",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "there is no difference they are the same",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "get is defined in DOM / Object.defineProperty() is defined in window.global",
-                  "correct": false
-               }
-            ]
-         }
-      ],
-      "backend": [
-         {
-            "question": "What does the acronym OOP stand for?",
-            "sugesstions": [
-               {
-                  "sugesstion": "Oriented-Operation Programming",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Oriented-Object Programming",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Object-Oriented Programming",
-                  "correct": true
-               },
-               {
-                  "sugesstion": "Observation Oriented Programming",
-                  "correct": false
-               }
-            ]
-         },
-         {
-            "question": "Expand CRUD acronym",
-            "sugesstions": [
-               {
-                  "sugesstion": "Create, Read, Update, Delete",
-                  "correct": true
-               },
-               {
-                  "sugesstion": "Change, Read, Upgrade, Delete",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Create, React, Update, Debug",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Concentrate, Remote, User, Delete",
-                  "correct": false
-               }
-            ]
-         },
-         {
-            "question": "The difference between put and patch?",
-            "sugesstions": [
-               {
-                  "sugesstion": "Both have the same function",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "PUT updates or deletes the entire resource / PATCH updates only the entire resource",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "PUT updates or creates the entire resource / PATCH updates the entire resource or a portion of it",
-                  "correct": true
-               },
-               {
-                  "sugesstion": "PUT updates the entire resource or a portion of it / PATCH is used to update the entire resource",
-                  "correct": false
-               }
-            ]
-         },
-         {
-            "question": "What is a relational database?",
-            "sugesstions": [
-               {
-                  "sugesstion": "A relational database is a type of database that allows you to store related data elements and provides access to them",
-                  "correct": true
-               },
-               {
-                  "sugesstion": "A relational database is a type of database that does not allow you to store data just provide access to it",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "A relational database is a type of database that allows you to store unrelated data elements and does not provide access to them",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "A relational database is a type of database that allows you to store unrelated data elements and provides access to them",
-                  "correct": false
-               }
-            ]
-         },
-         {
-            "question": "What is the difference between an interface and an abstract class?",
-            "sugesstions": [
-               {
-                  "sugesstion": "They have the same function",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Interfaces can have state and do not define behavior for objects",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Interfaces cannot have state, they are used to define behavior for objects",
-                  "correct": true
-               },
-               {
-                  "sugesstion": "Neither of these answers is correct",
-                  "correct": false
-               }
-            ]
-         },
-         {
-            "question": "JWhat is the difference between join and union?",
-            "sugesstions": [
-               {
-                  "sugesstion": "JOIN creates Cartesian quotient and subsets / UNION creates arrays of objects",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "JOIN creates arrays of objects / UNION places rows from queries one after another",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "JOIN places rows from queries one after another / UNION creates Cartesian product and subsets",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "JOIN creates cartesian product and subsets / UNION places rows from queries one after another",
-                  "correct": true
-               }
-            ]
-         },
-         {
-            "question": "What is a JSP Page?",
-            "sugesstions": [
-               {
-                  "sugesstion": "A Java Server Page (JSP) is a text document containing two types of text: static data and JSP elements",
-                  "correct": true
-               },
-               {
-                  "sugesstion": "Java Server Page (JSP) is a document in the form of a photo which has two extensions: PNG, JPGN",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Java Server Page (JSP) is a database that stores images",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Java Server Page (JSP) is a server on which you can add images",
-                  "correct": false
-               }
-            ]
-         },
-         {
-            "question": "Expand the abbreviation of the ACID",
-            "sugesstions": [
-               {
-                  "sugesstion": "Application Create Include Data",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Atomicity Consistency Isolation Durable",
-                  "correct": true
-               },
-               {
-                  "sugesstion": "Automatic Customer Insert Design",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Administrator Coordinate Issue Database",
-                  "correct": false
-               }
-            ]
-         },
-         {
-            "question": "What is the Gateway API?",
-            "sugesstions": [
-               {
-                  "sugesstion": "All answers are correct",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "It is a database",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "These are micro servers that allow the user to enter and share the API",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "The server, which is the only possible entry point into the system, encapsulates the architecture of the entire system and provides an API that is already customized for each client",
-                  "correct": true
-               }
-            ]
-         },
-         {
-            "question": "What is the most important part of API design?",
-            "sugesstions": [
-               {
-                  "sugesstion": "Documentation",
-                  "correct": true
-               },
-               {
-                  "sugesstion": "Consistency",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Security",
-                  "correct": false
-               },
-               {
-                  "sugesstion": "Stability",
-                  "correct": false
-               }
-            ]
-         }
-      ]
-   }
+   "questions": [
+      {
+         "name": "frontend",
+         "questionList": [
+            {
+               "question": "What do the abbreviations HTML and CSS mean?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "Helper Text Mark Languages & Coding Style Sheets",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Hiper Text Make Language & Comment Style Sheet",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Hyper Text Mark-up Language & Cascading Style Sheets",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": "Height Text Mental Language & Counter Strike Shoots",
+                     "correct": false
+                  }
+               ]
+            },
+            {
+               "question": "What data types are present in javascript?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "Letter, Number, Boolean, Array, Undefined, Zero i Signal",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "String, Number, Boolean, Array, Undefined, Null i Symbol",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "String, Number, Boolean, Undefined, Zero",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "String, Number, Boolean, Object, Undefined, Null i Symbol",
+                     "correct": true
+                  }
+               ]
+            },
+            {
+               "question": "What tag do we use if we want to create a checkbox?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "<input type='checkbox'>",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": "<checkbox>",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "<checkbox type='input'>",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "All answers are correct",
+                     "correct": false
+                  }
+               ]
+            },
+            {
+               "question": "Which of the listed ways is correct for inserting a comment in a CSS file?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "/ Comment /",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "/' Comment '/",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "/* Comment */",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": "' Comment '",
+                     "correct": false
+                  }
+               ]
+            },
+            {
+               "question": "Which one is a conditional operator(Ternary Operator)?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "<?",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": ";?",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "?:",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": ":?",
+                     "correct": false
+                  }
+               ]
+            },
+            {
+               "question": "Where is the right place to insert a JavaScript file?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "<footer>",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "<body>",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "<head>",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "<head> i <body>",
+                     "correct": true
+                  }
+               ]
+            },
+            {
+               "question": "We have a list of 10 elements that contain text, what pseudo-class will we use to set the text color only on the last 5 elements?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "li:nth-child-type(5){ color: red;}",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "li:nth-of-type(n / 5){ color: red;}",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "li:nth-of-type(n + 5){ color: red;}",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": "li:nth-of-type(n - 5){ color: red;}",
+                     "correct": false
+                  }
+               ]
+            },
+            {
+               "question": "The original name of JavaScript is?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "LiveScript",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Mocha",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": "JavaScript",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Java",
+                     "correct": false
+                  }
+               ]
+            },
+            {
+               "question": "What type will console.log(typeof NaN) return?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "NaN",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "undefined",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "number",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": "null",
+                     "correct": false
+                  }
+               ]
+            },
+            {
+               "question": "What is the difference between get and defineProperty?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "get will be defined in the object prototype / Object.defineProperty() will be defined on the instance to which it is applied",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": "get will be defined on the instance to which it is applied / Object.defineProperty() will be defined in the prototype of the object",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "there is no difference they are the same",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "get is defined in DOM / Object.defineProperty() is defined in window.global",
+                     "correct": false
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name": "backend",
+         "questionList": [
+            {
+               "question": "What does the acronym OOP stand for?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "Oriented-Operation Programming",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Oriented-Object Programming",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Object-Oriented Programming",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": "Observation Oriented Programming",
+                     "correct": false
+                  }
+               ]
+            },
+            {
+               "question": "Expand CRUD acronym",
+               "sugesstions": [
+                  {
+                     "sugesstion": "Create, Read, Update, Delete",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": "Change, Read, Upgrade, Delete",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Create, React, Update, Debug",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Concentrate, Remote, User, Delete",
+                     "correct": false
+                  }
+               ]
+            },
+            {
+               "question": "The difference between put and patch?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "Both have the same function",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "PUT updates or deletes the entire resource / PATCH updates only the entire resource",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "PUT updates or creates the entire resource / PATCH updates the entire resource or a portion of it",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": "PUT updates the entire resource or a portion of it / PATCH is used to update the entire resource",
+                     "correct": false
+                  }
+               ]
+            },
+            {
+               "question": "What is a relational database?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "A relational database is a type of database that allows you to store related data elements and provides access to them",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": "A relational database is a type of database that does not allow you to store data just provide access to it",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "A relational database is a type of database that allows you to store unrelated data elements and does not provide access to them",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "A relational database is a type of database that allows you to store unrelated data elements and provides access to them",
+                     "correct": false
+                  }
+               ]
+            },
+            {
+               "question": "What is the difference between an interface and an abstract class?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "They have the same function",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Interfaces can have state and do not define behavior for objects",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Interfaces cannot have state, they are used to define behavior for objects",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": "Neither of these answers is correct",
+                     "correct": false
+                  }
+               ]
+            },
+            {
+               "question": "JWhat is the difference between join and union?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "JOIN creates Cartesian quotient and subsets / UNION creates arrays of objects",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "JOIN creates arrays of objects / UNION places rows from queries one after another",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "JOIN places rows from queries one after another / UNION creates Cartesian product and subsets",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "JOIN creates cartesian product and subsets / UNION places rows from queries one after another",
+                     "correct": true
+                  }
+               ]
+            },
+            {
+               "question": "What is a JSP Page?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "A Java Server Page (JSP) is a text document containing two types of text: static data and JSP elements",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": "Java Server Page (JSP) is a document in the form of a photo which has two extensions: PNG, JPGN",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Java Server Page (JSP) is a database that stores images",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Java Server Page (JSP) is a server on which you can add images",
+                     "correct": false
+                  }
+               ]
+            },
+            {
+               "question": "Expand the abbreviation of the ACID",
+               "sugesstions": [
+                  {
+                     "sugesstion": "Application Create Include Data",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Atomicity Consistency Isolation Durable",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": "Automatic Customer Insert Design",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Administrator Coordinate Issue Database",
+                     "correct": false
+                  }
+               ]
+            },
+            {
+               "question": "What is the Gateway API?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "All answers are correct",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "It is a database",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "These are micro servers that allow the user to enter and share the API",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "The server, which is the only possible entry point into the system, encapsulates the architecture of the entire system and provides an API that is already customized for each client",
+                     "correct": true
+                  }
+               ]
+            },
+            {
+               "question": "What is the most important part of API design?",
+               "sugesstions": [
+                  {
+                     "sugesstion": "Documentation",
+                     "correct": true
+                  },
+                  {
+                     "sugesstion": "Consistency",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Security",
+                     "correct": false
+                  },
+                  {
+                     "sugesstion": "Stability",
+                     "correct": false
+                  }
+               ]
+            }
+         ]
+      }
+   ]
 }

@@ -41,18 +41,13 @@ export default {
     },
     selectQuestionsCategory(category) {
       const translatedText = JSON.parse(localStorage.getItem("translatedText"));
-
-      if (category === "frontend") {
-        localStorage.setItem(
-          "questions",
-          JSON.stringify(translatedText.frontend)
-        );
-      } else {
-        localStorage.setItem(
-          "questions",
-          JSON.stringify(translatedText.backend)
-        );
-      }
+      const categories = translatedText.questions.find(
+        (question) => question.name === category
+      );
+      this.setQuestionsCategory(categories.questionList);
+    },
+    setQuestionsCategory(selectedOptions) {
+      localStorage.setItem("questions", JSON.stringify(selectedOptions));
     },
   },
 };
