@@ -28,13 +28,14 @@ export default {
   },
   data() {
     return {
-      userScore: 0,
+      userScore: 5,
       questionsNumber: 0,
     };
   },
   methods: {
     addPoint() {
       ++this.userScore;
+      console.log(this.userScore);
     },
     resetPoint() {
       this.userScore = 0;

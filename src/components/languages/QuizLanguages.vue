@@ -66,25 +66,20 @@ export default {
   },
   methods: {
     selectLanguage(lang) {
+      const i18n = this.$i18n;
       this.lang = lang;
-      this.$i18n.locale = lang;
+      i18n.locale = lang;
 
-      if (lang === "en") {
+      if (lang === i18n.messages[lang].languages) {
         this.translateText = {
-          questions: this.$i18n.messages.en.questions,
-          feedback: this.$i18n.messages.en.feedback,
-        };
-      } else if (lang === "pl") {
-        this.translateText = {
-          questions: this.$i18n.messages.pl.questions,
-          feedback: this.$i18n.messages.pl.feedback,
-        };
-      } else if (lang === "de") {
-        this.translateText = {
-          questions: this.$i18n.messages.de.questions,
-          feedback: this.$i18n.messages.de.feedback,
+          questions: i18n.messages[lang].questions,
+          feedback: i18n.messages[lang].feedback,
         };
       }
+      this.setLanguage(lang);
+      // zrob zeby to było dynbamiczne
+    },
+    setLanguage(lang) {
       localStorage.setItem("language", lang);
       localStorage.setItem(
         "translatedText",
@@ -107,7 +102,6 @@ export default {
     }
 
     localStorage.setItem("translatedText", JSON.stringify(this.translateText));
-
     localStorage.setItem("language", this.lang);
   },
 };

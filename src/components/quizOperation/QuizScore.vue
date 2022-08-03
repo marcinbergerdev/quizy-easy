@@ -40,9 +40,9 @@ export default {
 
       let feedback = "";
 
-      if (this.userScore <= this.selectedQuestions.length * 0.3) {
+      if (this.userScore <= this.selectedQuestions.length * 0.4) {
         feedback = info.feedback.feedbackOne;
-      } else if (this.userScore <= this.selectedQuestions.length * 0.6) {
+      } else if (this.userScore <= this.selectedQuestions.length * 0.5) {
         feedback = info.feedback.feedbackTwo;
       } else if (this.userScore <= this.selectedQuestions.length * 0.8) {
         feedback = info.feedback.feedbackThree;
