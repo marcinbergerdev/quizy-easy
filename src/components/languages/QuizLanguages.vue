@@ -67,17 +67,15 @@ export default {
   methods: {
     selectLanguage(lang) {
       const i18n = this.$i18n;
+
       this.lang = lang;
       i18n.locale = lang;
+      this.translateText = {
+        questions: i18n.messages[lang].questions,
+        feedback: i18n.messages[lang].feedback,
+      };
 
-      if (lang === i18n.messages[lang].languages) {
-        this.translateText = {
-          questions: i18n.messages[lang].questions,
-          feedback: i18n.messages[lang].feedback,
-        };
-      }
       this.setLanguage(lang);
-      // zrob zeby to było dynbamiczne
     },
     setLanguage(lang) {
       localStorage.setItem("language", lang);
@@ -90,19 +88,8 @@ export default {
   created() {
     const currentLanguage = localStorage.getItem("language");
 
-    if (!currentLanguage) {
-      localStorage.setItem("language", this.lang);
-      this.translateText = {
-        questions: this.$i18n.messages.en.questions,
-        feedback: this.$i18n.messages.en.feedback,
-      };
-    } else {
-      this.lang = currentLanguage;
-      this.selectLanguage(this.lang);
-    }
-
-    localStorage.setItem("translatedText", JSON.stringify(this.translateText));
-    localStorage.setItem("language", this.lang);
+    //sets default language if not picked by user
+    this.selectLanguage(currentLanguage || this.lang);
   },
 };
 </script>
