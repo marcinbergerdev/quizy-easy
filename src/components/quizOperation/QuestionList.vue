@@ -26,6 +26,7 @@ export default {
     QuestionItem,
   },
   props: ["routeQuestion"],
+  inject: ["resetPoint"],
   data() {
     return {
       selectedQuestions: [],
@@ -66,6 +67,7 @@ export default {
     this.selectedQuestions = selectedQuestions;
     this.changeQuestion(newRoute);
     this.questionsNumber = this.selectedQuestions.length;
+    this.resetPoint();
   },
 };
 </script>

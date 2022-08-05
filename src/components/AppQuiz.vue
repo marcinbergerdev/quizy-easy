@@ -35,7 +35,6 @@ export default {
   methods: {
     addPoint() {
       ++this.userScore;
-      console.log(this.userScore);
     },
     resetPoint() {
       this.userScore = 0;

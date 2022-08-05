@@ -18,8 +18,8 @@ header {
   letter-spacing: 3px;
   font-family: "Fuzzy Bubbles", cursive;
   font-size: 1rem;
-
   color: #fff;
+
   @media (orientation: landscape) and (max-width: 768px) {
     top: 10%;
     left: -85%;

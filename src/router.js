@@ -50,7 +50,6 @@ const router = createRouter({
          ],
          redirect: "/start-quiz",
       },
-
    ],
 });
 

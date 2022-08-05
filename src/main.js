@@ -5,22 +5,19 @@ import App from "./App.vue";
 import Router from "./router.js";
 import VueConfetti from "vue-confetti";
 
-import en from './languages/en.json';
-import pl from './languages/pl.json';
-import de from './languages/de.json';
-
-
+import en from "./languages/en.json";
+import pl from "./languages/pl.json";
+import de from "./languages/de.json";
 
 const i18n = createI18n({
-   locale: 'en',
-   fallbackLocale: 'en',
+   locale: "en",
+   fallbackLocale: "en",
    messages: {
       en,
       pl,
-      de
-   }
+      de,
+   },
 });
-
 
 const app = createApp(App);
 app.use(i18n);
