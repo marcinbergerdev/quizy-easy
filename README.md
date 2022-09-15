@@ -1,4 +1,4 @@
-# In this project i trained vue transitions and here is waht came out. 😎
+# In this project i trained vue transitions and here is what came out. 😎
 # Live here 👉 https://quizy-easy.netlify.app/
 
 ## How it works?
