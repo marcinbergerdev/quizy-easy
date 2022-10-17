@@ -4,7 +4,7 @@
 ## How it works?
  - Solve your quiz.
 
-## It's made?
+## Tech stack
   - Vue.js (Vue CLI).
   - Vue Routing.
   - Vue Transition.
