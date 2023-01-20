@@ -5,7 +5,7 @@
  - Solve your quiz.
 
 ## Tech stack
-  - Vue.js (Vue CLI).
+  - Vue.js (Option Api).
   - Vue Routing.
   - Vue Transition.
   - Locale Storage.
